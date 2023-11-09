@@ -14,3 +14,24 @@ body {
     object-fit: cover;
     box-shadow: 0px 5px 10px rgba(0, 0, 0);
 }
+
+.description {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.institute {
+    color: brown;
+    font-weight: bold;
+}
+
+@keyframes parpadeo {
+    0% { visibility: hidden; }
+    50% { visibility: visible; }
+    100% { visibility: hidden; }
+  }
+  
+  .blinking {
+    animation: parpadeo 1s step-end infinite;
+  }
