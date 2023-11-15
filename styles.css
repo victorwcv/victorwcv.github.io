@@ -14,7 +14,7 @@ body {
 }
 
 .main-container {
- display: flexbox;
+ display: flex;
  height: 100vh;
 }
 
@@ -46,11 +46,11 @@ body {
     0% { visibility: hidden; }
     50% { visibility: visible; }
     100% { visibility: hidden; }
-  }
+}
   
-  .blinking {
+.blinking {
     animation: parpadeo 1s step-end infinite;
-  }
+}
 
 h1 {
     padding-top: 100px;
