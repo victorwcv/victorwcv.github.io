@@ -21,6 +21,7 @@ body {
 .profile-photo-container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .profile-photo {
