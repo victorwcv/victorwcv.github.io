@@ -16,8 +16,10 @@ body {
 
 .main-container {
  display: flex;
+ width: 900px;
  height: 100vh;
  justify-content: center;
+ align-items: center;
 }
 
 .profile-photo-container {
