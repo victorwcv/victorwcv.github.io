@@ -11,11 +11,13 @@ body {
     margin: 0;
     width: 100vw;
     font-family: 'Times New Roman', Times, serif;
+    display: flex;
 }
 
 .main-container {
  display: flex;
  height: 100vh;
+ justify-content: center;
 }
 
 .profile-photo-container {
