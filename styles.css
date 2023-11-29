@@ -136,7 +136,7 @@ body {
 #projects-page {
     display: grid;
     width: 1300px;
-    height: 100vh;
+    height: 90vh;
     grid-template-areas: 
         "pro1 pro2"
         "pro3 pro4";
