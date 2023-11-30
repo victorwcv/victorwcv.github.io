@@ -3,72 +3,33 @@
 const buttons = document.querySelectorAll('.button');
 const pages = document.querySelectorAll('.page');
 let currentPage = 0;
-let isScrolling = false;
 
-buttons[0].classList.add('active');
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    currentPage = index;
+    scrollToPageButton(currentPage);
+    button.classList.add('active');
+
+    // Eliminar la clase 'active' después de 1 segundo (1000 milisegundos)
+    setTimeout(() => {
+      button.classList.remove('active');
+    }, 400);
+  });
+});
 
 function scrollToPageButton(index) {
-    if (index === 1) {
-        buttons[1].classList.add('active');
-        buttons[0].classList.remove('active');
-    } else {
-        buttons[0].classList.add('active');
-        buttons[1].classList.remove('active');
-    }
-    
-    const yOffset = pages[index].offsetTop;
-    window.scrollTo({ top: yOffset, behavior: 'smooth' });
+  const yOffset = pages[index].offsetTop;
+  window.scrollTo({ top: yOffset, behavior: 'smooth' });
 }
 
-document.addEventListener('wheel', (event) => {
-    if (isScrolling) return;
-    isScrolling = true;
-
-    if (event.deltaY > 0 && currentPage < pages.length - 1) {
-        currentPage++;
-    } else if (event.deltaY < 0 && currentPage > 0) {
-        currentPage--;
-    }
-    
-    scrollToPageWheel(currentPage);
-});
-
-function scrollToPageWheel(index) {
-    const yOffset = pages[index].offsetTop;
-    window.scrollTo({ top: yOffset, behavior: 'smooth' });
-    
-    if (index === 1) {
-        buttons[1].classList.add('active');
-        buttons[0].classList.remove('active');
-    } else {
-        buttons[0].classList.add('active');
-        buttons[1].classList.remove('active');
-    }
-    
-    setTimeout(() => {
-        isScrolling = false;
-    }, 500);
-}
-
-let touchStartY = 0;
-let touchEndY = 0;
-
-document.addEventListener('touchstart', (event) => {
-    touchStartY = event.touches[0].clientY;
-});
-
-document.addEventListener('touchend', (event) => {
-    touchEndY = event.changedTouches[0].clientY;
-    
-    if (touchStartY - touchEndY > 50 && currentPage < pages.length - 1) {
-        currentPage++;
-    } else if (touchEndY - touchStartY > 50 && currentPage > 0) {
-        currentPage--;
-    }
-
+window.addEventListener('load', () => {
+  const savedPage = localStorage.getItem('currentPage');
+  if (savedPage !== null) {
+    currentPage = parseInt(savedPage);
     scrollToPageButton(currentPage);
+  } else {
+    buttons[0].classList.add('active');
+  }
 });
-
-
 
 
