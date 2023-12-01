@@ -10,6 +10,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -23,7 +24,7 @@
         <nav id="nav">
           <ul>
             <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#sobre-mi">SOBRE MI</a></li>
+            <li><a href="#about-me">SOBRE MI</a></li>
             <li><a href="#curriculum">CURRICULUM</a></li>
             <li><a href="#portfolio">PORTFOLIO</a></li>
             <li><a href="#contacto">CONTACTO</a></li>
@@ -54,16 +55,15 @@
 
     <!-- SECTION ABOUT ME -->
     <section id="about-me" class="about-me">
-      <div class="about-me-container">
+      <div class="container">
         <h2>Sobre Mi</h2>
         <p>
           <span>Hola, soy Victor Ccanchi. </span>Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Aspernatur pariatur quas excepturi autem
           quae voluptas iusto velit eaque enim quaerat voluptatem, odit eos
-          ullam, tenetur adipisci, perferendis aperiam doloribus. Quibusdam?
+          ullam, tenetur adipisci, perferendis aperiam doloribus. Quibusdam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur similique sed voluptatibus blanditiis praesentium, aperiam, officia rem, obcaecati cum officiis expedita. Tempore corrupti, corporis eligendi ut consequatur explicabo libero.
         </p>
-        <div class="content-row">
-          <!-- PERSONAL DATA -->
+        <div class="content-row col">
           <div class="data-col">
             <h3>Datos Personales</h3>
             <ul>
@@ -84,29 +84,25 @@
                 Ica - Perú
               </li>
             </ul>
-						<button>
-							Descargar CV <i class="fa-solid fa-download"></i>
-							<span class="overlay"></span>
-						</button>
           </div>
           <!-- INTERESTS -->
           <div class="data-col">
             <h3>Intereses</h3>
             <div class="interests-container">
-							<div class="interests">
-								<i class="fa-solid fa-microchip"></i>
+              <div class="interests">
+                <i class="fa-solid fa-microchip"></i>
 								<span>TECH</span>
 							</div>
 							<div class="interests">
-								<i class="fa-solid fa-gamepad"></i>
+                <i class="fa-solid fa-gamepad"></i>
 								<span>JUEGOS</span>
 							</div>
 							<div class="interests">
-								<i class="fa-solid fa-headphones"></i>
+                <i class="fa-solid fa-headphones"></i>
                 <span>MÚSICA</span>
               </div>
 							<div class="interests">
-								<i class="fa-solid fa-language"></i>
+                <i class="fa-solid fa-language"></i>
 								<span>IDIOMAS</span>
 							</div>
               <div class="interests">
@@ -120,6 +116,10 @@
             </div>
           </div>
         </div>
+        <button>
+          Descargar CV <i class="fa-solid fa-download"></i>
+          <span class="overlay"></span>
+        </button>
       </div>
     </section>
 
@@ -128,12 +128,12 @@
 			<div class="content-section">
 				<h2>Curriculum</h2>
 				<div class="row-cv">
-					<div class="col-cv right-main">
+					<div class="col-cv left-main">
 						<h3>Educación</h3>
 						<div class="item left">
 							<h4>Arte y Multimedia</h4>
 							<span class="house">Univesidad del pacifico</span>
-							<span class="fecha">2010-2015</span>
+							<span class="date">2010-2015</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
 							<div class="conector-left">
 								<div class="circle-left"></div>
@@ -142,7 +142,7 @@
 						<div class="item left">
 							<h4>Arte y Multimedia</h4>
 							<span class="house">Univesidad del pacifico</span>
-							<span class="fecha">2010-2015</span>
+							<span class="date">2010-2015</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
 							<div class="conector-left">
 								<div class="circle-left"></div>
@@ -151,45 +151,113 @@
 						<div class="item left">
 							<h4>Arte y Multimedia</h4>
 							<span class="house">Univesidad del pacifico</span>
-							<span class="fecha">2010-2015</span>
+							<span class="date">2010-2015</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
 							<div class="conector-left">
 								<div class="circle-left"></div>
 							</div>
 						</div>
 					</div>
-					<div class="col-cv rigth-main">
+					<div class="col-cv right-main">
 						<h3>Experiencia Laborar</h3>
-						<div class="item rigth">
+						<div class="item right">
 							<h4>Front-End</h4>
 							<span class="house">Empresa X</span>
-							<span class="fecha">2010-2015</span>
+							<span class="date">2010-2015</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
-							<div class="conector-rigth">
-								<div class="circle-rigth"></div>
+							<div class="conector-right">
+								<div class="circle-right"></div>
 							</div>
 						</div>
-						<div class="item rigth">
+						<div class="item right">
 							<h4>Arte y Multimedia</h4>
 							<span class="house">Univesidad del pacifico</span>
-							<span class="fecha">2010-2015</span>
+							<span class="date">2010-2015</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
-							<div class="conector-rigth">
-								<div class="circle-rigth"></div>
+							<div class="conector-right">
+								<div class="circle-right"></div>
 							</div>
 						</div>
-						<div class="item rigth">
+						<div class="item right">
 							<h4>Arte y Multimedia</h4>
 							<span class="house">Univesidad del pacifico</span>
-							<span class="fecha">2010-2015</span>
+							<span class="date">2010-2015</span>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
-							<div class="conector-rigth">
-								<div class="circle-rigth"></div>
+							<div class="conector-right">
+								<div class="circle-right"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+    <!-- SECTION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <div class="row">
+        </div>
+        <div class="row">
+          <h2>Portfolio</h2>
+          <div class="card mb-3 " style="max-width: 450px;">
+            <div class="row g-0 ">
+              <div class="col-md-4 ">
+                <img src="/img/portfolio_1.jpg" class="img-fluid" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 450px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/img/portfolio_2.webp" class="img-fluid" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 450px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/img/portfolio_3.jpeg" class="img-fluid" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-3" style="max-width: 450px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/img/portfolio_4.jpeg" class="img-fluid" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+    </section>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
