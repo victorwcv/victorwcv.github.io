@@ -1,292 +1,263 @@
-:root {
-    --first-color: rgb(176,4,52);
-    --second-color: rgb(243, 242, 242); 
-    --third-color: #333;   
-}
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;400;700;900&display=swap');
 
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: var(--secon-dcolor);
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 400; */
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    font-size: 15px;
+    /* add a smoth scroll when clicked on links */
+    scroll-behavior: smooth;
 }
 
-body {
-    height: 100%;
-    background-color: var(--third-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+/* MENU */
 
-.nav-bar {
-    background-color: transparent;
-    width: 100vw;
-    height: 60px;
+.header-container {
+    background: #a80532;
     position: fixed;
-    top: 20px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 20px;
-    padding-left: 70px;
-    
-}
-
-.nav-bar button {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    transform: scale(1.3);
-    margin: 20px;
-    transition: background-color 0.4s ease-out !important; 
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
-}
-
-.active {
-    background-color: var(--first-color) !important ;
-    color: var(--second-color) !important ;
-    transition: background-color 0.4s ease !important; 
-}
-
-/* landing page styles */
-
-#landing-page {
-    
-    display: grid;
-    width: 1300px;
-    height: 100vh;
-    grid-template-areas: 
-            "picture description description description"
-            "picture icons icons icons "
-            "v-descr v-descr video video"
-            "v-descr v-descr video video";
-        grid-template-rows:  2fr 1fr 1fr 2fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
-    padding: 120px 0px 50px 0px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#landing-page > div {
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: var(--second-color);
-}
-
-#landing-page .prof-pic {
-    grid-area: picture;
-    background-color: var(--first-color);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
-}
-
-#landing-page .prof-pic img {
-    border-radius: 50%;
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: cover;
-    border: 5px solid var(--second-color);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#landing-page .presentation {
-    grid-area: description;
-    background-color: var(--first-color);
-    flex-direction: column;
-    text-align: center;
-}
-
-#landing-page .social {
-    grid-area: icons;
-    display: flex;
-    gap: 10px;
-    box-shadow: none;
-}
-
-#landing-page .social > div {
-    background-color: var(--first-color);
-    height: 100%;
-    flex: 1;
-    border-radius: 10px;    
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#landing-page .video-desc {
-    grid-area: v-descr;
-    background-color: var(--first-color);
-}
-
-#landing-page .video-desc h3 {
-    font-size: 1.5rem;
-    padding: 0 25px;
-    text-align: center;
-    
-}
-
-#landing-page .video-cont {
-    grid-area: video;
-    background-color: var(--first-color);
-}
-
-/* project page styles */
-
-#projects-page {
-    flex: 1;
-    display: grid;
-    width: 1300px;
-    height: 100vh;
-    grid-template-areas: 
-        "pro1 pro2"
-        "pro3 pro4";
-    grid-template-rows: 1fr 1fr ;
-    grid-template-columns: 1fr 1fr ;
-    gap: 10px;
-    padding: 120px 0px 50px 0px;
-}
-
-#projects-page > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#projects-page .project-1 {
-    grid-area: pro1;
-    background-color: var(--first-color);
-}
-
-#projects-page .project-2 {
-    grid-area: pro2;
-    background-color: var(--first-color);
-}
-
-#projects-page .project-3 {
-    grid-area: pro3;
-    background-color: var(--first-color);
-}
-
-#projects-page .project-4 {
-    grid-area: pro4;
-    background-color: var(--first-color);
-}
-
-#projects-page > div {
-    border-radius: 10px ;
-}
-
-/* footer styles */
-
-
-footer {
-    background-color: #222;
-    color: var(--second-color);
-    padding: 20px 0;
     width: 100%;
-    font-size: 1.1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.header-container header {
+    max-width: 1100px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
 }
 
-.footer-container p {
-    margin: 0;
-}
-
-.footer-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-container ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-container ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-container ul li a {
-    color: var(--second-color);
+.header-container header .logo a {
+    font-family: 'Righteous', sans-serif;
+    font-size: 36px;
+    color: whitesmoke;
     text-decoration: none;
 }
 
-.page {
-    height: 100vh;
-    width: 100%; 
+.header-container header ul {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    list-style: none;
 }
 
- /* X-Small devices (portrait phones, less than 576px)
- No media query for `xs` since this is the default in Bootstrap */
+.header-container header nav ul li a {
+    text-align: none;
+    color: white;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
 
- /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 768px) { 
-    #landing-page {
-        flex: 1;
-        display: grid;
-        width: 100%;
-        /* height: 1000px; */
-        grid-template-areas: 
-            "picture description"
-            "  icons icons "
-            "v-descr v-descr "
-            " video video";
-        grid-template-rows: 2fr 1fr 1fr 3fr;
-        grid-template-columns: 1fr 1fr;
-        padding: 100px 30px 30px 30px;
-        
-    }
+.header-container header nav ul li a:hover {
+    color: black;
+}
 
-    #projects-page {
-        flex: 1;
-        display: grid;
-        width: 100%;
-        /* height: 1500px; */
-        grid-template-areas: 
-            "pro1"
-            "pro2"
-            "pro3"
-            "pro4";
-        grid-template-rows: repeat(4, 1fr) ;
-        grid-template-columns: 1fr ;
-        gap: 10px;
-        padding: 100px 30px 30px 30px;
-    }
+.nav-responsive {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
 
-    .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+/* SECTION INICIO */
 
-    .nav-bar {
-        justify-content: center;
-        padding: 0;
+.inicio {
+    background: linear-gradient(to top, rgba(30, 35, 38, .8), rgba(30, 35, 38, 1)), url(img/background_2.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+}
 
-    }
- }
-    
+.inicio .banner-container {
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    /* margin-top: 100px; */
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .banner-container img {
+    margin-top: 40px;
+    border: 10px solid #a80532;
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .banner-container h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Righteous', sans-serif;
+}
+
+.inicio .banner-container h2 {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.inicio .banner-container .redes a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .banner-container .redes a:hover {
+    background-color: #a80532;
+}
+
+
+/* SECTION ABOUT ME */
+
+.about-me {
+    background-color: #1e2326;
+    color: white;
+    padding: 50px 20px;
+}
+
+.about-me .about-me-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-me h2 {
+    font-size: 48px;
+    font-family: 'Righteous', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.about-me .about-me-container p {
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-me .about-me-container p span {
+    color: #a80532;
+    font-weight: bold;
+}
+
+.about-me .content-row {
+    display: flex;
+}
+
+.about-me .content-row .data-col {
+    width: 50%;
+}
+
+.about-me .content-row .data-col h3 {
+    font-size: 28px;
+    font-family: 'Righteous', sans-serif;
+    margin-bottom: 25px;
+}
+
+.about-me .content-row .data-col ul {
+    list-style: none;
+    padding-left: 10%;
+}
+
+.about-me .content-row .data-col ul li {
+    margin: 12px 0;
+    text-align: left;
+}
+
+.about-me .content-row .data-col ul li strong {
+    display: inline-block;
+    color: #a80532;
+    width: 130px;
+}
+
+.about-me .content-row .data-col ul li span {
+    background-color: #a80532;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.about-me .content-row .data-col .interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-me .content-row .data-col .interests-container .interests {
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.about-me .content-row .data-col .interests-container .interests:hover {
+    background-color: #a80532;
+}
+
+.about-me .content-row .data-col .interests-container .interests i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.about-me button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    width: fit-content;
+    display: block;
+    margin: 40px auto;
+    padding: 10px 22px;
+    font-size: 15px;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.about-me button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #a80532;
+    z-index: -1;
+    transition: .5s;
+}
+
+.about-me button:hover .overlay {
+    width: 100%;
+}
+
+/* SECTION CURRICULUM */
+
+.curriculum {
+    background-color: #252a2e;
+    color: white;
+    padding: 50px 20px;
+}
 

@@ -3,171 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio Victor William</title>
-    <!-- Bootstrap and personal Styles Sheet -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Title Icons -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/Icons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/Icons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/Icons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/Icons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/Icons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/Icons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/Icons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/Icons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/Icons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/Icons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/Icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/Icons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/Icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/Icons/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/Icons/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <!-- Nav bar -->
-    <div class="nav-bar">
-      <div class="nav-item">
-        <a
-          ><button
-            type="button"
-            class="btn btn-light button"
-            onclick="scrollToPageButton(0)"
-          >
-            Sobre mi
-          </button></a
-        >
-      </div>
-      <div class="nav-item">
-        <a
-          ><button
-            type="button"
-            class="btn btn-light button"
-            onclick="scrollToPageButton(1)"
-          >
-            Proyectos
-          </button></a
-        >
-      </div>
-    </div>
-    <!-- End Nav bar -->
-
-    <!-- Starts Landing Page -->
-    <div class="page">
-      <section id="landing-page">
-        <div class="prof-pic">
-          <img src="image_1.jpg" alt="" />
+    <!-- HEADER MAIN MENU -->
+    <div class="header-container">
+      <header>
+        <div class="logo">
+          <a href="#">Victor</a>
         </div>
-        <div class="presentation">
-          <h1>Victor William</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            voluptatem quia repellat cum earum! Est sit nam libero quasi quod
-            eum saepe aspernatur mollitia vel, doloremque soluta accusamus
-            voluptas esse?
-          </p>
-        </div>
-        <div class="social">
-          <div><i>LinkedIn</i></div>
-          <div><i>GitHub</i></div>
-          <div><i>Contactame!</i></div>
-        </div>
-        <div class="video-desc">
-          <h3>"Lorem ipsum dolor, sit amet consectetur adipisicing elit"</h3>
-        </div>
-        <div class="video-cont"></div>
-      </section>
-    </div>
-
-    <!-- End Landing Page -->
-
-    <!-- Starts Projects Page -->
-    <div class="page">
-      <section id="projects-page">
-        <div class="project-1"></div>
-        <div class="project-2"></div>
-        <div class="project-3"></div>
-        <div class="project-4"></div>
-      </section>
-
-      <!-- End Projects Page -->
-
-      <!-- Footer -->
-      <footer>
-        <div class="footer-container">
-          <p>© 2023 Victor Ccanchi Portafolio - MIT-xPro</p>
+        <nav id="nav">
           <ul>
-            <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Proyectos</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#sobre-mi">SOBRE MI</a></li>
+            <li><a href="#curriculum">CURRICULUM</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
           </ul>
+        </nav>
+        <div class="nav-responsive">
+          <i class="fa-solid fa-bars"></i>
         </div>
-      </footer>
+      </header>
     </div>
 
-    <script src="script.js"></script>
+    <!-- SECTION INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="banner-container">
+        <img src="img/image_1.jpg" alt="" />
+        <h1>VICTOR CCANCHI</h1>
+        <h2>
+          Desarrollador Fullstack - by
+          <span style="color: #a80532">MIT xPro</span>
+        </h2>
+        <div class="redes">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION ABOUT ME -->
+    <section id="about-me" class="about-me">
+      <div class="about-me-container">
+        <h2>Sobre Mi</h2>
+        <p>
+          <span>Hola, soy Victor Ccanchi. </span>Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Aspernatur pariatur quas excepturi autem
+          quae voluptas iusto velit eaque enim quaerat voluptatem, odit eos
+          ullam, tenetur adipisci, perferendis aperiam doloribus. Quibusdam?
+        </p>
+        <div class="content-row">
+          <!-- PERSONAL DATA -->
+          <div class="data-col">
+            <h3>Datos Personales</h3>
+            <ul>
+              <li>
+                <strong>Cumpleaños</strong>
+                16-Enero
+              </li>
+              <li>
+                <strong>Teléfono</strong>
+                +51 931196396
+              </li>
+              <li>
+								<strong>E-mail</strong>
+                victorwccv@gmail.com
+              </li>
+              <li>
+								<strong>Ubicación</strong>
+                Ica - Perú
+              </li>
+            </ul>
+						<button>
+							Descargar CV <i class="fa-solid fa-download"></i>
+							<span class="overlay"></span>
+						</button>
+          </div>
+          <!-- INTERESTS -->
+          <div class="data-col">
+            <h3>Intereses</h3>
+            <div class="interests-container">
+							<div class="interests">
+								<i class="fa-solid fa-microchip"></i>
+								<span>TECH</span>
+							</div>
+							<div class="interests">
+								<i class="fa-solid fa-gamepad"></i>
+								<span>JUEGOS</span>
+							</div>
+							<div class="interests">
+								<i class="fa-solid fa-headphones"></i>
+                <span>MÚSICA</span>
+              </div>
+							<div class="interests">
+								<i class="fa-solid fa-language"></i>
+								<span>IDIOMAS</span>
+							</div>
+              <div class="interests">
+                <i class="fa-solid fa-plane-departure"></i>
+                <span>VIAJES</span>
+              </div>
+							<div class="interests">
+                <i class="fa-solid fa-tree"></i>
+                <span>NATURE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<!-- SECTION CURRICULUM-->
+		<section id="curriculum" class="curriculum">
+			<div class="content-section">
+				<h2>Curriculum</h2>
+				<div class="row-cv">
+					<div class="col-cv right-main">
+						<h3>Educación</h3>
+						<div class="item left">
+							<h4>Arte y Multimedia</h4>
+							<span class="house">Univesidad del pacifico</span>
+							<span class="fecha">2010-2015</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
+							<div class="conector-left">
+								<div class="circle-left"></div>
+							</div>
+						</div>
+						<div class="item left">
+							<h4>Arte y Multimedia</h4>
+							<span class="house">Univesidad del pacifico</span>
+							<span class="fecha">2010-2015</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
+							<div class="conector-left">
+								<div class="circle-left"></div>
+							</div>
+						</div>
+						<div class="item left">
+							<h4>Arte y Multimedia</h4>
+							<span class="house">Univesidad del pacifico</span>
+							<span class="fecha">2010-2015</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
+							<div class="conector-left">
+								<div class="circle-left"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-cv rigth-main">
+						<h3>Experiencia Laborar</h3>
+						<div class="item rigth">
+							<h4>Front-End</h4>
+							<span class="house">Empresa X</span>
+							<span class="fecha">2010-2015</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
+							<div class="conector-rigth">
+								<div class="circle-rigth"></div>
+							</div>
+						</div>
+						<div class="item rigth">
+							<h4>Arte y Multimedia</h4>
+							<span class="house">Univesidad del pacifico</span>
+							<span class="fecha">2010-2015</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
+							<div class="conector-rigth">
+								<div class="circle-rigth"></div>
+							</div>
+						</div>
+						<div class="item rigth">
+							<h4>Arte y Multimedia</h4>
+							<span class="house">Univesidad del pacifico</span>
+							<span class="fecha">2010-2015</span>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus voluptates, animi aliquam officiis recusandae? Omnis eligendi sit quis possimus dolores earum, optio quam velit esse alias nihil nam ad!</p>
+							<div class="conector-rigth">
+								<div class="circle-rigth"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
   </body>
 </html>
