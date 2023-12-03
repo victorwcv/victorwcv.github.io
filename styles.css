@@ -16,12 +16,18 @@ html {
 /* MENU */
 
 .header-container {
-    background: #a80532;
+    background: transparent;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 99;
+    transition: ease-out .6s ;
+}
+
+.header-container.scrolled {
+    background-color: #a80532;
+    transition: ease-in .6s;
 }
 
 .header-container header {
@@ -35,7 +41,7 @@ html {
 
 .header-container header .logo a {
     font-family: 'Righteous', sans-serif;
-    font-size: 36px;
+    font-size: 40px;
     color: whitesmoke;
     text-decoration: none;
 }
@@ -48,16 +54,19 @@ html {
 }
 
 .header-container header nav ul li a {
+    font-size: 1.2rem;
+    font-weight: 700;
     text-align: none;
     color: white;
     margin: 0 15px;
     padding: 3px;
-    transition: .5s;
+    transition: ease .1s;
     text-decoration: none;
 }
 
 .header-container header nav ul li a:hover {
-    color: black;
+    text-shadow: 1px 1px 2px #000;
+    border-bottom: 3px solid #fff;
 }
 
 .nav-responsive {
@@ -131,6 +140,10 @@ html {
 
 /* SECTION ABOUT ME */
 
+.active {
+    background-color: #a80532 !important;
+}
+
 .about-me {
     background-color: #1e2326;
     color: white;
@@ -139,6 +152,7 @@ html {
 .about-me .container {
     max-width: 1100px;
     padding: 50px 0;
+    margin: 0 auto;
 }
 
 .about-me h2 {
@@ -162,7 +176,7 @@ html {
 }
 
 .about-me .container .row {
-    justify-content: center;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -180,11 +194,8 @@ html {
 
 .about-me .row .data-col {
     max-width: 50%;
-    min-width: 400px;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    min-width: 350px;
 }
 
 .about-me .row .data-col h3 {
@@ -238,7 +249,7 @@ html {
 }
 
 .about-me .row .data-col .interests-container .interests:hover {
-    background-color: #a80532;
+    background-color: #252a2e !important;
 }
 
 .about-me .row .data-col .interests-container .interests i {
@@ -282,13 +293,12 @@ html {
     background: #252a2e;
     background-size: cover;
     color: white;
-    justify-content: space-around;
 }
 
 .curriculum .container {
     max-width: 1100px;
     padding: 80px 0px;
-    justify-content: space-around;
+    margin: 0 auto;
 }
 
 .curriculum h2 {
@@ -299,13 +309,13 @@ html {
 }
 
 .curriculum .row {
-    justify-content: space-around;
+    margin: 0 auto;
     margin-top: 40px;
     width: 100%;
 }
 
 .curriculum .row .col-cv {
-    margin: 50px 5px 0px 5px;
+    margin: 0 auto;
     width: 49%;
     min-width: 350px;
     padding: 0 29px;
