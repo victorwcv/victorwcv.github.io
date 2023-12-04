@@ -1,4 +1,4 @@
-// function that show and hide menu
+
 
 let showingMenu = false;
 const menu = document.getElementById("nav");
@@ -6,6 +6,8 @@ const interests = document.getElementsByClassName('interests');
 const interestsContainer = document.getElementById('interests-container')
 let pos = 0;
 const header = document.querySelector('.header-container')
+
+//Efecto de nav-bar
 
 window.addEventListener("scroll", function() {
   if (window.scrollY >= document.documentElement.clientHeight / 8) {
@@ -15,6 +17,7 @@ window.addEventListener("scroll", function() {
   }
 });
 
+//efecto de intereses
 
 function toggle(pos) {
   if (pos < 0) return;
@@ -37,10 +40,12 @@ const observer = new IntersectionObserver(entries => {
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.5 }); // Umbral del 50%
+}, { threshold: 0.5 });
 
 // Observar el elemento 'interestsContainer'
 observer.observe(interestsContainer);
+
+//funcion que muestra y oculta nav-bar en dispositivos pequ.
 
 function showHideMenu() {
   if (showingMenu) {
