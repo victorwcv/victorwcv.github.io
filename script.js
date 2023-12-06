@@ -1,15 +1,12 @@
-
-
 let showingMenu = false;
 const menu = document.getElementById("nav");
-const interests = document.getElementsByClassName('interests');
-const interestsContainer = document.getElementById('interests-container')
+const interests = document.getElementsByClassName("interests");
+const interestsContainer = document.getElementById("interests-container");
+const header = document.querySelector(".header-container");
 let pos = 0;
-const header = document.querySelector('.header-container')
 
-//Efecto de nav-bar
-
-window.addEventListener("scroll", function() {
+//nav-var animation
+window.addEventListener("scroll", function () {
   if (window.scrollY >= document.documentElement.clientHeight / 8) {
     header.classList.add("scrolled");
   } else {
@@ -17,11 +14,10 @@ window.addEventListener("scroll", function() {
   }
 });
 
-//efecto de intereses
-
+//Interests animation
 function toggle(pos) {
   if (pos < 0) return;
-  interests[pos].classList.add('active');
+  interests[pos].classList.add("active");
 }
 
 function move() {
@@ -32,21 +28,23 @@ function move() {
   setTimeout(move, 300);
 }
 
-// Crear un observer
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-      move();
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
+//Observer
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        move();
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
 
-// Observar el elemento 'interestsContainer'
+
 observer.observe(interestsContainer);
 
-//funcion que muestra y oculta nav-bar en dispositivos pequ.
-
+//show and hide nav-bar in small devices
 function showHideMenu() {
   if (showingMenu) {
     menu.classList = "";
@@ -61,9 +59,3 @@ function select() {
   menu.classList = "";
   showingMenu = false;
 }
-
-
-
-
-
-

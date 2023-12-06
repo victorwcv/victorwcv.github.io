@@ -22,7 +22,7 @@ html {
     top: 0;
     left: 0;
     z-index: 99;
-    transition: ease-out .6s ;
+    transition: ease-out .6s;
 }
 
 .header-container.scrolled {
@@ -330,15 +330,15 @@ html {
 
 .curriculum .row .left-main {
     border-right: 4px solid #1e2326;
-    
+
 }
 
 .curriculum .row .right-main {
     border-left: 4px solid #1e2326;
-    
+
 }
 
-.curriculum .row .right-main h3{
+.curriculum .row .right-main h3 {
     margin-left: 20px;
 }
 
