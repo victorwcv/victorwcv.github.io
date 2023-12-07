@@ -41,7 +41,6 @@ const observer = new IntersectionObserver(
   { threshold: 0.5 }
 );
 
-
 observer.observe(interestsContainer);
 
 //show and hide nav-bar in small devices
@@ -58,4 +57,14 @@ function showHideMenu() {
 function select() {
   menu.classList = "";
   showingMenu = false;
+}
+
+function showSpan(container) {
+  var span = container.getElementsByClassName("hidden-span")[0];
+  span.style.display = "inline"; // Muestra el span al pasar el mouse por el contenedor
+}
+
+function hideSpan(container) {
+  var span = container.getElementsByClassName("hidden-span")[0];
+  span.style.display = "none"; // Oculta el span al retirar el mouse del contenedor
 }

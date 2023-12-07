@@ -103,7 +103,6 @@
           <ul>
             <li><a href="#inicio" onclick="select()">INICIO</a></li>
             <li><a href="#about-me" onclick="select()">SOBRE MI</a></li>
-            <li><a href="#curriculum" onclick="select()">CURRICULUM</a></li>
             <li><a href="#portfolio" onclick="select()">PORTFOLIO</a></li>
           </ul>
         </nav>
@@ -123,9 +122,15 @@
           <a href="https://www.linkedin.com/in/victor-ccanchi/" target="_blank"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
-          <a href="https://github.com/victorwcv" target="_blank"
-            ><i class="fa-brands fa-github"></i
-          ></a>
+          <a
+            href="https://github.com/victorwcv"
+            target="_blank"
+            onmouseover="showSpan(this)"
+            onmouseout="hideSpan(this)"
+            ><i class="fa-brands fa-github"
+              ><span class="hidden-span"> victorwcv</span></i
+            ></a
+          >
           <a href="mailto:victorwccv@gmail.com" target="_blank"
             ><i class="fa-solid fa-envelope"></i
           ></a>
@@ -147,9 +152,7 @@
           práctico, buscando constantemente formas de mejorar mis habilidades.
           Mi trayectoria en la electricidad industrial se fusiona con mi
           habilidad para trabajar en equipo, adaptarme a las últimas tendencias
-          tecnológicas y colaborar efectivamente. Además, mi pasión por el
-          idioma inglés y los videojuegos alimentan mi curiosidad constante,
-          brindando una perspectiva única a mis proyectos de desarrollo web.
+          tecnológicas y colaborar efectivamente.
         </p>
         <div class="row">
           <div class="data-col">
@@ -193,93 +196,6 @@
       </div>
     </section>
 
-    <!-- SECTION CURRICULUM-->
-    <section id="curriculum" class="curriculum">
-      <div class="container">
-        <h2>Curriculum</h2>
-        <div class="row">
-          <div class="col-cv left-main">
-            <h3>Educación</h3>
-            <div class="item left">
-              <h4>Arte y Multimedia</h4>
-              <span class="house">Univesidad del pacifico</span>
-              <span class="date">2010-2015</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                accusamus voluptates
-              </p>
-              <div class="conector-left">
-                <div class="circle-left"></div>
-              </div>
-            </div>
-            <div class="item left">
-              <h4>Arte y Multimedia</h4>
-              <span class="house">Univesidad del pacifico</span>
-              <span class="date">2010-2015</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                accusamus voluptates
-              </p>
-              <div class="conector-left">
-                <div class="circle-left"></div>
-              </div>
-            </div>
-            <div class="item left">
-              <h4>Arte y Multimedia</h4>
-              <span class="house">Univesidad del pacifico</span>
-              <span class="date">2010-2015</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                accusamus voluptates
-              </p>
-              <div class="conector-left">
-                <div class="circle-left"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-cv right-main">
-            <h3>Experiencia Laborar</h3>
-            <div class="item right">
-              <h4>Front-End</h4>
-              <span class="house">Empresa X</span>
-              <span class="date">2010-2015</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                accusamus voluptates
-              </p>
-              <div class="conector-right">
-                <div class="circle-right"></div>
-              </div>
-            </div>
-            <div class="item right">
-              <h4>Arte y Multimedia</h4>
-              <span class="house">Univesidad del pacifico</span>
-              <span class="date">2010-2015</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                accusamus voluptates
-              </p>
-              <div class="conector-right">
-                <div class="circle-right"></div>
-              </div>
-            </div>
-            <div class="item right">
-              <h4>Arte y Multimedia</h4>
-              <span class="house">Univesidad del pacifico</span>
-              <span class="date">2010-2015</span>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                accusamus voluptates
-              </p>
-              <div class="conector-right">
-                <div class="circle-right"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- SECTION PORTFOLIO -->
     <section id="portfolio" class="portfolio">
       <div class="container">
@@ -288,7 +204,9 @@
           <div class="card mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4">
-                <a href="#"
+                <a
+                  href="https://github.com/victorwcv/PacMen-Exercise"
+                  target="_blank"
                   ><img
                     src="/img/pacmen.jpg"
                     class="img-fluid"
@@ -323,8 +241,13 @@
           <div class="card mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4">
-                <a href="#"
-                  ><img src="/img/eyes.jpg" class="img-fluid" alt="..."
+                <a
+                  href="https://github.com/victorwcv/Eye-Exercise"
+                  target="_blank"
+                  ><img
+                    src="/img/eyes.jpg"
+                    class="img-fluid"
+                    alt="imagen of pacmen exercise"
                 /></a>
               </div>
               <div class="col-md-8">
@@ -356,7 +279,9 @@
           <div class="card mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4">
-                <a href="#"
+                <a
+                  href="https://github.com/victorwcv/Real-Time-Bus-Tracker"
+                  target="_blank"
                   ><img
                     src="/img/bus-tracker.jpg"
                     class="img-fluid"
@@ -367,8 +292,9 @@
                 <div class="card-body">
                   <h5 class="card-title">Real Time Bus Tracking</h5>
                   <p class="card-text">
-                    En este proyecto seguiremos en vivo el recorrido de los
-                    buses de una de las lineas de buses del MIT.
+                    En este proyecto seguiremos en vivo el recorrido de una de
+                    las rutas de buses en la ciudad de Boston que pasan por el
+                    MIT.
                   </p>
                   <a
                     class="btn btn-primary"
@@ -391,7 +317,7 @@
           <div class="card mb-3" style="max-width: 450px">
             <div class="row g-0">
               <div class="col-md-4">
-                <a href="#"
+                <a href="https://github.com/victorwcv" target="_blank"
                   ><img src="/img/portfolio_4.jpg" class="img-fluid" alt="..."
                 /></a>
               </div>
