@@ -179,7 +179,7 @@ html {
 }
 
 .about-me .container p span {
-    color: #a80532;
+    color: whitesmoke;
     font-weight: bold;
 }
 
@@ -271,7 +271,7 @@ html {
     border: 2px solid white;
     width: fit-content;
     display: block;
-    margin: 60px auto;
+    margin: 130px auto;
     padding: 10px 22px;
     font-size: 20px;
     color: white;
