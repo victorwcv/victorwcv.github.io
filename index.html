@@ -1,367 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="/Icons/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="/Icons/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="/Icons/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="/Icons/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="/Icons/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="/Icons/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="/Icons/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="/Icons/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/Icons/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/Icons/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/Icons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/Icons/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/Icons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/Icons/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/Icons/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- HEADER MAIN MENU -->
     <div class="header-container">
-      <header>
-        <div class="logo">
-          <a href="#">Victor</a>
-        </div>
-        <nav id="nav">
-          <ul>
-            <li><a href="#inicio" onclick="select()">INICIO</a></li>
-            <li><a href="#about-me" onclick="select()">SOBRE MI</a></li>
-            <li><a href="#portfolio" onclick="select()">PORTFOLIO</a></li>
-          </ul>
-        </nav>
-        <div class="nav-responsive" onclick="showHideMenu()">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </header>
+        <header>
+            <div class="logo">
+                <a href="#">Victor</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="select()">INICIO</a></li>
+                    <li><a href="#about-me" onclick="select()">SOBRE MI</a></li>
+                    <li><a href="#portfolio" onclick="select()">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="showHideMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
     </div>
 
     <!-- SECTION INICIO -->
     <section id="inicio" class="inicio">
-      <div class="banner-container">
-        <img src="img/image_1.jpg" alt="" />
-        <h1>VICTOR CCANCHI</h1>
-        <h2>Desarrollador Web FullStack</h2>
-        <div class="redes">
-          <a href="https://www.linkedin.com/in/victor-ccanchi/" target="_blank"
-            ><i class="fa-brands fa-linkedin"></i
-          ></a>
-          <a
-            href="https://github.com/victorwcv"
-            target="_blank"
-            onmouseover="showSpan(this)"
-            onmouseout="hideSpan(this)"
-            ><i class="fa-brands fa-github"
-              ><span class="hidden-span"> victorwcv</span></i
-            ></a
-          >
-          <a href="mailto:victorwccv@gmail.com" target="_blank"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
+        <div class="banner-container">
+            <img src="assets/profile.webp" alt="" />
+            <h1>VICTOR CCANCHI</h1>
+            <h2>Desarrollador Web FullStack</h2>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/victor-ccanchi/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/victorwcv" target="_blank" onmouseover="showSpan(this)"
+                    onmouseout="hideSpan(this)"><i class="fa-brands fa-github"><span class="hidden-span">
+                            victorwcv</span></i></a>
+                <a href="mailto:victorwccv@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
         </div>
-      </div>
     </section>
 
     <!-- SECTION ABOUT ME -->
     <section id="about-me" class="about-me">
-      <div class="container">
-        <h2>Sobre Mi</h2>
-        <p>
-          <span>Hola!, soy Victor... </span>Un desarrollador web apasionado, con
-          raíces en la electricidad industrial y estudios en ingeniería
-          electrónica. Mi enfoque detallista y disciplina se refleja en cada línea de código
-          que escribo, combinando una mente creativa con la capacidad de ofrecer
-          soluciones innovadoras y funcionales. Autodidacta por naturaleza, he
-          cultivado mi experiencia a través de un aprendizaje continuo y
-          práctico, buscando constantemente formas de mejorar mis habilidades.
-        </p>
-        <div class="row">
-          <div class="data-col">
-            <h3>Curriculum</h3>
-            <button>
-              Descargar CV <i class="fa-solid fa-download"></i>
-              <span class="overlay"></span>
-          </div>
-          <!-- INTERESTS -->
-          <div class="data-col">
-            <h3>Intereses</h3>
-            <div id="interests-container" class="interests-container col">
-              <div class="interests">
-                <i class="fa-solid fa-microchip"></i>
-                <span>TECH</span>
-              </div>
-              <div class="interests">
-                <i class="fa-solid fa-gamepad"></i>
-                <span>JUEGOS</span>
-              </div>
-              <div class="interests">
-                <i class="fa-solid fa-headphones"></i>
-                <span>MÚSICA</span>
-              </div>
-              <div class="interests">
-                <i class="fa-solid fa-language"></i>
-                <span>IDIOMAS</span>
-              </div>
-              <div class="interests">
-                <i class="fa-solid fa-plane-departure"></i>
-                <span>VIAJES</span>
-              </div>
-              <div class="interests">
-                <i class="fa-solid fa-tree"></i>
-                <span>NATURE</span>
-              </div>
+        <div class="container">
+            <h2>Sobre Mi</h2>
+            <p>
+                <span>Hola!, soy Victor... </span>Un desarrollador web apasionado, con
+                raíces en la electricidad industrial y estudios en ingeniería
+                electrónica. Mi enfoque detallista y disciplina se refleja en cada línea de código
+                que escribo, combinando una mente creativa con la capacidad de ofrecer
+                soluciones innovadoras y funcionales. Autodidacta por naturaleza, he
+                cultivado mi experiencia a través de un aprendizaje continuo y
+                práctico, buscando constantemente formas de mejorar mis habilidades.
+            </p>
+            <div class="row">
+                <div class="data-col">
+                    <h3>Curriculum</h3>
+                    <button>
+                        Descargar CV <i class="fa-solid fa-download"></i>
+                        <span class="overlay"></span>
+                </div>
+                <!-- INTERESTS -->
+                <div class="data-col">
+                    <h3>Intereses</h3>
+                    <div id="interests-container" class="interests-container col">
+                        <div class="interests">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>TECH</span>
+                        </div>
+                        <div class="interests">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interests">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MÚSICA</span>
+                        </div>
+                        <div class="interests">
+                            <i class="fa-solid fa-language"></i>
+                            <span>IDIOMAS</span>
+                        </div>
+                        <div class="interests">
+                            <i class="fa-solid fa-plane-departure"></i>
+                            <span>VIAJES</span>
+                        </div>
+                        <div class="interests">
+                            <i class="fa-solid fa-tree"></i>
+                            <span>NATURE</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            </button>
         </div>
-        
-        </button>
-      </div>
     </section>
 
     <!-- SECTION PORTFOLIO -->
     <section id="portfolio" class="portfolio">
-      <div class="container">
-        <div class="row">
-          <h2>Portfolio</h2>
-          <div class="card mb-3" style="max-width: 450px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <a
-                  href="https://github.com/victorwcv/Eye-Exercise"
-                  target="_blank"
-                  ><img
-                    src="/img/tic-tac-toe.jpg"
-                    class="img-fluid"
-                    alt="imagen of pacmen exercise"
-                /></a>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Tic-Tac-Toe</h5>
-                  <p class="card-text">
-                    Este proyecto es el clásico juego tres en raya pero esta vez desarrollado en React. Diviertete retando a tus amigos!
-                  </p>
-                  <a
-                    class="btn btn-primary"
-                    href="https://tic-tac-toe-eta-six.vercel.app/"
-                    role="button"
-                    target="_blank"
-                    >Proyecto</a
-                  >
-                  <a
-                    class="btn btn-primary"
-                    href="https://github.com/victorwcv/tic-tac-toe"
-                    role="button"
-                    target="_blank"
-                    >Repositorio</a
-                  >
+        <div class="container">
+            <div class="row">
+                <h2>Portfolio</h2>
+                <div class="card mb-3" style="max-width: 450px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://github.com/victorwcv/Eye-Exercise" target="_blank"><img
+                                    src="/img/tic-tac-toe.jpg" class="img-fluid" alt="imagen of pacmen exercise" /></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Tic-Tac-Toe</h5>
+                                <p class="card-text">
+                                    Este proyecto es el clásico juego tres en raya pero esta vez desarrollado en React.
+                                    Diviertete retando a tus amigos!
+                                </p>
+                                <a class="btn btn-primary" href="https://tic-tac-toe-eta-six.vercel.app/" role="button"
+                                    target="_blank">Proyecto</a>
+                                <a class="btn btn-primary" href="https://github.com/victorwcv/tic-tac-toe" role="button"
+                                    target="_blank">Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 450px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <a
-                  href="https://github.com/victorwcv/PacMen-Exercise"
-                  target="_blank"
-                  ><img
-                    src="/img/pacmen.jpg"
-                    class="img-fluid"
-                    alt="image of the pac-men project"
-                /></a>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">PacMen Exercise</h5>
-                  <p class="card-text">
-                    Aqui veremos como multiples PacMan se desplazan
-                    aleatoriamente interactuando con los límites del navegador.
-                  </p>
-                  <a
-                    class="btn btn-primary"
-                    href="https://victorwcv.github.io/PacMen-Exercise/"
-                    role="button"
-                    target="_blank"
-                    >Proyecto</a
-                  >
-                  <a
-                    class="btn btn-primary"
-                    href="https://github.com/victorwcv/PacMen-Exercise"
-                    role="button"
-                    target="_blank"
-                    >Repositorio</a
-                  >
+                <div class="card mb-3" style="max-width: 450px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://github.com/victorwcv/PacMen-Exercise" target="_blank"><img
+                                    src="/img/pacmen.jpg" class="img-fluid" alt="image of the pac-men project" /></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">PacMen Exercise</h5>
+                                <p class="card-text">
+                                    Aqui veremos como multiples PacMan se desplazan
+                                    aleatoriamente interactuando con los límites del navegador.
+                                </p>
+                                <a class="btn btn-primary" href="https://victorwcv.github.io/PacMen-Exercise/"
+                                    role="button" target="_blank">Proyecto</a>
+                                <a class="btn btn-primary" href="https://github.com/victorwcv/PacMen-Exercise"
+                                    role="button" target="_blank">Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 450px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <a
-                  href="https://github.com/victorwcv/Real-Time-Bus-Tracker"
-                  target="_blank"
-                  ><img
-                    src="/img/bus-tracker.jpg"
-                    class="img-fluid"
-                    alt="image of the bus-tracker project"
-                /></a>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Real Time Bus Tracking</h5>
-                  <p class="card-text">
-                    En este proyecto seguiremos en vivo el recorrido de una de
-                    las rutas de buses en la ciudad de Boston que pasan por el
-                    MIT.
-                  </p>
-                  <a
-                    class="btn btn-primary"
-                    href="https://victorwcv.github.io/Real-Time-Bus-Tracker/"
-                    role="button"
-                    target="_blank"
-                    >Proyecto
-                  </a>
-                  <a
-                    class="btn btn-primary"
-                    href="https://github.com/victorwcv/Real-Time-Bus-Tracker"
-                    role="button"
-                    target="_blank"
-                    >Repositorio</a
-                  >
+                <div class="card mb-3" style="max-width: 450px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://github.com/victorwcv/Real-Time-Bus-Tracker" target="_blank"><img
+                                    src="/img/bus-tracker.jpg" class="img-fluid"
+                                    alt="image of the bus-tracker project" /></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Real Time Bus Tracking</h5>
+                                <p class="card-text">
+                                    En este proyecto seguiremos en vivo el recorrido de una de
+                                    las rutas de buses en la ciudad de Boston que pasan por el
+                                    MIT.
+                                </p>
+                                <a class="btn btn-primary" href="https://victorwcv.github.io/Real-Time-Bus-Tracker/"
+                                    role="button" target="_blank">Proyecto
+                                </a>
+                                <a class="btn btn-primary" href="https://github.com/victorwcv/Real-Time-Bus-Tracker"
+                                    role="button" target="_blank">Repositorio</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-3" style="max-width: 450px">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <a href="https://github.com/victorwcv" target="_blank"
-                  ><img src="/img/portfolio_4.jpg" class="img-fluid" alt="..."
-                /></a>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Más Proyectos...</h5>
-                  <p class="card-text">
-                    Constantemente enriqueciendo mi portafolio con proyectos
-                    innovadores y emocionantes. ¡Más por venir pronto!
-                  </p>
-                  <a
-                    class="btn btn-primary"
-                    href="https://github.com/victorwcv"
-                    role="button"
-                    target="_blank"
-                    >Visita mi GitHub</a
-                  >
+                <div class="card mb-3" style="max-width: 450px">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://github.com/victorwcv" target="_blank"><img src="/img/portfolio_4.jpg"
+                                    class="img-fluid" alt="..." /></a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Más Proyectos...</h5>
+                                <p class="card-text">
+                                    Constantemente enriqueciendo mi portafolio con proyectos
+                                    innovadores y emocionantes. ¡Más por venir pronto!
+                                </p>
+                                <a class="btn btn-primary" href="https://github.com/victorwcv" role="button"
+                                    target="_blank">Visita mi GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-      <a href="#inicio" class="top">
-        <i class="fa-solid fa-angles-up"></i>
-      </a>
-      <div class="redes">
-        <a href="https://www.linkedin.com/in/victor-ccanchi/" target="_blank"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="https://github.com/victorwcv" target="_blank"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="mailto:victorwccv@gmail.com" target="_blank"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-      </div>
-      <p>&copy; 2023 Victor William Ccanchi Vasquez - MIT-xPro</p>
+        <a href="#inicio" class="top">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/victor-ccanchi/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/victorwcv" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:victorwccv@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <p>&copy; <span id="year"></span> Victor William Ccanchi Vasquez</p>
     </footer>
-  </body>
-  <script src="script.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
+
 </html>
