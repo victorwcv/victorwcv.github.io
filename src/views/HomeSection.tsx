@@ -4,7 +4,10 @@ import { Icon } from '../icons/icons';
 
 const HomeSection: FC = () => {
   return (
-    <section className="relative h-[calc(100vh-64px)] min-w-80 min-h-[600px] homeSection">
+    <section
+      className="relative h-[calc(100vh-64px)] min-w-80 min-h-[600px] homeSection"
+      id="home"
+    >
       <div className="bg-zinc-950/80 absolute inset-0 w-full h-full"></div>
       <div className="relative h-full flex flex-col justify-center items-center">
         <div>
@@ -19,7 +22,7 @@ const HomeSection: FC = () => {
           </h3>
           <button className="block border-gray-500 border-2 lg:px-16 px-8 lg:py-4 py-2 text-white mt-8 mx-auto hover:border-primary transition-all duration-300">
             <span className="inline-flex items-center gap-2">
-              MORE ABOUT ME <Icon.IoIosArrowDown />
+              MORE ABOUT ME <Icon.arrowDown />
             </span>
           </button>
         </div>
@@ -28,19 +31,19 @@ const HomeSection: FC = () => {
             href="#"
             className="hover:text-primary transition-all duration-300"
           >
-            <Icon.FaLinkedin />
+            <Icon.linkedin />
           </a>
           <a
             href="#"
             className="hover:text-primary transition-all duration-300"
           >
-            <Icon.FaGithub />
+            <Icon.github />
           </a>
           <a
             href="#"
             className="hover:text-primary transition-all duration-300"
           >
-            <Icon.FaEnvelope />
+            <Icon.envelope />
           </a>
         </div>
       </div>

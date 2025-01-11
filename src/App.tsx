@@ -4,18 +4,18 @@ import LoadingPage from './views/LoadingPage';
 import { AnimatePresence } from 'motion/react';
 import Navbar from './components/Navbar';
 import HomeSection from './views/HomeSection';
-import AboutmeSection from './views/AboutmeSection';
+import AboutSection from './views/AboutmeSection';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
 
   return (
-    <div className="relative h-screen min-h-fit app">
+    <div className="relative h-screen min-h-fit text-zinc-600 app">
       <Navbar />
 
       <PortfolioLayout>
         <HomeSection />
-        <AboutmeSection />
+        <AboutSection />
       </PortfolioLayout>
 
       <AnimatePresence>

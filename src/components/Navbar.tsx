@@ -8,10 +8,10 @@ const Navbar: FC = () => {
         <nav className="lg:block hidden">
           <ul className="flex gap-12 font font-semibold">
             <li className="hover:text-primary">
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li className="hover:text-primary">
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
           </ul>
         </nav>
