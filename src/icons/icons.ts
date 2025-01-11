@@ -32,6 +32,7 @@ import { FaGlobeAmericas } from 'react-icons/fa';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { DiScrum } from 'react-icons/di';
 import { BsTranslate } from 'react-icons/bs';
+import { FaGraduationCap } from 'react-icons/fa';
 
 export const Icon = {
   linkedin: FaLinkedin,
@@ -68,4 +69,5 @@ export const Icon = {
   externalLink: FaExternalLinkAlt,
   scrum: DiScrum,
   translate: BsTranslate,
+  graduation: FaGraduationCap,
 };

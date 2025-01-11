@@ -20,7 +20,7 @@ const HomeSection: FC = () => {
           <h3 className="lg:text-xl text-sm text-center text-gray-100 m-2 font-console">
             {'| WEB-APP-DEVELOPER | FRONTEND | BACKEND |'}
           </h3>
-          <button className="block border-gray-500 border-2 lg:px-16 px-8 lg:py-4 py-2 text-white mt-8 mx-auto hover:border-primary transition-all duration-300">
+          <button className="block border-gray-500 border-[3px] lg:px-16 px-8 lg:py-4 py-2 text-white mt-8 mx-auto hover:border-primary transition-all duration-300">
             <span className="inline-flex items-center gap-2">
               MORE ABOUT ME <Icon.arrowDown />
             </span>
