@@ -25,8 +25,8 @@ const ResumeSection = () => {
 
       <div>
         {/* Work Experience */}
-        <div>
-          <h3 className="text-primary font-bold lg:text-xl text-base text-center tracking-widest my-10">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-primary font-bold lg:text-xl text-base tracking-widest my-10">
             WORK EXPERIENCE
           </h3>
 
@@ -58,8 +58,8 @@ const ResumeSection = () => {
         </div>
 
         {/* Education */}
-        <div>
-          <h3 className="text-primary font-bold lg:text-xl text-base text-center tracking-widest mt-14 mb-10">
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-primary font-bold lg:text-xl text-base tracking-widest mt-14 mb-10">
             EDUCATION
           </h3>
 
@@ -90,7 +90,7 @@ const ResumeSection = () => {
           </div>
         </div>
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-primary font-bold lg:text-xl text-base text-center tracking-widest mt-24 mb-16">
+          <h3 className="text-primary font-bold lg:text-xl text-base tracking-widest mt-24 mb-16">
             CERTIFICATES
           </h3>
           <div className="w-full flex justify-center">

@@ -193,10 +193,10 @@ const AboutSection: FC = () => {
       </div>
       {/* Links */}
       <div className="flex sm:flex-row flex-col justify-center gap-6 mt-12">
-        <a className="text-center border-zinc-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-primary hover:text-primary font-bold transition-all duration-300 ">
+        <a className="text-center border-zinc-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-primary hover:text-primary font-bold transition-all duration-300 cursor-pointer">
           HIRE ME
         </a>
-        <a className="text-center border-zinc-700 bg-zinc-700 text-white border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-zinc-900 hover:bg-zinc-900  font-bold transition-all duration-300 ">
+        <a className="text-center border-zinc-700 bg-zinc-700 text-white border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-zinc-900 hover:bg-zinc-900  font-bold transition-all duration-300 cursor-pointer">
           DOWNLOAD CV
         </a>
       </div>
