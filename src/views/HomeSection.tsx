@@ -5,7 +5,7 @@ import { Icon } from '../icons/icons';
 const HomeSection: FC = () => {
   return (
     <section
-      className="relative h-[calc(100vh-64px)] min-w-80 min-h-[600px] homeSection"
+      className="relative h-[calc(100vh-64px)] min-w-80 min-h-[600px] scroll-mt-16"
       id="home"
     >
       <div className="bg-zinc-950/80 absolute inset-0 w-full h-full"></div>

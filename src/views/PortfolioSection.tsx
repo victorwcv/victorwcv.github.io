@@ -27,14 +27,14 @@ const PortfolioSection = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1">
           <div className="col-span-1">
             <ProjectSquare
-              imgSrc="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              imgSrc="https://picsum.photos/id/206/900/400"
               height="lg:h-[700px] h-[400px]"
               projectName="Project 1"
               projectDescription="Description 1"
               onclick={handleClick}
             />
             <ProjectSquare
-              imgSrc="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              imgSrc="https://picsum.photos/id/217/900/400"
               height="lg:h-[500px] h-[400px]"
               projectName="Project 2"
               projectDescription="Description 2"
@@ -42,7 +42,7 @@ const PortfolioSection = () => {
             />
 
             <ProjectSquare
-              imgSrc="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              imgSrc="https://picsum.photos/id/218/900/400"
               height="lg:h-[500px] h-[400px]"
               projectName="Project 3"
               projectDescription="Description 3"
@@ -52,7 +52,7 @@ const PortfolioSection = () => {
 
           <div className="col-span-1">
             <ProjectSquare
-              imgSrc="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              imgSrc="https://picsum.photos/id/219/900/400"
               height="lg:h-[500px] h-[450px]"
               projectName="Project 4"
               projectDescription="Description 4"
@@ -60,7 +60,7 @@ const PortfolioSection = () => {
             />
 
             <ProjectSquare
-              imgSrc="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              imgSrc="https://picsum.photos/id/230/900/400"
               height="lg:h-[500px] h-[450px]"
               projectName="Project 5"
               projectDescription="Description 5"
@@ -68,7 +68,7 @@ const PortfolioSection = () => {
             />
 
             <ProjectSquare
-              imgSrc="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+              imgSrc="https://picsum.photos/id/221/900/400"
               height="lg:h-[700px] h-[450px]"
               projectName="Project 6"
               projectDescription="Description 6"

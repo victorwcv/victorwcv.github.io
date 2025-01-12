@@ -13,23 +13,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* :root {
-  --scrollbar-bg: #ffffff00;
-  --scrollbar-thumb: #05b0d4;
-  --scrollbar-thumb-hover: #69d0e5;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
-  border-radius: 9999px;
-}
-::-webkit-scrollbar-track {
-  background-color: var(--scrollbar-bg);
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scrollbar-thumb-hover);
-} */

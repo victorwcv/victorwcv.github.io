@@ -82,8 +82,8 @@ const ResumeSection = () => {
 
             <ResumeLineBlock
               icon={<Icon.graduation className="text-white text-xl" />}
-              title="Associate Degree in Industrial Electricity"
-              date="2023 - Present"
+              title="Technical Diploma in Industrial Electricity"
+              date="Aug. 2012 - Jul. 2015"
               descriptioTitle="SENATI"
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim ab cumque quasi eaque odio, accusamus eius, ipsa deserunt eum aliquid maxime harum minima debitis itaque. Incidunt laboriosam veritatis architecto natus."
             />
