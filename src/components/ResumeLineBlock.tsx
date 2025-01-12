@@ -28,7 +28,9 @@ const ResumeLineBlock: FC<Props> = ({
         </h4>
         {/* line */}
         <div className="w-16 h-1 bg-zinc-400"></div>
-        <p className="text-zinc-500 py-4 lg:text-base text-sm">{description}</p>
+        <p className="text-zinc-500 py-4 lg:text-base text-sm font-serif">
+          {description}
+        </p>
         {/* circle */}
         <div className="absolute size-12 rounded-full bg-zinc-700 top-5 left-0 -translate-x-1/2 flex items-center justify-center">
           {icon}
