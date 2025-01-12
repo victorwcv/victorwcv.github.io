@@ -34,6 +34,12 @@ import { DiScrum } from 'react-icons/di';
 import { BsTranslate } from 'react-icons/bs';
 import { FaGraduationCap } from 'react-icons/fa';
 import { FaArrowUpLong } from 'react-icons/fa6';
+import { GiCoffeeCup } from 'react-icons/gi';
+import { FaPencilRuler } from 'react-icons/fa';
+import { IoCalendarNumber } from 'react-icons/io5';
+import { PiCertificateFill } from 'react-icons/pi';
+import { FaCodeBranch } from 'react-icons/fa6';
+import { FaClock } from 'react-icons/fa6';
 
 export const Icon = {
   linkedin: FaLinkedin,
@@ -72,4 +78,10 @@ export const Icon = {
   translate: BsTranslate,
   graduation: FaGraduationCap,
   arrowUp: FaArrowUpLong,
+  coffee: GiCoffeeCup,
+  pencil: FaPencilRuler,
+  calendar: IoCalendarNumber,
+  certificate: PiCertificateFill,
+  codeBranch: FaCodeBranch,
+  clock: FaClock,
 };
