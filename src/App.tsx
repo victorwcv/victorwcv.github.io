@@ -10,6 +10,7 @@ import AboutSection from './views/AboutmeSection';
 import ResumeSection from './views/ResumeSection';
 import PortfolioSection from './views/PortfolioSection';
 import ContactSection from './views/ContactSection';
+import MyNumbers from './views/MyNumbers';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
@@ -21,6 +22,7 @@ function App() {
       <PortfolioLayout>
         <HomeSection />
         <AboutSection />
+        <MyNumbers />
         <ResumeSection />
         <PortfolioSection />
         <ContactSection />

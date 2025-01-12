@@ -105,7 +105,7 @@ const ContactSection = () => {
               {...register('name', {
                 required: 'this field is required',
               })}
-              className="mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 bg-white bg-opacity-20 focus:border-b-primary outline-none placeholder:text-zinc-600"
+              className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-primary outline-none placeholder:text-zinc-600"
             />
             {errors.name && (
               <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1  text-white bg-primary text-xs uppercase">
@@ -127,7 +127,7 @@ const ContactSection = () => {
                   message: 'invalid email format',
                 },
               })}
-              className="mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 bg-white bg-opacity-20 focus:border-b-primary outline-none placeholder:text-zinc-600"
+              className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-primary outline-none placeholder:text-zinc-600"
             />
             {errors.email && (
               <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1  text-white bg-primary text-xs uppercase">
@@ -144,7 +144,7 @@ const ContactSection = () => {
               {...register('message', {
                 required: 'this field is required',
               })}
-              className="block w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 bg-white bg-opacity-20 focus:border-b-primary outline-none placeholder:text-zinc-600 resize-none"
+              className="block w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-primary outline-none placeholder:text-zinc-600 resize-none"
               rows={4}
             ></textarea>
             {errors.message && (

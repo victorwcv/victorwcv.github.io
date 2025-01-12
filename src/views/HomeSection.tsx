@@ -1,13 +1,28 @@
-import { FC } from 'react';
+import { FC, useRef } from 'react';
 import BlinkingCursor from '../components/BlinkingCursor';
 import { Icon } from '../icons/icons';
+import { useInView } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const HomeSection: FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: '-50%' });
+
   return (
     <section
       className="relative h-[calc(100vh-64px)] min-w-80 min-h-[600px] scroll-mt-16"
       id="home"
+      ref={ref}
     >
+      <motion.div
+        className="fixed bottom-0 right-0 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 h-10 bg-primary text-white z-40"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isInView ? 0 : 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Icon.arrowUp className="lg:text-2xl text-lg" />
+      </motion.div>
       <div className="bg-zinc-950/80 absolute inset-0 w-full h-full"></div>
       <div className="relative h-full flex flex-col justify-center items-center">
         <div>

@@ -36,7 +36,11 @@ const LoadingPage: FC<Props> = ({ onAnimationComplete }) => {
         max="100"
       ></progress>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
-        <img src="/vc-logo.png" alt="VC logo" className="w-20 h-auto" />
+        <img
+          src="/vc-logo.png"
+          alt="VC logo"
+          className="w-20 h-auto brightness-125"
+        />
       </div>
     </motion.div>
   );
