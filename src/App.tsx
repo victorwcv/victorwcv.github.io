@@ -11,6 +11,7 @@ import ResumeSection from './views/ResumeSection';
 import PortfolioSection from './views/PortfolioSection';
 import ContactSection from './views/ContactSection';
 import Stats from './views/Stats';
+import ResponsiveNav from './components/ResponsiveNav';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
@@ -18,7 +19,7 @@ function App() {
   return (
     <div className="relative h-screen min-h-fit text-zinc-700 app">
       <Navbar />
-
+      <ResponsiveNav />
       <PortfolioLayout>
         <HomeSection />
         <AboutSection />

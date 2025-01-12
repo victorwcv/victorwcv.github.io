@@ -8,16 +8,22 @@ export const stats = [
     icon: Icon.calendar,
   },
   {
+    id: 3,
+    number: 5,
+    title: 'certificates',
+    icon: Icon.certificate,
+  },
+  {
     id: 2,
     number: 10,
     title: 'projects completed',
     icon: Icon.pencil,
   },
   {
-    id: 3,
-    number: 5,
-    title: 'certificates',
-    icon: Icon.certificate,
+    id: 6,
+    number: 400,
+    title: 'coffee cups',
+    icon: Icon.coffee,
   },
   {
     id: 4,
@@ -27,14 +33,8 @@ export const stats = [
   },
   {
     id: 5,
-    number: 4000,
+    number: 4500,
     title: 'code hours',
     icon: Icon.clock,
-  },
-  {
-    id: 6,
-    number: 200,
-    title: 'coffee cups',
-    icon: Icon.coffee,
   },
 ];

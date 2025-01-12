@@ -40,6 +40,8 @@ import { IoCalendarNumber } from 'react-icons/io5';
 import { PiCertificateFill } from 'react-icons/pi';
 import { FaCodeBranch } from 'react-icons/fa6';
 import { FaClock } from 'react-icons/fa6';
+import { FaXmark } from 'react-icons/fa6';
+import { FaBars } from 'react-icons/fa6';
 
 export const Icon = {
   linkedin: FaLinkedin,
@@ -84,4 +86,6 @@ export const Icon = {
   certificate: PiCertificateFill,
   codeBranch: FaCodeBranch,
   clock: FaClock,
+  xmark: FaXmark,
+  bars: FaBars,
 };

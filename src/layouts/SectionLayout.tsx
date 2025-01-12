@@ -8,7 +8,7 @@ interface Props {
 
 const SectionLayout: FC<Props> = ({ children, id, className = 'bg-white' }) => {
   return (
-    <section className={`${className} scroll-mt-16`} id={id}>
+    <section className={`${className} sm:scroll-mt-16 scroll-mt-0`} id={id}>
       <div className="container mx-auto px-8 py-28">{children}</div>
     </section>
   );

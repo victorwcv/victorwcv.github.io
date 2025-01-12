@@ -15,7 +15,7 @@ const HomeSection: FC = () => {
       ref={ref}
     >
       <motion.div
-        className="fixed bottom-0 right-0 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 h-10 bg-primary text-white z-40"
+        className="fixed bottom-0 right-0 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 h-10 bg-primary text-white z-30"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         initial={{ opacity: 0 }}
         animate={{ opacity: isInView ? 0 : 1 }}
