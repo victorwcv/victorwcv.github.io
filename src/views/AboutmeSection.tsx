@@ -15,10 +15,8 @@ const AboutSection: FC = () => {
       </h2>
       {/* Avatar */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-12 mb-5">
-        <div className="avatar m-8">
-          <div className="lg:w-36 w-24 rounded-full">
-            <img src="/profile.jpg" />
-          </div>
+        <div className="ring-primary ring-offset-base-100 lg:w-36 w-24 rounded-full ring ring-offset-2 m-8 overflow-hidden">
+          <img src="/profile.jpg" />
         </div>
         <p className="lg:text-xl text-lg lg:text-left text-center font-serif text-zinc-500 max-w-lg leading-relaxed">
           Hi!, I'm Victor , a passionate web developer from Lima, Peru. My focus
