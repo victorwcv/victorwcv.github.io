@@ -48,19 +48,25 @@ const HomeSection: FC = () => {
         </div>
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white lg:text-4xl text-2xl flex gap-8">
           <a
-            href="#"
+            href="https://www.linkedin.com/in/victor-ccanchi/"
+            target="_blank"
+            rel="noreferrer"
             className="hover:text-primary transition-all duration-300"
           >
             <Icon.linkedin />
           </a>
           <a
-            href="#"
+             href="https://github.com/victorwcv"
+             target="_blank"
+             rel="noreferrer"
             className="hover:text-primary transition-all duration-300"
           >
             <Icon.github />
           </a>
           <a
-            href="#"
+             href="mailto:victorwccv@gmail.com"
+             target="_blank"
+             rel="noreferrer"
             className="hover:text-primary transition-all duration-300"
           >
             <Icon.envelope />
