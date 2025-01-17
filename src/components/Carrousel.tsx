@@ -27,7 +27,6 @@ const Carrousel: FC<Props> = ({ items }) => {
 
   useEffect(() => {
     const desplazamientos = carruselRef.current?.clientWidth === 960 ? items.length - 3 : items.length - 1;
-    console.log(desplazamientos);
     
     const maxOffset = 320 * (desplazamientos); // Desplazamiento máximo permitido
     const moveCarousel = () => {

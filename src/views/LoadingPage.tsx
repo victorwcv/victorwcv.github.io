@@ -25,7 +25,7 @@ const LoadingPage: FC<Props> = ({ onAnimationComplete }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 w-screen h-screen bg-white z-50"
+      className="fixed inset-0 w-screen h-dvh bg-zinc-900 z-50"
       onAnimationComplete={() => onAnimationComplete(false)}
       animate={{ opacity: 1, transition: { duration: 0.5 } }}
       exit={{ opacity: 0, transition: { delay: 2, duration: 0.5 } }}

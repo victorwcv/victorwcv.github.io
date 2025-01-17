@@ -26,7 +26,7 @@ const HomeSection: FC = () => {
       </motion.div>
 
       {/* Background */}
-      <div className="bg-zinc-950/80 absolute inset-0 w-full h-full"></div>
+      <div className="bg-zinc-900/90 absolute inset-0 w-full h-full"></div>
 
       {/* Content */}
       <div className="relative h-full flex flex-col justify-center items-center">
