@@ -21,18 +21,22 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Check environment variables
+      - name: Debug environment variables
         run: |
-          echo "SERVICE_ID=${{ secrets.VITE_SERVICE_ID }}"
-          echo "TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }}"
-          echo "PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }}"
-
-      - name: Build the project
+          echo "VITE_SERVICE_ID=${VITE_SERVICE_ID}"
+          echo "VITE_TEMPLATE_ID=${VITE_TEMPLATE_ID}"
+          echo "PUBLIC_KEY=${VITE_PUBLIC_KEY}"
         env:
           VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
           VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
           VITE_PUBLIC_KEY: ${{ secrets.VITE_PUBLIC_KEY }}
-        run: npm run build
+
+      - name: Build the project
+        run: |
+          VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }} \
+          VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }} \
+          VITE_PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }} \
+          npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
