@@ -27,19 +27,19 @@ const AboutSection: FC = () => {
       </div>
 
       {/* Profile */}
-      <div className="grid lg:grid-cols-2 grid-cols-1 lg:mt-12 lg:mx-40 gap-x-12">
+      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 lg:mt-12 lg:mx-20 gap-x-12">
         {/* Left Side */}
-        <div className="flex flex-col mx-auto max-w-md">
+        <div className="flex flex-col mx-auto max-w-lg">
           <h4 className="font-extrabold text-lg lg:text-left text-center my-4 tracking-widest">
             PROFILE
           </h4>
-          <p className="text-zinc-500 font-serif leading-relaxed">
+          <p className="text-zinc-500 font-serif leading-relaxed pb-8">
             Constantly seeking new challenges to grow as a web developer,
             enhance skills, and adopt emerging technologies to remain aligned
             with the latest industry trends.
           </p>
           <div className="flex-1 flex flex-col justify-center items-center">
-            <ul className="my-6 mr-6">
+            <ul className="mr-6">
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2">
                   <Icon.user />
@@ -104,86 +104,88 @@ const AboutSection: FC = () => {
         </div>
 
         {/* Right Side */}
-        <div className="mx-auto max-w-md">
+        <div className="mx-auto max-w-lg">
           <h4 className="font-extrabold text-lg lg:text-left text-center my-4 tracking-widest">
             SKILLS
           </h4>
-          <p className="text-zinc-500 font-serif leading-relaxed">
+          <p className="text-zinc-500 font-serif leading-relaxed pb-8">
             Skilled in JavaScript, TypeScript, React, Angular, Vue.js, Node.js,
             Express, MongoDB, Tailwind CSS, and more modern technologies & tools
             for web development.
           </p>
-          <div role="tablist" className="tabs tabs-lifted mt-6">
-            <input
-              type="radio"
-              name="my_tabs_2"
-              role="tab"
-              className="tab"
-              aria-label="Technologies"
-              defaultChecked
-            />
-            <div
-              role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-            >
-              <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
-                {skills.technologies.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
-                  >
-                    <skill.icon className="w-6 h-6" />
-                    <p>{skill.name}</p>
-                  </div>
-                ))}
+          <div className='sm:h-auto h-[420px]'>
+            <div role="tablist" className="tabs tabs-lifted">
+              <input
+                type="radio"
+                name="my_tabs_2"
+                role="tab"
+                className="tab"
+                aria-label="Technologies"
+                defaultChecked
+              />
+              <div
+                role="tabpanel"
+                className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              >
+                <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
+                  {skills.technologies.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
+                    >
+                      <skill.icon className="w-6 h-6" />
+                      <p>{skill.name}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <input
-              type="radio"
-              name="my_tabs_2"
-              role="tab"
-              className="tab"
-              aria-label="Tools"
-            />
-            <div
-              role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-            >
-              <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
-                {skills.tools.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
-                  >
-                    <skill.icon className="w-6 h-6" />
-                    <p>{skill.name}</p>
-                  </div>
-                ))}
+              <input
+                type="radio"
+                name="my_tabs_2"
+                role="tab"
+                className="tab"
+                aria-label="Tools"
+              />
+              <div
+                role="tabpanel"
+                className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              >
+                <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
+                  {skills.tools.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
+                    >
+                      <skill.icon className="w-6 h-6" />
+                      <p>{skill.name}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <input
-              type="radio"
-              name="my_tabs_2"
-              role="tab"
-              className="tab"
-              aria-label="Others"
-            />
-            <div
-              role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-            >
-              <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
-                {skills.others.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
-                  >
-                    <skill.icon className="w-6 h-6" />
-                    <p>{skill.name}</p>
-                  </div>
-                ))}
+              <input
+                type="radio"
+                name="my_tabs_2"
+                role="tab"
+                className="tab"
+                aria-label="Others"
+              />
+              <div
+                role="tabpanel"
+                className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              >
+                <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
+                  {skills.others.map((skill, index) => (
+                    <div
+                      key={index}
+                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
+                    >
+                      <skill.icon className="w-6 h-6" />
+                      <p>{skill.name}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

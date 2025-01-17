@@ -15,14 +15,21 @@ interface Props {
 }
 
 const Carrousel: FC<Props> = ({ items }) => {
-  const [isPaused, setIsPaused] = useState(false);
   const [isMovingForward, setIsMovingForward] = useState(true);
-  const containerRef = useRef(null);
+  const [isPaused, setIsPaused] = useState(false);
   const controls = useAnimation();
-  const positionRef = useRef(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const carruselRef = useRef<HTMLDivElement>(null);
+  const positionRef = useRef<number>(0);
+
+
+  
 
   useEffect(() => {
-    const maxOffset = 320 * (items.length - 3); // Desplazamiento máximo permitido
+    const desplazamientos = carruselRef.current?.clientWidth === 960 ? items.length - 3 : items.length - 1;
+    console.log(desplazamientos);
+    
+    const maxOffset = 320 * (desplazamientos); // Desplazamiento máximo permitido
     const moveCarousel = () => {
       let x = positionRef.current;
 
@@ -51,6 +58,7 @@ const Carrousel: FC<Props> = ({ items }) => {
 
   return (
     <div
+      ref={carruselRef}
       className="carousel-container relative lg:w-[960px] w-[320px] overflow-hidden mx-auto"
       onMouseEnter={() => setIsPaused(true)} // Pausar al hacer hover
       onMouseLeave={() => setIsPaused(false)} // Reanudar al salir

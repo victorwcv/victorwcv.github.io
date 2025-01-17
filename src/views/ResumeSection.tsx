@@ -69,7 +69,7 @@ const ResumeSection = () => {
               title="Professional Certificate in Full Stack Web Development"
               date="Sept. 2023 - Aug. 2024"
               descriptioTitle="Massachusetts Institute of Technology - xPro"
-              description="Completed an intensive program focused on modern full-stack web development. Gained expertise in technologies such as React, Node.js, Express, and MongoDB, and developed practical skills in building scalable and responsive web applications. The program emphasized hands-on projects, collaborative coding, and best practices for software engineering, equipping me with the tools to deliver robust and efficient solutions."
+              description="Completed an intensive program focused on modern full-stack web development. Gained expertise in technologies such as React, Node.js, Express, and MongoDB, and developed practical skills in building scalable and responsive web applications. The program emphasized hands-on projects, collaborative coding, and best practices for software engineering."
             />
 
             <ResumeLineBlock
@@ -85,8 +85,7 @@ const ResumeSection = () => {
               title="Technical Diploma in Industrial Electricity"
               date="Aug. 2012 - Jul. 2015"
               descriptioTitle="SENATI"
-              description="Although my background is in industrial electricity, my studies provided a solid foundation in technical problem-solving, analytical thinking, and project management. These skills have been essential in my transition to software development, where I apply similar logical reasoning and troubleshooting techniques to build and optimize software solutions.
-              Fun fact: Besides creating magnificent web apps, I could probably install any electrical device wherever you need it! 😄"
+              description="Although my background is in industrial electricity, my studies provided a solid foundation in technical problem-solving, analytical thinking, and project management. These skills have been essential in my transition to software development, where I apply similar logical reasoning and troubleshooting techniques to build and optimize software solutions."
             />
           </div>
         </div>

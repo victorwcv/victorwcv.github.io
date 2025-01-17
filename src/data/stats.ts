@@ -9,7 +9,7 @@ export const stats = [
   },
   {
     id: 3,
-    number: 5,
+    number: 6,
     title: 'certificates',
     icon: Icon.certificate,
   },
@@ -27,7 +27,7 @@ export const stats = [
   },
   {
     id: 4,
-    number: 800,
+    number: 900,
     title: 'code commits',
     icon: Icon.codeBranch,
   },

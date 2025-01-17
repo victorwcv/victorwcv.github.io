@@ -17,7 +17,7 @@ function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
 
   return (
-    <div className="relative h-screen min-h-fit text-zinc-700 app">
+    <div className="relative min-h-fit text-zinc-700 app">
       <Navbar />
       <ResponsiveNav />
       <PortfolioLayout>

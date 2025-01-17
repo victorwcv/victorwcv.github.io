@@ -10,10 +10,11 @@ const HomeSection: FC = () => {
 
   return (
     <section
-      className="relative h-[calc(100vh-64px)] min-w-80 min-h-[600px] scroll-mt-16"
+      className="relative sm:h-[calc(100vh-64px)] h-[100dvh] min-w-80 min-h-[500px] scroll-mt-16"
       id="home"
       ref={ref}
     >
+      {/* Scroll to top */}
       <motion.div
         className="fixed bottom-0 right-0 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 h-10 bg-primary text-white z-30"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -23,8 +24,14 @@ const HomeSection: FC = () => {
       >
         <Icon.arrowUp className="lg:text-2xl text-lg" />
       </motion.div>
+
+      {/* Background */}
       <div className="bg-zinc-950/80 absolute inset-0 w-full h-full"></div>
+
+      {/* Content */}
       <div className="relative h-full flex flex-col justify-center items-center">
+
+        {/* Hero */}
         <div>
           <h2 className="text-primary font-bold lg:text-2xl text-sm m-2">
             HELLO, WORLD! <BlinkingCursor />
@@ -32,7 +39,7 @@ const HomeSection: FC = () => {
           <h1 className="lg:text-8xl text-4xl font-bold text-center text-white">
             I'm Victor Ccanchi
           </h1>
-          <h3 className="lg:text-xl text-sm text-center text-gray-100 m-2 font-console">
+          <h3 className="lg:text-xl text-sm text-center text-gray-100 m-2">
             {'| WEB-APP-DEVELOPER | FRONTEND | BACKEND |'}
           </h3>
           <div>
@@ -46,6 +53,8 @@ const HomeSection: FC = () => {
             </a>
           </div>
         </div>
+
+        {/* Socials */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white lg:text-4xl text-2xl flex gap-8">
           <a
             href="https://www.linkedin.com/in/victor-ccanchi/"

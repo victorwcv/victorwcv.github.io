@@ -1,21 +1,22 @@
 import { stats } from '@/data/stats';
+import SectionLayout from '@/layouts/SectionLayout';
 import { FC } from 'react';
 import CountUp from 'react-countup';
 
 const Stats: FC = () => {
   return (
-    <section
+    <SectionLayout
       id="stats"
-      className="w-full min-h-[306px] flex items-center justify-center gap-4 bg-accent-600"
+      className= "bg-accent-600"
     >
-      <div className="flex flex-wrap items-stretch justify-center my-auto mx-8 py-8">
+      <div className="flex flex-wrap items-stretch justify-center gap-6">
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className="w-[200px] h-fit flex flex-col items-center justify-center gap-2 p-4"
+            className="md:w-[150px] w-[120px]  h-fit flex flex-col items-center justify-center gap-1"
           >
-            <stat.icon className="text-black/80 text-4xl" />
-            <h1 className="text-4xl font-bold text-white">
+            <stat.icon className="text-black/80 md:text-4xl text-3xl" />
+            <h1 className="md:text-4xl text-2xl font-bold text-white">
               <CountUp
                 end={stat.number}
                 duration={8}
@@ -24,13 +25,13 @@ const Stats: FC = () => {
               />
               +
             </h1>
-            <p className="text-white/80 uppercase font-bold text-center">
+            <p className="text-white/80 uppercase font-bold text-center md:text-base text-xs">
               {stat.title}
             </p>
           </div>
         ))}
       </div>
-    </section>
+    </SectionLayout>
   );
 };
 
