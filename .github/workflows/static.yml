@@ -5,9 +5,13 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: github-pages
 
     steps:
       - name: Check out the repository
@@ -23,9 +27,9 @@ jobs:
 
       - name: Debug environment variables
         run: |
-          echo "VITE_SERVICE_ID=${VITE_SERVICE_ID}"
-          echo "VITE_TEMPLATE_ID=${VITE_TEMPLATE_ID}"
-          echo "PUBLIC_KEY=${VITE_PUBLIC_KEY}"
+          echo "VITE_SERVICE_ID=${{ secrets.VITE_SERVICE_ID }}"
+          echo "VITE_TEMPLATE_ID=${{ secrets.VITE_TEMPLATE_ID }}"
+          echo "PUBLIC_KEY=${{ secrets.VITE_PUBLIC_KEY }}"
         env:
           VITE_SERVICE_ID: ${{ secrets.VITE_SERVICE_ID }}
           VITE_TEMPLATE_ID: ${{ secrets.VITE_TEMPLATE_ID }}
