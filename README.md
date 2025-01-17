@@ -1,6 +1,6 @@
 # Portafolio Personal de Victor Ccanchi
 
-¡Bienvenido a mi portafolio personal! Aquí encontrarás una muestra de mis proyectos, habilidades y experiencia en el mundo del desarrollo web.
+¡Bienvenido a mi portafolio personal! Aquí encontrarás una muestra de mis proyectos, habilidades y experiencia en el mundo del desarrollo web
 
 ## Acerca de mí
 
