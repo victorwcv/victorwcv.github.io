@@ -10,9 +10,10 @@ const HomeSection: FC = () => {
 
   return (
     <section
-      className="relative sm:h-[calc(100vh-64px)] h-[100dvh] min-w-80 min-h-[500px] scroll-mt-16"
+      className="relative sm:h-[calc(100vh-64px)] h-svh min-w-80 min-h-[500px] scroll-mt-16 static-bg"
       id="home"
       ref={ref}
+      
     >
       {/* Scroll to top */}
       <motion.div

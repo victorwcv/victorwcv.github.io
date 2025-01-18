@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 const Navbar: FC = () => {
   return (
-    <header className="sm:block hidden w-full h-16 z-40 bg-zinc-950/90 text-white sticky top-0">
+    <header className="sm:block hidden w-full h-16 z-40 bg-zinc-900 text-white sticky top-0">
       <div className="container mx-auto px-4 h-full sm:flex hidden justify-between items-center">
         <img
           src="vc-logo.png"
