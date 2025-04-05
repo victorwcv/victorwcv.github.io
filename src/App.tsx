@@ -8,7 +8,7 @@ import LoadingPage from './views/LoadingPage';
 import HomeSection from './views/HomeSection';
 import AboutSection from './views/AboutmeSection';
 import ResumeSection from './views/ResumeSection';
-import PortfolioSection from './views/PortfolioSection';
+// import PortfolioSection from './views/PortfolioSection';
 import ContactSection from './views/ContactSection';
 import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
@@ -24,7 +24,7 @@ function App() {
         <HomeSection />
         <AboutSection />
         <ResumeSection />
-        <PortfolioSection />
+        {/* <PortfolioSection /> */}
         <Stats />
         <ContactSection />
       </PortfolioLayout>

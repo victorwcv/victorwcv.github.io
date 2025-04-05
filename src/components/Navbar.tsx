@@ -20,9 +20,9 @@ const Navbar: FC = () => {
             <li className="hover:text-primary">
               <a href="#resume">Resume</a>
             </li>
-            <li className="hover:text-primary">
+            {/* <li className="hover:text-primary">
               <a href="#portfolio">Portfolio</a>
-            </li>
+            </li> */}
             <li className="hover:text-primary">
               <a href="#contact">Contact</a>
             </li>
