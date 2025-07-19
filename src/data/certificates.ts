@@ -57,4 +57,11 @@ export const certificates: CarouselItem[] = [
     src: 'certs/gen-ai.jpg',
     link: '#',
   },
+  {
+    id: 9,
+    title: 'Patrones de Diseño: Soluciones prácticas y eficientes',
+    description: 'Udemy',
+    src: 'certs/design-patterns.jpg',
+    link: '#',
+  },
 ];
