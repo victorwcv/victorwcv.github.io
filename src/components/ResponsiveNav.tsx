@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ToggleButton from './ToggleButton';
+import { useTranslation } from 'react-i18next';
+import SelectLanguage from './SelectLanguage';
 
 const ResponsiveNav = () => {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggle = () => {
     setOpen((prev) => !prev);
@@ -24,12 +27,12 @@ const ResponsiveNav = () => {
             <ul className="flex flex-col items-center justify-center h-full text-2xl font-semibold">
               <li className="py-4 w-full active:bg-primary/50">
                 <a className="block text-center" href="#home" onClick={toggle}>
-                  Home
+                  {t('navbar.home')}
                 </a>
               </li>
               <li className="py-4 w-full active:bg-primary/50">
                 <a className="block text-center" href="#about" onClick={toggle}>
-                  About
+                  {t('navbar.about')}
                 </a>
               </li>
               <li className="py-4 w-full active:bg-primary/50">
@@ -38,10 +41,10 @@ const ResponsiveNav = () => {
                   href="#resume"
                   onClick={toggle}
                 >
-                  Resume
+                  {t('navbar.resume')}
                 </a>
               </li>
-              <li className="py-4 w-full active:bg-primary/50">
+              {/* <li className="py-4 w-full active:bg-primary/50">
                 <a
                   className="block text-center"
                   href="#portfolio"
@@ -49,15 +52,18 @@ const ResponsiveNav = () => {
                 >
                   Portfolio
                 </a>
-              </li>
+              </li> */}
               <li className="py-4 w-full active:bg-primary/50">
                 <a
                   className="block text-center"
                   href="#contact"
                   onClick={toggle}
                 >
-                  Contact
+                  {t('navbar.contact')}
                 </a>
+              </li>
+              <li className="py-4 w-full">
+                <SelectLanguage />
               </li>
             </ul>
           </motion.div>
