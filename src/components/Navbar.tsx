@@ -1,11 +1,32 @@
 import { useTranslation } from 'react-i18next';
 import SelectLanguage from './SelectLanguage';
+import { useEffect } from 'react';
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    //Change background color on scroll, only on desktop when is 500px from top
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        document.querySelector('header')?.classList.add('bg-zinc-900/90');
+      } else {
+        document.querySelector('header')?.classList.remove('bg-zinc-900/90');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (document.querySelector('header')) {
+        document.querySelector('header')?.classList.remove('bg-zinc-900/90'); 
+      }
+    }
+  }, []);
+
   return (
-    <header className="sm:block hidden w-full h-16 z-40 bg-zinc-900 text-white sticky top-0">
+    <header className="sm:block hidden w-full h-16 z-40 text-white fixed top-0  transition-colors duration-500">
       <div className="container mx-auto px-4 h-full sm:flex hidden justify-between items-center">
         <div className="flex items-center gap-4">
           <img
