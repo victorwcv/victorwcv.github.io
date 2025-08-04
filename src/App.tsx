@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'motion/react';
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useLocation } from 'react-router';
+import { useState } from 'react';
+
 
 import PortfolioLayout from './layouts/PortfolioLayout';
 import Navbar from './components/Navbar';
@@ -14,19 +13,13 @@ import ResumeSection from './views/ResumeSection';
 import ContactSection from './views/ContactSection';
 import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
+import { useLanguageFromQuery } from '../hooks/useLanguageFromQuery';
+
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
-  const { i18n } = useTranslation();
-  const location = useLocation();
-
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const lang = params.get('lang');
-    if (lang && lang !== i18n.language) {
-      i18n.changeLanguage(lang);
-    }
-  }, [location.search, i18n]);
+  useLanguageFromQuery();
+  
 
   return (
     <div className="relative min-h-fit text-zinc-700">
