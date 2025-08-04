@@ -5,5 +5,11 @@
     "resume": "Resume",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "home": {
+    "title": "I'm Victor Ccanchi",
+    "subtitle": "Hello, World!",
+    "description": "web developer | Frontend Especialist",
+    "button": "More about me"
   }
 }

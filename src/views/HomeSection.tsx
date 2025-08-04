@@ -3,10 +3,12 @@ import BlinkingCursor from '../components/BlinkingCursor';
 import { Icon } from '../icons/icons';
 import { useInView } from 'motion/react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const HomeSection: FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { margin: '-50%' });
+  const { t } = useTranslation();
 
   return (
     <section
@@ -34,22 +36,22 @@ const HomeSection: FC = () => {
 
         {/* Hero */}
         <div>
-          <h2 className="text-primary font-bold lg:text-2xl text-sm m-2">
-            HELLO, WORLD! <BlinkingCursor />
+          <h2 className="text-primary font-bold lg:text-2xl uppercase text-sm m-2">
+            {t('home.subtitle')} <BlinkingCursor />
           </h2>
           <h1 className="lg:text-8xl text-4xl font-bold text-center text-white">
-            I'm Victor Ccanchi
+            {t('home.title')}
           </h1>
           <h3 className="lg:text-xl text-sm text-center text-gray-100 m-2">
-            {'| WEB-APP-DEVELOPER | FRONTEND | BACKEND |'}
+            {t('home.description')}
           </h3>
           <div>
             <a
               href="#about"
               className="block w-fit border-gray-500 border-[3px] lg:px-16 px-8 lg:py-4 py-2 text-white mt-8 mx-auto hover:border-primary transition-all duration-300"
             >
-              <span className="inline-flex items-center gap-2">
-                MORE ABOUT ME <Icon.arrowDown />
+              <span className="inline-flex items-center gap-2 uppercase font-bold">
+                {t('home.button')} <Icon.arrowDown />
               </span>
             </a>
           </div>

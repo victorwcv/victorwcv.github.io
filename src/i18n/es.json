@@ -5,5 +5,11 @@
     "resume": "Currículum",
     "projects": "Proyectos",
     "contact": "Contacto"
+  },
+  "home": {
+    "title": "Soy Victor Ccanchi",
+    "subtitle": "Hola, Mundo!",
+    "description": "Desarrollador web | Especialista frontend",
+    "button": "Más sobre mí"
   }
 }

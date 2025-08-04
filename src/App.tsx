@@ -13,7 +13,7 @@ import ResumeSection from './views/ResumeSection';
 import ContactSection from './views/ContactSection';
 import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
-import { useLanguageFromQuery } from '../hooks/useLanguageFromQuery';
+import { useLanguageFromQuery } from './hooks/useLanguageFromQuery';
 
 
 function App() {
