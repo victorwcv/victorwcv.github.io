@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import ToggleButton from './ToggleButton';
 import { useTranslation } from 'react-i18next';
@@ -12,19 +12,27 @@ const ResponsiveNav = () => {
     setOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'; 
+    } else {
+      document.body.style.overflow = 'auto'; 
+    }
+  }, [open]);
+
   return (
     <div className="sm:hidden block">
       <ToggleButton toggle={toggle} open={open} />
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed top-0 left-0 w-full h-full bg-white z-40"
+            className="fixed top-0 left-0 w-screen h-screen bg-white z-40"
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
-            <ul className="flex flex-col items-center justify-center h-full text-2xl font-semibold">
+            <ul className="flex flex-col items-center justify-center h-full text-xl font-semibold">
               <li className="py-4 w-full active:bg-primary/50">
                 <a className="block text-center" href="#home" onClick={toggle}>
                   {t('navbar.home')}

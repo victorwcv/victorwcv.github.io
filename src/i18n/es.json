@@ -11,5 +11,36 @@
     "subtitle": "Hola, Mundo!",
     "description": "Desarrollador web | Especialista frontend",
     "button": "Más sobre mí"
+  },
+  "about": {
+    "title": "Sobre mi",
+    "subtitle": "Déjame presentarme",
+    "description": "¡Hola!, soy Victor, un apasionado desarrollador web de Lima, Perú. Me enfoco en crear soluciones digitales, ofreciendo productos que son funcionales, escalables y visualmente atractivos. Mi principal objetivo es transformar ideas en proyectos reales mediante el uso de tecnologías modernas.",
+    "profile": {
+      "title": "Perfil",
+      "description": "Soy un desarrollador web con enfoque en tecnologías frontend. Disfruto creando interfaces amigables y asegurando una experiencia de usuario fluida. Mis habilidades incluyen HTML, CSS, JavaScript y varios frameworks.",
+      "fullname-title": "Nombre completo",
+      "fullname": "Victor William Ccanchi Vasquez",
+      "job-title": "Profesión",
+      "job": "Desarrollador Web, Frontend",
+      "location-title": "Ubicación",
+      "location": "Lima, Perú",
+      "email-title": "Correo electrónico",
+      "email": "victorwccv@gmail.com",
+      "linkedin-title": "LinkedIn",
+      "linkedin": "victor-ccanchi",
+      "github-title": "GitHub",
+      "github": "victorwcv"
+    },
+
+    "skills": {
+      "title": "Habilidades",
+      "description": "Conocimiento en JavaScript, TypeScript, React, Vue.js, Lit, Node.js, Express, MongoDB, Tailwind CSS y otras tecnologías y herramientas modernas para el desarrollo web.",
+      "technologies-label": "Tecnologías",
+      "tools-label": "Herramientas",
+      "others-label": "Otros"
+    },
+    "hire-me-button": "Contáctame",
+    "download-cv-button": "Descargar CV"
   }
 }

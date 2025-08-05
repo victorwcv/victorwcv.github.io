@@ -11,5 +11,36 @@
     "subtitle": "Hello, World!",
     "description": "Web developer | Frontend especialist",
     "button": "More about me"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Let me introduce myself",
+    "description": "Hi!, I'm Victor , a passionate web developer from Lima, Peru. My focus is creating digital solutions, offering products that are functional, scalable, and visually appealing. My main goal is transforming ideas into real projects through the use of modern technologies.",
+    "profile": {
+      "title": "Profile",
+      "description": "I am a web developer with a focus on frontend technologies. I enjoy creating user-friendly interfaces and ensuring a smooth user experience. My expertise includes HTML, CSS, JavaScript, and various frameworks.",
+      "fullname-title": "Fullname",
+      "fullname": "Victor Ccanchi",
+      "job-title": "Job",
+      "job": "Web Developer",
+      "location-title": "Location",
+      "location": "Lima, Peru",
+      "email-title": "Email",
+      "email": "victorwccv@gmail.com",
+      "linkedin-title": "LinkedIn",
+      "linkedin": "victor-ccanchi",
+      "github-title": "GitHub",
+      "github": "victorwcv"
+    },
+
+    "skills": {
+      "title": "Skills",
+      "description": "Skilled in JavaScript, TypeScript, React, Vue.js, Lit, Node.js, Express, MongoDB, Tailwind CSS, and more modern technologies & tools for web development.",
+      "technologies-label": "Technologies",
+      "tools-label": "Tools",
+      "others-label": "Others"
+    },
+    "hire-me-button": "Hire me",
+    "download-cv-button": "Download CV"
   }
 }
