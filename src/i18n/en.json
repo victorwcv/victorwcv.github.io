@@ -1,4 +1,7 @@
 {
+  "document": {
+    "title": "My Portfolio"
+  },
   "navbar": {
     "home": "Home",
     "about": "About",

@@ -12,7 +12,7 @@ const HomeSection: FC = () => {
 
   return (
     <section
-      className="relative sm:h-screen h-svh min-w-80 min-h-[500px] scroll-mt-16 static-bg"
+      className="relative sm:h-screen h-svh min-w-80 min-h-[500px] static-bg"
       id="home"
       ref={ref}
       

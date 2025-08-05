@@ -7,7 +7,7 @@ const supportedLangs = ['en', 'es'];
 const defaultLang = 'en';
 
 export const useLanguageFromQuery = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -34,6 +34,8 @@ export const useLanguageFromQuery = () => {
       }
      
       document.documentElement.lang = lang!;
+      document.title = t('document.title') || 'Mi Pagina Web';
     }
-  }, [i18n, location.pathname, location.search, navigate]);
+  }, [i18n, location.pathname, location.search, navigate, t]);
+
 };

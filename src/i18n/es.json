@@ -1,4 +1,7 @@
 {
+  "document": {
+    "title": "Mi Portafolio"
+  },
   "navbar": {
     "home": "Inicio",
     "about": "Sobre mi",
