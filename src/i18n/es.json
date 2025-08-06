@@ -45,5 +45,13 @@
     },
     "hire-me-button": "Contáctame",
     "download-cv-button": "Descargar CV"
+  },
+  "stats": {
+    "years-experience": "Años de experiencia",
+    "certificates": "Certificados obtenidos",
+    "projects-completed": "Proyectos Completados",
+    "coffee-cups": "Tazas de café tomadas",
+    "code-commits": "Commits realizados",
+    "code-hours": "Horas codificando"
   }
 }

@@ -45,5 +45,13 @@
     },
     "hire-me-button": "Hire me",
     "download-cv-button": "Download CV"
+  },
+  "stats": {
+    "years-experience": "Years of Experience",
+    "certificates": "Certificates",
+    "projects-completed": "Projects Completed",
+    "coffee-cups": "Coffee Cups",
+    "code-commits": "Code Commits",
+    "code-hours": "Code Hours"
   }
 }

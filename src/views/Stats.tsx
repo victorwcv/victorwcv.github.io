@@ -1,11 +1,13 @@
 import { stats } from '@/data/stats';
 import SectionLayout from '@/layouts/SectionLayout';
-import { FC, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 
-const Stats: FC = () => {
+const Stats: React.FC = () => {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,7 +52,7 @@ const Stats: FC = () => {
               +
             </h1>
             <p className="text-white/80 uppercase font-bold text-center md:text-base text-xs">
-              {stat.title}
+              {t(`stats.${stat.title}`)}
             </p>
           </div>
         ))}
