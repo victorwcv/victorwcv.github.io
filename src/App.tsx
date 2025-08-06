@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'motion/react';
 import { useState } from 'react';
 
-
 import PortfolioLayout from './layouts/PortfolioLayout';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -13,38 +12,37 @@ import ResumeSection from './views/ResumeSection';
 import ContactSection from './views/ContactSection';
 import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
-import { useLanguageFromQuery } from './hooks/useLanguageFromQuery';
-
+import LanguageProvider from './components/LanguageProvider';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
-  useLanguageFromQuery();
-  
 
   return (
-    <div className="relative min-h-fit text-zinc-700">
-      <Navbar />
-      <ResponsiveNav />
-      <PortfolioLayout>
-        <HomeSection />
-        <AboutSection />
-        <ResumeSection />
-        {/* <PortfolioSection /> */}
-        <Stats />
-        <ContactSection />
-      </PortfolioLayout>
+    <LanguageProvider>
+      <div className="relative min-h-fit text-zinc-700">
+        <Navbar />
+        <ResponsiveNav />
+        <PortfolioLayout>
+          <HomeSection />
+          <AboutSection />
+          <ResumeSection />
+          {/* <PortfolioSection /> */}
+          <Stats />
+          <ContactSection />
+        </PortfolioLayout>
 
-      <Footer />
+        <Footer />
 
-      <AnimatePresence>
-        {showLoadingPage && (
-          <LoadingPage
-            onAnimationComplete={setShowLoadingPage}
-            key={'loadingPage'}
-          />
-        )}
-      </AnimatePresence>
-    </div>
+        <AnimatePresence>
+          {showLoadingPage && (
+            <LoadingPage
+              onAnimationComplete={setShowLoadingPage}
+              key={'loadingPage'}
+            />
+          )}
+        </AnimatePresence>
+      </div>
+    </LanguageProvider>
   );
 }
 

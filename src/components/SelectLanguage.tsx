@@ -1,18 +1,15 @@
-import { useNavigate, useLocation } from 'react-router';
+import { useSearchParams } from 'react-router';
 
 const SelectLanguage: React.FC = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const lang = searchParams.get('lang') || 'en';
 
-    const params = new URLSearchParams(location.search);
-    const lang = params.get('lang');
- 
-
-  const changeLang = (lang: string) => {
-    const params = new URLSearchParams(location.search);
-    params.set('lang', lang);
-    navigate({ search: params.toString() });
+  const changeLang = (newLang: string) => {
+    if (newLang === lang) return;
+    searchParams.set('lang', newLang);
+    setSearchParams(searchParams);
   };
+
   return (
     <div className="flex items-center justify-center">
       <button
