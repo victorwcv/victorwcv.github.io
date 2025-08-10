@@ -8,7 +8,6 @@ const AboutSection: React.FC = () => {
 
   return (
     <SectionLayout id="about">
-
       {/* Title */}
       <h3 className="text-primary font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('about.title')}
@@ -18,8 +17,8 @@ const AboutSection: React.FC = () => {
       </h2>
       {/* Avatar */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-12 mb-5">
-        <div className="ring-primary ring-offset-base-100 lg:w-36 w-24 rounded-full ring ring-offset-2 m-8 overflow-hidden">
-          <img src="/profile.jpg" />
+        <div className="relative ring-primary ring-offset-base-100 lg:w-36 lg:h-36 w-24 h-24 rounded-full ring ring-offset-2 m-8 overflow-hidden flex justify-center items-center">
+          <img src="/profile.webp" alt="My picture" />
         </div>
         <p className="lg:text-lg text-lg lg:text-left text-center font-serif text-zinc-500 max-w-lg leading-relaxed">
           {t('about.description')}
@@ -49,9 +48,7 @@ const AboutSection: React.FC = () => {
                 <h5 className="font-bold flex items-center gap-2 uppercase">
                   <Icon.briefcase /> {t('about.profile.job-title')}:
                 </h5>
-                <p className="text-zinc-500">
-                  {t('about.profile.job')}
-                </p>
+                <p className="text-zinc-500">{t('about.profile.job')}</p>
               </li>
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2 uppercase">
