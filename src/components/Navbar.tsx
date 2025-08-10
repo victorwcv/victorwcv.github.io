@@ -6,9 +6,8 @@ const Navbar: React.FC = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    //Change background color on scroll, only on desktop when is 500px from top
     const handleScroll = () => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 100) {
         document.querySelector('header')?.classList.add('bg-zinc-900/90');
       } else {
         document.querySelector('header')?.classList.remove('bg-zinc-900/90');
@@ -38,7 +37,7 @@ const Navbar: React.FC = () => {
         </div>
 
         <nav className="block">
-          <ul className="flex md:gap-12 gap-8 font font-semibold">
+          <ul className="flex md:gap-10 gap-6 font font-semibold">
             <li className="hover:text-primary">
               <a href="#home">{t('navbar.home')}</a>
             </li>

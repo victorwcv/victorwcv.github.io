@@ -46,6 +46,45 @@
     "hire-me-button": "Contáctame",
     "download-cv-button": "Descargar CV"
   },
+  "resume": {
+    "title": "Currículum",
+    "subtitle": "Más sobre mis credenciales",
+    "description": "Conoce mi experiencia profesional y formación académica, que reflejan mi compromiso y crecimiento constante en el desarrollo de software.",
+    "experience": {
+      "title": "Experiencia Laboral",
+      "title-1": "Ingeniero de Software Junior",
+      "date-1": "Sept. 2024 - Presente",
+      "organization-1": "NTT Data",
+      "description-1": "En mi rol como Ingeniero de Software Junior, he participado en el desarrollo y mantenimiento de aplicaciones web para clientes, utilizando React, Vue.js y Angular. Me especializo en la creación de interfaces dinámicas y componentes reutilizables, colaborando con equipos multidisciplinarios para integrar soluciones frontend con sistemas backend.",
+      "title-2": "Revisor de Código Generado por IA",
+      "date-2": "Jun. 2024 - Ago. 2024",
+      "organization-2": "Revelo",
+      "description-2": "Revisé y evalué código generado por IA, brindando retroalimentación para optimizar su precisión y efectividad. Identifiqué y reporté usos correctos e incorrectos de la herramienta, contribuyendo a la mejora de los modelos de IA. Además, colaboré con equipos para implementar recomendaciones que aumentaron la calidad y relevancia del código generado.",
+      "title-3": "Desarrollador Freelance",
+      "date-3": "Ene. 2024 - Ago. 2024",
+      "organization-3": "Autónomo",
+      "description-3": "Diseñé e implementé soluciones web personalizadas para clientes, utilizando tecnologías modernas como React, Node.js y MongoDB. Mis responsabilidades incluyeron desarrollar interfaces intuitivas, optimizar el rendimiento de las aplicaciones y garantizar una integración fluida entre frontend y backend."
+    },
+    "education": {
+      "title": "Educación",
+      "title-1": "Certificado Profesional en Desarrollo Web Full Stack",
+      "date-1": "Sept. 2023 - Ago. 2024",
+      "organization-1": "Massachusetts Institute of Technology - xPro",
+      "description-1": "Completé un programa intensivo enfocado en el desarrollo web full stack moderno. Adquirí experiencia en tecnologías como React, Node.js, Express y MongoDB, desarrollando habilidades prácticas para crear aplicaciones web escalables y responsivas. El programa enfatizó proyectos prácticos, trabajo colaborativo y buenas prácticas de ingeniería de software.",
+      "title-2": "Estudios en Ingeniería Electrónica",
+      "date-2": "Ene. 2020 - Jul. 2023",
+      "organization-2": "Universidad Nacional San Luis Gonzaga",
+      "description-2": "Completé cursos fundamentales en sistemas electrónicos, diseño de circuitos y programación, obteniendo una base técnica sólida en resolución de problemas y pensamiento analítico. Gané experiencia aplicando principios de ingeniería para diseñar y optimizar componentes electrónicos, desarrollando habilidades de trabajo en equipo y aprendizaje basado en proyectos.",
+      "title-3": "Técnico en Electricidad Industrial",
+      "date-3": "Ago. 2012 - Jul. 2015",
+      "organization-3": "SENATI",
+      "description-3": "Aunque mi formación inicial fue en electricidad industrial, me proporcionó una base sólida en resolución técnica de problemas, pensamiento analítico y gestión de proyectos. Estas habilidades han sido esenciales para mi transición al desarrollo de software, aplicando el mismo razonamiento lógico y técnicas de diagnóstico para construir y optimizar soluciones digitales."
+    },
+    "certificates": {
+      "title": "Certificaciones",
+      "description": "He obtenido diversas certificaciones que validan mis habilidades y conocimientos en desarrollo web e ingeniería de software, demostrando mi compromiso con el aprendizaje continuo y el crecimiento profesional."
+    }
+  },
   "stats": {
     "years-experience": "Años de experiencia",
     "certificates": "Certificados obtenidos",
