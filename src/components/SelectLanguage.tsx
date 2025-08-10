@@ -7,7 +7,7 @@ const SelectLanguage: React.FC = () => {
   const changeLang = (newLang: string) => {
     if (newLang === lang) return;
     searchParams.set('lang', newLang);
-    setSearchParams(searchParams);
+    setSearchParams(searchParams, { replace: true });
   };
 
   return (
