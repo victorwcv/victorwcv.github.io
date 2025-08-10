@@ -91,5 +91,25 @@
     "coffee-cups": "Coffee Cups",
     "code-commits": "Code Commits",
     "code-hours": "Code Hours"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "subtitle": "I'd love to hear from you.",
+    "description": "Feel free to get in touch with me for collaboration, questions, or opportunities—I’m always open to connecting!",
+    "alert": {
+      "success": "Message sent successfully",
+      "error": "Error sending message"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "errors": {
+        "required": "this field is required",
+        "invalidEmail": "invalid email format"
+      },
+      "submit": "Submit",
+      "submitting": "Submitting..."
+    }
   }
 }

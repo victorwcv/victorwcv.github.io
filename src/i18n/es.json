@@ -92,5 +92,25 @@
     "coffee-cups": "Tazas de café tomadas",
     "code-commits": "Commits realizados",
     "code-hours": "Horas codificando"
+  },
+  "contact": {
+    "title": "CONTACTO",
+    "subtitle": "Me encantaría saber de ti.",
+    "description": "No dudes en ponerte en contacto conmigo para colaborar, hacer preguntas u ofrecer oportunidades—¡siempre estoy abierto a conectar!",
+    "alert": {
+      "success": "Mensaje enviado con éxito",
+      "error": "Error al enviar el mensaje"
+    },
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "errors": {
+        "required": "este campo es obligatorio",
+        "invalidEmail": "formato de correo inválido"
+      },
+      "submit": "Enviar",
+      "submitting": "Enviando..."
+    }
   }
 }

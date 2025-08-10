@@ -4,6 +4,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import Alert from '@/components/Alert';
 import { AnimatePresence, motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
 type Inputs = {
   name: string;
@@ -12,9 +13,8 @@ type Inputs = {
 };
 
 const ContactSection = () => {
-  const [showMessage, setShowMessage] = useState<null | 'success' | 'error'>(
-    null,
-  );
+  const { t } = useTranslation();
+  const [showMessage, setShowMessage] = useState<null | 'success' | 'error'>(null);
 
   const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -57,9 +57,9 @@ const ContactSection = () => {
 
   const alertMessage = () => {
     if (showMessage === 'success') {
-      return <Alert message="Message sent successfully" status="success" />;
+      return <Alert message={t('contact.alert.success')} status="success" />;
     } else if (showMessage === 'error') {
-      return <Alert message="Error sending message" status="error" />;
+      return <Alert message={t('contact.alert.error')} status="error" />;
     }
   };
 
@@ -81,16 +81,16 @@ const ContactSection = () => {
 
       {/* Title */}
       <h3 className="text-primary font-bold lg:text-base text-xs text-center tracking-widest">
-        CONTACT
+        {t('contact.title')}
       </h3>
       <h2 className="text-center lg:text-4xl text-2xl font-bold">
-        i'd love to hear from you.
+        {t('contact.subtitle')}
       </h2>
-      {/* Avatar */}
+
+      {/* Description */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-4 mb-5">
         <p className="lg:text-xl text-lg text-center font-serif text-zinc-300 max-w-lg leading-relaxed">
-          Feel free to get in touch with me for collaboration, questions, or
-          opportunities—I’m always open to connecting!
+          {t('contact.description')}
         </p>
       </div>
 
@@ -101,14 +101,14 @@ const ContactSection = () => {
             <input
               type="text"
               id="name"
-              placeholder="Name"
+              placeholder={t('contact.form.name')}
               {...register('name', {
-                required: 'this field is required',
+                required: t('contact.form.errors.required') as string,
               })}
               className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-primary outline-none placeholder:text-zinc-600"
             />
             {errors.name && (
-              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1  text-white bg-primary text-xs uppercase">
+              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-primary text-xs uppercase">
                 {errors.name.message}
               </span>
             )}
@@ -119,18 +119,18 @@ const ContactSection = () => {
             <input
               type="email"
               id="email"
-              placeholder="Email"
+              placeholder={t('contact.form.email')}
               {...register('email', {
-                required: 'this field is required',
+                required: t('contact.form.errors.required') as string,
                 pattern: {
                   value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
-                  message: 'invalid email format',
+                  message: t('contact.form.errors.invalidEmail') as string,
                 },
               })}
               className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-primary outline-none placeholder:text-zinc-600"
             />
             {errors.email && (
-              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1  text-white bg-primary text-xs uppercase">
+              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-primary text-xs uppercase">
                 {errors.email.message}
               </span>
             )}
@@ -140,27 +140,26 @@ const ContactSection = () => {
           <div className="relative mt-2">
             <textarea
               id="message"
-              placeholder="Message"
+              placeholder={t('contact.form.message')}
               {...register('message', {
-                required: 'this field is required',
+                required: t('contact.form.errors.required') as string,
               })}
               className="block w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-primary outline-none placeholder:text-zinc-600 resize-none"
               rows={4}
             ></textarea>
             {errors.message && (
-              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1  text-white bg-primary text-xs uppercase">
+              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-primary text-xs uppercase">
                 {errors.message.message}
               </span>
             )}
           </div>
 
           {/* Submit Button */}
-
           <button
             type="submit"
             className="w-full font-bold text-center py-6 text-white bg-primary hover:bg-primary/80 transition-all duration-300 mt-16"
           >
-            {isSubmitting ? 'Submitting...' : 'Submit'}
+            {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
           </button>
         </form>
       </div>

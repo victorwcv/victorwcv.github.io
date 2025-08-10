@@ -1,14 +1,14 @@
 import { skills } from '@/data/skills';
 import { Icon } from '@/icons/icons';
 import SectionLayout from '@/layouts/SectionLayout';
-import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-const AboutSection: FC = () => {
+const AboutSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
     <SectionLayout id="about">
+
       {/* Title */}
       <h3 className="text-primary font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('about.title')}
