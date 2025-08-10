@@ -112,5 +112,12 @@
       "submit": "Enviar",
       "submitting": "Enviando..."
     }
+  },
+  "footer": {
+    "copyright": "Copyright {{year}}",
+    "developedBy": "Desarrollado por",
+    "poweredBy": "Impulsado por",
+    "author": "Victor Ccanchi",
+    "stack": "React + TypeScript"
   }
 }

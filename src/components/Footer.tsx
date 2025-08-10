@@ -1,6 +1,8 @@
 import { Icon } from '@/icons/icons';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
 
   return (
@@ -8,20 +10,23 @@ const Footer = () => {
       <div className="container mx-auto lg:px-16 px-4 py-8 h-full flex lg:flex-row flex-col lg:justify-between justify-center items-center gap-y-10">
         {/* Copyright */}
         <div className="flex lg:flex-row flex-col">
-          <span className="mx-3  text-center ">&copy; Copyright {year}</span>
+          <span className="mx-3 text-center">
+            &copy; {t('footer.copyright', { year })}
+          </span>
           <span className="lg:inline-block hidden">|</span>
 
-          <span className="mx-3  text-center">
-            Developed by
+          <span className="mx-3 text-center">
+            {t('footer.developedBy')}
             <strong className="ml-2 italic font-semibold text-white">
-              Victor Ccanchi
+              {t('footer.author')}
             </strong>
           </span>
           <span className="lg:inline-block hidden">|</span>
-          <span className="mx-3  text-center">
-            Powered by
+
+          <span className="mx-3 text-center">
+            {t('footer.poweredBy')}
             <strong className="ml-2 italic font-semibold text-white">
-              React + TypeScript
+              {t('footer.stack')}
             </strong>
           </span>
         </div>
