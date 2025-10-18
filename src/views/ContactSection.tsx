@@ -64,7 +64,7 @@ const ContactSection = () => {
   };
 
   return (
-    <SectionLayout id="contact" className="bg-zinc-900 text-white">
+    <SectionLayout id="contact" className="bg-neutral-900 text-white">
       {/* Alert */}
       <AnimatePresence>
         {showMessage && (
@@ -89,7 +89,7 @@ const ContactSection = () => {
 
       {/* Description */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-4 mb-5">
-        <p className="lg:text-xl text-lg text-center font-serif text-zinc-300 max-w-lg leading-relaxed">
+        <p className="lg:text-xl text-lg text-center  text-neutral-300 max-w-lg leading-relaxed">
           {t('contact.description')}
         </p>
       </div>
@@ -105,7 +105,7 @@ const ContactSection = () => {
               {...register('name', {
                 required: t('contact.form.errors.required') as string,
               })}
-              className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-accent-500 outline-hidden placeholder:text-zinc-600"
+              className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-neutral-600 focus:border-b-accent-500 outline-hidden placeholder:text-neutral-600"
             />
             {errors.name && (
               <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-accent-500 text-xs uppercase">
@@ -127,7 +127,7 @@ const ContactSection = () => {
                   message: t('contact.form.errors.invalidEmail') as string,
                 },
               })}
-              className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-accent-500 outline-hidden placeholder:text-zinc-600"
+              className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-neutral-600 focus:border-b-accent-500 outline-hidden placeholder:text-neutral-600"
             />
             {errors.email && (
               <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-accent-500 text-xs uppercase">
@@ -144,7 +144,7 @@ const ContactSection = () => {
               {...register('message', {
                 required: t('contact.form.errors.required') as string,
               })}
-              className="block w-full px-8 py-6 border-b bg-transparent border-b-zinc-600 focus:border-b-accent-500 outline-hidden placeholder:text-zinc-600 resize-none"
+              className="block w-full px-8 py-6 border-b bg-transparent border-b-neutral-600 focus:border-b-accent-500 outline-hidden placeholder:text-neutral-600 resize-none"
               rows={4}
             ></textarea>
             {errors.message && (

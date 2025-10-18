@@ -9,9 +9,9 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
-        document.querySelector('header')?.classList.add('bg-zinc-900/90');
+        document.querySelector('header')?.classList.add('bg-neutral-900/90');
       } else {
-        document.querySelector('header')?.classList.remove('bg-zinc-900/90');
+        document.querySelector('header')?.classList.remove('bg-neutral-900/90');
       }
     };
 
@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (document.querySelector('header')) {
-        document.querySelector('header')?.classList.remove('bg-zinc-900/90');
+        document.querySelector('header')?.classList.remove('bg-neutral-900/90');
       }
     };
   }, []);

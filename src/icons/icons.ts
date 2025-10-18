@@ -1,91 +1,96 @@
-import { FaLinkedin } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
-import { IoIosArrowDown } from 'react-icons/io';
-import { SiJavascript } from 'react-icons/si';
-import { SiTypescript } from 'react-icons/si';
-import { FaHtml5 } from 'react-icons/fa';
-import { FaCss3Alt } from 'react-icons/fa';
-import { FaReact } from 'react-icons/fa';
-import { IoLogoVue } from 'react-icons/io5';
-import { FaAngular } from 'react-icons/fa';
-import { RiTailwindCssFill } from 'react-icons/ri';
-import { FaSass } from 'react-icons/fa';
-import { RiNodejsLine } from 'react-icons/ri';
-import { SiExpress } from 'react-icons/si';
-import { SiMongodb } from 'react-icons/si';
-import { BsGit } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
-import { FaDocker } from 'react-icons/fa';
-import { VscVscode } from 'react-icons/vsc';
-import { SiPostman } from 'react-icons/si';
-import { IoLogoFirebase } from 'react-icons/io5';
-import { BsMicrosoftTeams } from 'react-icons/bs';
-import { IoLogoFigma } from 'react-icons/io5';
-import { SiJira } from 'react-icons/si';
-import { SiVitest } from 'react-icons/si';
-import { SiJest } from 'react-icons/si';
-import { SiVite } from 'react-icons/si';
-import { FaUser } from 'react-icons/fa';
-import { IoBriefcaseSharp } from 'react-icons/io5';
-import { FaGlobeAmericas } from 'react-icons/fa';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { BsGit, BsMicrosoftTeams, BsTranslate } from 'react-icons/bs';
 import { DiScrum } from 'react-icons/di';
-import { BsTranslate } from 'react-icons/bs';
-import { FaGraduationCap } from 'react-icons/fa';
-import { FaArrowUpLong } from 'react-icons/fa6';
+import {
+  FaAngular,
+  FaBars,
+  FaClock,
+  FaCodeBranch,
+  FaCss3Alt,
+  FaDocker,
+  FaEnvelope,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaGithubSquare,
+  FaGlobeAmericas,
+  FaGraduationCap,
+  FaHtml5,
+  FaLinkedin,
+  FaPencilRuler,
+  FaReact,
+  FaSass,
+  FaUser,
+} from 'react-icons/fa';
+import { FaArrowUpLong, FaXmark, FaCode } from 'react-icons/fa6';
 import { GiCoffeeCup } from 'react-icons/gi';
-import { FaPencilRuler } from 'react-icons/fa';
-import { IoCalendarNumber } from 'react-icons/io5';
+import { IoIosArrowDown } from 'react-icons/io';
+import {
+  IoBriefcaseSharp,
+  IoCalendarNumber,
+  IoLogoFigma,
+  IoLogoFirebase,
+  IoLogoVue,
+  IoRocketOutline
+} from 'react-icons/io5';
 import { PiCertificateFill } from 'react-icons/pi';
-import { FaCodeBranch } from 'react-icons/fa6';
-import { FaClock } from 'react-icons/fa6';
-import { FaXmark } from 'react-icons/fa6';
-import { FaBars } from 'react-icons/fa6';
+import { RiNodejsLine, RiTailwindCssFill } from 'react-icons/ri';
+import {
+  SiExpress,
+  SiJest,
+  SiJira,
+  SiJavascript,
+  SiMongodb,
+  SiPostman,
+  SiTypescript,
+  SiVite,
+  SiVitest,
+} from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
 
 export const Icon = {
-  linkedin: FaLinkedin,
-  github: FaGithub,
-  envelope: FaEnvelope,
-  arrowDown: IoIosArrowDown,
-  javascript: SiJavascript,
-  typescript: SiTypescript,
-  html: FaHtml5,
-  css: FaCss3Alt,
-  react: FaReact,
-  vue: IoLogoVue,
   angular: FaAngular,
-  tailwind: RiTailwindCssFill,
-  sass: FaSass,
-  node: RiNodejsLine,
-  express: SiExpress,
-  mongodb: SiMongodb,
-  git: BsGit,
-  githubSquare: FaGithubSquare,
-  docker: FaDocker,
-  vscode: VscVscode,
-  postman: SiPostman,
-  firebase: IoLogoFirebase,
-  teams: BsMicrosoftTeams,
-  figma: IoLogoFigma,
-  jira: SiJira,
-  vitest: SiVitest,
-  jest: SiJest,
-  vite: SiVite,
-  user: FaUser,
-  briefcase: IoBriefcaseSharp,
-  globe: FaGlobeAmericas,
-  externalLink: FaExternalLinkAlt,
-  scrum: DiScrum,
-  translate: BsTranslate,
-  graduation: FaGraduationCap,
+  arrowDown: IoIosArrowDown,
   arrowUp: FaArrowUpLong,
-  coffee: GiCoffeeCup,
-  pencil: FaPencilRuler,
+  bars: FaBars,
+  briefcase: IoBriefcaseSharp,
   calendar: IoCalendarNumber,
   certificate: PiCertificateFill,
-  codeBranch: FaCodeBranch,
   clock: FaClock,
+  code: FaCode,
+  codeBranch: FaCodeBranch,
+  coffee: GiCoffeeCup,
+  css: FaCss3Alt,
+  docker: FaDocker,
+  envelope: FaEnvelope,
+  express: SiExpress,
+  externalLink: FaExternalLinkAlt,
+  figma: IoLogoFigma,
+  firebase: IoLogoFirebase,
+  git: BsGit,
+  github: FaGithub,
+  githubSquare: FaGithubSquare,
+  globe: FaGlobeAmericas,
+  graduation: FaGraduationCap,
+  html: FaHtml5,
+  javascript: SiJavascript,
+  jest: SiJest,
+  jira: SiJira,
+  linkedin: FaLinkedin,
+  mongodb: SiMongodb,
+  node: RiNodejsLine,
+  pencil: FaPencilRuler,
+  postman: SiPostman,
+  react: FaReact,
+  rocket: IoRocketOutline,
+  sass: FaSass,
+  scrum: DiScrum,
+  tailwind: RiTailwindCssFill,
+  teams: BsMicrosoftTeams,
+  translate: BsTranslate,
+  typescript: SiTypescript,
+  user: FaUser,
+  vite: SiVite,
+  vitest: SiVitest,
+  vscode: VscVscode,
+  vue: IoLogoVue,
   xmark: FaXmark,
-  bars: FaBars,
 };

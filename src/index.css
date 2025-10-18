@@ -13,6 +13,9 @@
   --color-accent-900: #00262f;
   --color-accent-950: #00161d;
 
+  --color-primary-light: #e4f7ff;
+  --color-primary-dark: #00262f;
+
   --font-console: Courier New, monospace, Monaco, Consolas, 'Fira Code';
 }
 

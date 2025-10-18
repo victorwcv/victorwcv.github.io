@@ -1,13 +1,27 @@
 import ProjectSquare from '@/components/ProjectSquare';
 import SectionLayout from '@/layouts/SectionLayout';
+import { ProjectCategory } from '@/types';
+import { useState } from 'react';
+import { projects } from '@/data/projects';
+import { Icon } from '@/icons/icons';
 
 const PortfolioSection = () => {
-  const handleClick = () => {
-    window.open('https://github.com/victorwcv', '_blank');
-  };
+  const [activeFilter, setActiveFilter] = useState<ProjectCategory>('All');
+
+  const categories: ProjectCategory[] = [
+    'All',
+    'Frontend',
+    'Fullstack',
+    'Mobile',
+  ];
+
+  const filteredProjects =
+    activeFilter === 'All'
+      ? projects
+      : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <SectionLayout id="portfolio">
+    <SectionLayout id="projects" className="bg-neutral-900 text-primary-light">
       {/* Title */}
       <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest">
         PORTFOLIO
@@ -17,65 +31,86 @@ const PortfolioSection = () => {
       </h2>
       {/* Avatar */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-4 mb-5">
-        <p className="lg:text-xl text-lg text-center font-serif text-zinc-500 max-w-lg leading-relaxed">
+        <p className="lg:text-xl text-lg text-center  text-neutral-500 max-w-lg leading-relaxed">
           Explore the projects I've worked on, showcasing my skills, creativity,
           and dedication to building innovative and impactful web solutions.
         </p>
       </div>
+      {/* Filters */}
+      <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveFilter(category)}
+            className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              activeFilter === category
+                ? 'bg-accent-500 bg-opacity-20 text-accent-500 border border-accent-500'
+                : 'bg-transparent text-gray-400 border border-gray-600 hover:border-gray-500 hover:text-gray-300'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
       {/* Projects */}
-      <div className="max-w-5xl mx-auto pt-12 hover:cursor-pointer">
-        <div className="grid lg:grid-cols-2 grid-cols-1">
-          <div className="col-span-1">
-            <ProjectSquare
-              imgSrc="https://picsum.photos/id/206/900/400"
-              height="lg:h-[700px] h-[400px]"
-              projectName="Project 1"
-              projectDescription="Description 1"
-              onclick={handleClick}
-            />
-            <ProjectSquare
-              imgSrc="https://picsum.photos/id/217/900/400"
-              height="lg:h-[500px] h-[400px]"
-              projectName="Project 2"
-              projectDescription="Description 2"
-              onclick={handleClick}
-            />
+      <div className="max-w-5xl mx-auto pt-12 space-y-12">
+        {filteredProjects.map((project) => (
+          <ProjectSquare key={project.id} {...project} />
+        ))}
 
-            <ProjectSquare
-              imgSrc="https://picsum.photos/id/218/900/400"
-              height="lg:h-[500px] h-[400px]"
-              projectName="Project 3"
-              projectDescription="Description 3"
-              onclick={handleClick}
-            />
+        {/* Coming Soon Cards */}
+
+        {[1].map((i) => (
+          <div
+            key={`coming-${i}`}
+            className="bg-neutral-800 rounded-lg border border-neutral-700 border-dashed overflow-hidden group hover:border-accent-500 transition-all duration-300"
+          >
+            <div className="relative h-64 bg-neutral-900 flex items-center justify-center">
+              <div className="text-center">
+                <div className="inline-block p-4 bg-neutral-800 rounded-full mb-4 group-hover:bg-accent-500 group-hover:bg-opacity-10 transition-all duration-300">
+                  <Icon.rocket
+                    className="text-accent-500 group-hover:animate-pulse"
+                    size={40}
+                  />
+                </div>
+                <Icon.code
+                  className="text-gray-700 mx-auto mb-2 group-hover:text-accent-500 transition-colors"
+                  size={60}
+                />
+              </div>
+            </div>
+            <div className="p-6 text-center">
+              <h3 className="text-xl font-bold text-white mb-3">Coming Soon</h3>
+              <p className="text-gray-400 mb-4">
+                New exciting project in development. Stay tuned!
+              </p>
+              <div className="flex flex-wrap gap-2 justify-center">
+                <span className="px-3 py-1 bg-neutral-900 border border-neutral-700 rounded text-gray-500 text-xs">
+                  React
+                </span>
+                <span className="px-3 py-1 bg-neutral-900 border border-neutral-700 rounded text-gray-500 text-xs">
+                  TypeScript
+                </span>
+                <span className="px-3 py-1 bg-neutral-900 border border-neutral-700 rounded text-gray-500 text-xs">
+                  ???
+                </span>
+              </div>
+            </div>
           </div>
+        ))}
 
-          <div className="col-span-1">
-            <ProjectSquare
-              imgSrc="https://picsum.photos/id/219/900/400"
-              height="lg:h-[500px] h-[450px]"
-              projectName="Project 4"
-              projectDescription="Description 4"
-              onclick={handleClick}
-            />
-
-            <ProjectSquare
-              imgSrc="https://picsum.photos/id/230/900/400"
-              height="lg:h-[500px] h-[450px]"
-              projectName="Project 5"
-              projectDescription="Description 5"
-              onclick={handleClick}
-            />
-
-            <ProjectSquare
-              imgSrc="https://picsum.photos/id/221/900/400"
-              height="lg:h-[700px] h-[450px]"
-              projectName="Project 6"
-              projectDescription="Description 6"
-              onclick={handleClick}
-            />
+        {/* Empty State Message if no projects */}
+        {filteredProjects.length === 0 && (
+          <div className="text-center py-20">
+            <Icon.code className="text-gray-700 mx-auto mb-4" size={80} />
+            <p className="text-gray-400 text-lg mb-2">
+              No projects found in this category yet.
+            </p>
+            <p className="text-gray-500 text-sm">
+              Check back soon for updates!
+            </p>
           </div>
-        </div>
+        )}
       </div>
     </SectionLayout>
   );

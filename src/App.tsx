@@ -13,6 +13,7 @@ import ContactSection from './views/ContactSection';
 import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
 import LanguageProvider from './components/LanguageProvider';
+import PortfolioSection from './views/PortfolioSection';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
@@ -54,14 +55,14 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="relative min-h-fit text-zinc-700">
+      <div className="relative min-h-fit text-neutral-700">
         <Navbar />
         <ResponsiveNav />
         <PortfolioLayout>
           <HomeSection />
           <AboutSection />
           <ResumeSection />
-          {/* <PortfolioSection /> */}
+          <PortfolioSection />
           <Stats />
           <ContactSection />
         </PortfolioLayout>

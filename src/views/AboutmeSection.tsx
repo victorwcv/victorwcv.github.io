@@ -7,7 +7,7 @@ const AboutSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <SectionLayout id="about">
+    <SectionLayout id="about" className="bg-neutral-900 text-primary-light">
       {/* Title */}
       <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('about.title')}
@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
         <div className="relative ring-primary ring-offset-base-100 lg:w-36 lg:h-36 w-24 h-24 rounded-full ring-3 ring-offset-2 m-8 overflow-hidden flex justify-center items-center">
           <img src="/profile.webp" alt="My picture" />
         </div>
-        <p className="lg:text-lg text-lg lg:text-left text-center font-serif text-zinc-500 max-w-lg leading-relaxed">
+        <p className="lg:text-lg text-lg lg:text-left text-center   max-w-lg leading-relaxed">
           {t('about.description')}
         </p>
       </div>
@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
           <h4 className="font-extrabold text-lg lg:text-left text-center my-4 tracking-widest uppercase">
             {t('about.profile.title')}
           </h4>
-          <p className="text-zinc-500 font-serif leading-relaxed pb-8">
+          <p className="  leading-relaxed pb-8">
             {t('about.profile.description')}
           </p>
           <div className="flex-1 flex flex-col justify-center items-center">
@@ -42,19 +42,19 @@ const AboutSection: React.FC = () => {
                   <Icon.user />
                   {t('about.profile.fullname-title')}:
                 </h5>
-                <p className="text-zinc-500">{t('about.profile.fullname')}</p>
+                <p className="">{t('about.profile.fullname')}</p>
               </li>
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2 uppercase">
                   <Icon.briefcase /> {t('about.profile.job-title')}:
                 </h5>
-                <p className="text-zinc-500">{t('about.profile.job')}</p>
+                <p className="">{t('about.profile.job')}</p>
               </li>
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2 uppercase">
                   <Icon.globe /> {t('about.profile.location-title')}:
                 </h5>
-                <p className="text-zinc-500">{t('about.profile.location')}</p>
+                <p className="">{t('about.profile.location')}</p>
               </li>
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2 uppercase">
@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
                 </h5>
                 <a
                   href="mailto:victorwccv@gamil.com"
-                  className="text-zinc-500 hover:text-accent-500 flex items-center gap-2"
+                  className=" hover:text-accent-500 flex items-center gap-2"
                 >
                   {t('about.profile.email')}
                   <Icon.externalLink />
@@ -74,7 +74,7 @@ const AboutSection: React.FC = () => {
                 </h5>
                 <a
                   href="https://www.linkedin.com/in/victor-ccanchi/"
-                  className="text-zinc-500 hover:text-accent-500 flex items-center gap-2"
+                  className=" hover:text-accent-500 flex items-center gap-2"
                   target="_blank"
                 >
                   {t('about.profile.linkedin')}
@@ -87,7 +87,7 @@ const AboutSection: React.FC = () => {
                 </h5>
                 <a
                   href="https://github.com/victorwcv"
-                  className="text-zinc-500 hover:text-accent-500 flex items-center gap-2"
+                  className=" hover:text-accent-500 flex items-center gap-2"
                   target="_blank"
                 >
                   {t('about.profile.github')}
@@ -103,7 +103,7 @@ const AboutSection: React.FC = () => {
           <h4 className="font-extrabold text-lg lg:text-left text-center my-4 tracking-widest uppercase">
             {t('about.skills.title')}
           </h4>
-          <p className="text-zinc-500 font-serif leading-relaxed pb-8">
+          <p className="  leading-relaxed pb-8">
             {t('about.skills.description')}
           </p>
           <div className="sm:h-auto h-[420px]">
@@ -124,7 +124,7 @@ const AboutSection: React.FC = () => {
                   {skills.technologies.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-accent-500 cursor-pointer"
+                      className="flex flex-col justify-center items-center  hover:text-accent-500 cursor-pointer"
                     >
                       <skill.icon className="w-6 h-6" />
                       <p>{skill.name}</p>
@@ -148,7 +148,7 @@ const AboutSection: React.FC = () => {
                   {skills.tools.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-accent-500 cursor-pointer"
+                      className="flex flex-col justify-center items-center  hover:text-accent-500 cursor-pointer"
                     >
                       <skill.icon className="w-6 h-6" />
                       <p>{skill.name}</p>
@@ -172,7 +172,7 @@ const AboutSection: React.FC = () => {
                   {skills.others.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-accent-500 cursor-pointer"
+                      className="flex flex-col justify-center items-center  hover:text-accent-500 cursor-pointer"
                     >
                       <skill.icon className="w-6 h-6" />
                       <p>{skill.name}</p>
@@ -188,13 +188,13 @@ const AboutSection: React.FC = () => {
       <div className="flex sm:flex-row flex-col justify-center gap-6 mt-12">
         <a
           href="#contact"
-          className="text-center border-zinc-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-accent-500 hover:text-accent-500 font-bold transition-all duration-300 cursor-pointer uppercase"
+          className="text-center border-neutral-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-accent-500 hover:text-accent-500 font-bold transition-all duration-300 cursor-pointer uppercase"
         >
           {t('about.hire-me-button')}
         </a>
         <a
           href="#"
-          className="text-center border-zinc-700 bg-zinc-700 text-white border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-zinc-900 hover:bg-zinc-900  font-bold transition-all duration-300 cursor-pointer uppercase"
+          className="text-center border-neutral-700 bg-neutral-700 text-white border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-neutral-900 hover:bg-neutral-900  font-bold transition-all duration-300 cursor-pointer uppercase"
         >
           {t('about.download-cv-button')}
         </a>

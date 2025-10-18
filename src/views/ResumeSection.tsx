@@ -9,7 +9,7 @@ const ResumeSection = () => {
   const { t } = useTranslation();
   
   return (
-    <SectionLayout id="resume" className="bg-zinc-100">
+    <SectionLayout id="resume" className="bg-neutral-100">
       {/* Title */}
       <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('resume.title')}
@@ -19,7 +19,7 @@ const ResumeSection = () => {
       </h2>
       {/* Avatar */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-4 pb-5">
-        <p className="lg:text-xl text-lg text-center font-serif text-zinc-500 max-w-lg leading-relaxed">
+        <p className="lg:text-xl text-lg text-center  text-neutral-500 max-w-lg leading-relaxed">
           {t('resume.description')}
         </p>
       </div>
