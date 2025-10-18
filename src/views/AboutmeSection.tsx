@@ -188,13 +188,13 @@ const AboutSection: React.FC = () => {
       <div className="flex sm:flex-row flex-col justify-center gap-6 mt-12">
         <a
           href="#contact"
-          className="text-center border-neutral-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-accent-500 hover:text-accent-500 font-bold transition-all duration-300 cursor-pointer uppercase"
+          className="min-w-[250px] text-center px-6 py-3 text-xl border-2 border-accent-500 text-accent-500 rounded hover:bg-accent-500 hover:text-white transition-all duration-300"
         >
           {t('about.hire-me-button')}
         </a>
         <a
           href="#"
-          className="text-center border-neutral-700 bg-neutral-700 text-white border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-neutral-900 hover:bg-neutral-900  font-bold transition-all duration-300 cursor-pointer uppercase"
+          className=" min-w-[250px] text-center px-6 py-3 text-xl border-2 border-gray-600 text-gray-400 rounded hover:border-gray-500 hover:text-gray-300 transition-all duration-300"
         >
           {t('about.download-cv-button')}
         </a>

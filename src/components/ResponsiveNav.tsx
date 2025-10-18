@@ -48,11 +48,10 @@ const ResponsiveNav = () => {
                   </a>
                 </li>
               ))}
-
-              <li className="py-4 w-full">
-                <SelectLanguage />
-              </li>
             </ul>
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+              <SelectLanguage />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

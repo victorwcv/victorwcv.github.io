@@ -108,7 +108,7 @@ const ContactSection = () => {
               className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-neutral-600 focus:border-b-accent-500 outline-hidden placeholder:text-neutral-600"
             />
             {errors.name && (
-              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-accent-500 text-xs uppercase">
+              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white rounded bg-accent-500 text-xs uppercase">
                 {errors.name.message}
               </span>
             )}
@@ -130,7 +130,7 @@ const ContactSection = () => {
               className="block mt-1 w-full px-8 py-6 border-b bg-transparent border-b-neutral-600 focus:border-b-accent-500 outline-hidden placeholder:text-neutral-600"
             />
             {errors.email && (
-              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-accent-500 text-xs uppercase">
+              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white rounded bg-accent-500 text-xs uppercase">
                 {errors.email.message}
               </span>
             )}
@@ -148,7 +148,7 @@ const ContactSection = () => {
               rows={4}
             ></textarea>
             {errors.message && (
-              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white bg-accent-500 text-xs uppercase">
+              <span className="absolute bottom-0 right-4 translate-y-1/2 px-6 py-1 text-white rounded bg-accent-500 text-xs uppercase">
                 {errors.message.message}
               </span>
             )}
@@ -157,7 +157,7 @@ const ContactSection = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full font-bold text-center py-6 text-white bg-accent-500 hover:bg-accent-500/80 transition-all duration-300 mt-16"
+            className="w-full rounded text-xl cursor-pointer text-center py-6 text-white bg-accent-500 hover:bg-accent-500/90 transition-all duration-300 mt-16"
           >
             {isSubmitting ? t('contact.form.submitting') : t('contact.form.submit')}
           </button>

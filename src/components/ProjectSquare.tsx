@@ -68,6 +68,8 @@ const ProjectSquare: FC<Props> = ({
               {github && (
                 <a
                   href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 border border-gray-600 text-gray-400 rounded hover:border-gray-500 hover:text-gray-300 transition-all duration-300 flex items-center gap-2"
                 >
                   <Icon.github size={18} />
@@ -119,6 +121,8 @@ const ProjectSquare: FC<Props> = ({
           {github && (
             <a
               href={github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-gray-300 transition-colors"
             >
               <Icon.github size={20} />

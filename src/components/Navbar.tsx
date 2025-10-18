@@ -34,18 +34,19 @@ const Navbar: React.FC = () => {
             alt="vc logo"
             className="block w-12 h-12 object-contain brightness-125"
           />
+        </div>
+        <div className="flex items-center gap-12">
+          <nav>
+            <ul className="flex md:gap-10 gap-6 font font-semibold">
+              {navOptions.map((option) => (
+                <li key={option.id} className="hover:text-accent-500">
+                  <a href={`#${option.id}`}>{t(`navbar.${option.id}`)}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <SelectLanguage />
         </div>
-
-        <nav className="block">
-          <ul className="flex md:gap-10 gap-6 font font-semibold">
-            {navOptions.map((option) => (
-              <li key={option.id} className="hover:text-accent-500">
-                <a href={`#${option.id}`}>{t(`navbar.${option.id}`)}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </div>
     </header>
   );
