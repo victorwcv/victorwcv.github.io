@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import SelectLanguage from './SelectLanguage';
 import { useEffect } from 'react';
+import { navOptions } from '@/data/nav-options';
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
@@ -19,9 +20,9 @@ const Navbar: React.FC = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
       if (document.querySelector('header')) {
-        document.querySelector('header')?.classList.remove('bg-zinc-900/90'); 
+        document.querySelector('header')?.classList.remove('bg-zinc-900/90');
       }
-    }
+    };
   }, []);
 
   return (
@@ -38,21 +39,11 @@ const Navbar: React.FC = () => {
 
         <nav className="block">
           <ul className="flex md:gap-10 gap-6 font font-semibold">
-            <li className="hover:text-accent-500">
-              <a href="#home">{t('navbar.home')}</a>
-            </li>
-            <li className="hover:text-accent-500">
-              <a href="#about">{t('navbar.about')}</a>
-            </li>
-            <li className="hover:text-accent-500">
-              <a href="#resume">{t('navbar.resume')}</a>
-            </li>
-            {/* <li className="hover:text-accent-500">
-              <a href="#portfolio">Portfolio</a>
-            </li> */}
-            <li className="hover:text-accent-500">
-              <a href="#contact">{t('navbar.contact')}</a>
-            </li>
+            {navOptions.map((option) => (
+              <li key={option.id} className="hover:text-accent-500">
+                <a href={`#${option.id}`}>{t(`navbar.${option.id}`)}</a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

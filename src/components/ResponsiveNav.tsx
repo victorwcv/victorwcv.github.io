@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import ToggleButton from './ToggleButton';
 import { useTranslation } from 'react-i18next';
 import SelectLanguage from './SelectLanguage';
+import { navOptions } from '@/data/nav-options';
 
 const ResponsiveNav = () => {
   const [open, setOpen] = useState(false);
@@ -14,9 +15,9 @@ const ResponsiveNav = () => {
 
   useEffect(() => {
     if (open) {
-      document.body.style.overflow = 'hidden'; 
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto'; 
+      document.body.style.overflow = 'auto';
     }
   }, [open]);
 
@@ -33,43 +34,21 @@ const ResponsiveNav = () => {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
             <ul className="flex flex-col items-center justify-center h-full text-xl font-semibold">
-              <li className="py-4 w-full active:bg-accent-500/50">
-                <a className="block text-center" href="#home" onClick={toggle}>
-                  {t('navbar.home')}
-                </a>
-              </li>
-              <li className="py-4 w-full active:bg-accent-500/50">
-                <a className="block text-center" href="#about" onClick={toggle}>
-                  {t('navbar.about')}
-                </a>
-              </li>
-              <li className="py-4 w-full active:bg-accent-500/50">
-                <a
-                  className="block text-center"
-                  href="#resume"
-                  onClick={toggle}
+              {navOptions.map((option) => (
+                <li
+                  key={option.id}
+                  className="py-4 w-full active:bg-accent-500/50"
                 >
-                  {t('navbar.resume')}
-                </a>
-              </li>
-              {/* <li className="py-4 w-full active:bg-accent-500/50">
-                <a
-                  className="block text-center"
-                  href="#portfolio"
-                  onClick={toggle}
-                >
-                  Portfolio
-                </a>
-              </li> */}
-              <li className="py-4 w-full active:bg-accent-500/50">
-                <a
-                  className="block text-center"
-                  href="#contact"
-                  onClick={toggle}
-                >
-                  {t('navbar.contact')}
-                </a>
-              </li>
+                  <a
+                    className="block text-center"
+                    href={`#${option.id}`}
+                    onClick={toggle}
+                  >
+                    {t(`navbar.${option.id}`)}
+                  </a>
+                </li>
+              ))}
+
               <li className="py-4 w-full">
                 <SelectLanguage />
               </li>
