@@ -32,7 +32,7 @@ const Stats: React.FC = () => {
   }, [hasAnimated]);
 
   return (
-    <SectionLayout id="stats" className="bg-accent-600">
+    <SectionLayout id="stats" className="bg-accent-500">
       <div
         ref={sectionRef}
         className="flex flex-wrap items-stretch justify-center gap-6"

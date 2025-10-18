@@ -19,7 +19,7 @@ const HomeSection: FC = () => {
     >
       {/* Scroll to top */}
       <motion.div
-        className="fixed bottom-0 right-0 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 h-10 bg-primary text-white z-30"
+        className="fixed bottom-0 right-0 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 h-10 bg-accent-500 text-white z-30"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         initial={{ opacity: 0 }}
         animate={{ opacity: isInView ? 0 : 1 }}
@@ -36,7 +36,7 @@ const HomeSection: FC = () => {
 
         {/* Hero */}
         <div>
-          <h2 className="text-primary font-bold lg:text-2xl uppercase text-sm m-2">
+          <h2 className="text-accent-500 font-bold lg:text-2xl uppercase text-sm m-2">
             {t('home.subtitle')} <BlinkingCursor />
           </h2>
           <h1 className="lg:text-8xl text-4xl font-bold text-center text-white">
@@ -48,7 +48,7 @@ const HomeSection: FC = () => {
           <div>
             <a
               href="#about"
-              className="block w-fit border-gray-500 border-[3px] lg:px-16 px-8 lg:py-4 py-2 text-white mt-8 mx-auto hover:border-primary transition-all duration-300"
+              className="block w-fit border-gray-500 border-[3px] lg:px-16 px-8 lg:py-4 py-2 text-white mt-8 mx-auto hover:border-accent-500 transition-all duration-300"
             >
               <span className="inline-flex items-center gap-2 uppercase font-bold">
                 {t('home.button')} <Icon.arrowDown />
@@ -63,7 +63,7 @@ const HomeSection: FC = () => {
             href="https://www.linkedin.com/in/victor-ccanchi/"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-primary transition-all duration-300"
+            className="hover:text-accent-500 transition-all duration-300"
           >
             <Icon.linkedin />
           </a>
@@ -71,7 +71,7 @@ const HomeSection: FC = () => {
              href="https://github.com/victorwcv"
              target="_blank"
              rel="noreferrer"
-            className="hover:text-primary transition-all duration-300"
+            className="hover:text-accent-500 transition-all duration-300"
           >
             <Icon.github />
           </a>
@@ -79,7 +79,7 @@ const HomeSection: FC = () => {
              href="mailto:victorwccv@gmail.com"
              target="_blank"
              rel="noreferrer"
-            className="hover:text-primary transition-all duration-300"
+            className="hover:text-accent-500 transition-all duration-300"
           >
             <Icon.envelope />
           </a>

@@ -11,7 +11,7 @@ const ResumeSection = () => {
   return (
     <SectionLayout id="resume" className="bg-zinc-100">
       {/* Title */}
-      <h3 className="text-primary font-bold lg:text-base text-sm text-center tracking-widest uppercase">
+      <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('resume.title')}
       </h3>
       <h2 className="text-center lg:text-4xl text-2xl font-bold">
@@ -27,7 +27,7 @@ const ResumeSection = () => {
       <div>
         {/* Work Experience */}
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-primary font-bold lg:text-xl text-base tracking-widest my-10 uppercase">
+          <h3 className="text-accent-500 font-bold lg:text-xl text-base tracking-widest my-10 uppercase">
             {t('resume.experience.title')}
           </h3>
 
@@ -60,7 +60,7 @@ const ResumeSection = () => {
 
         {/* Education */}
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-primary font-bold lg:text-xl text-base tracking-widest mt-14 mb-10 uppercase">
+          <h3 className="text-accent-500 font-bold lg:text-xl text-base tracking-widest mt-14 mb-10 uppercase">
             {t('resume.education.title')}
           </h3>
 
@@ -91,7 +91,7 @@ const ResumeSection = () => {
           </div>
         </div>
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-primary font-bold lg:text-xl text-base tracking-widest mt-24 mb-16 uppercase">
+          <h3 className="text-accent-500 font-bold lg:text-xl text-base tracking-widest mt-24 mb-16 uppercase">
             {t('resume.certificates.title')}
           </h3>
           <div className="w-full flex justify-center">

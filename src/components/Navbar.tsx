@@ -38,19 +38,19 @@ const Navbar: React.FC = () => {
 
         <nav className="block">
           <ul className="flex md:gap-10 gap-6 font font-semibold">
-            <li className="hover:text-primary">
+            <li className="hover:text-accent-500">
               <a href="#home">{t('navbar.home')}</a>
             </li>
-            <li className="hover:text-primary">
+            <li className="hover:text-accent-500">
               <a href="#about">{t('navbar.about')}</a>
             </li>
-            <li className="hover:text-primary">
+            <li className="hover:text-accent-500">
               <a href="#resume">{t('navbar.resume')}</a>
             </li>
-            {/* <li className="hover:text-primary">
+            {/* <li className="hover:text-accent-500">
               <a href="#portfolio">Portfolio</a>
             </li> */}
-            <li className="hover:text-primary">
+            <li className="hover:text-accent-500">
               <a href="#contact">{t('navbar.contact')}</a>
             </li>
           </ul>

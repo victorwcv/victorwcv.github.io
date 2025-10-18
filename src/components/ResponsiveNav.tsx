@@ -33,17 +33,17 @@ const ResponsiveNav = () => {
             transition={{ duration: 0.5, ease: 'easeInOut' }}
           >
             <ul className="flex flex-col items-center justify-center h-full text-xl font-semibold">
-              <li className="py-4 w-full active:bg-primary/50">
+              <li className="py-4 w-full active:bg-accent-500/50">
                 <a className="block text-center" href="#home" onClick={toggle}>
                   {t('navbar.home')}
                 </a>
               </li>
-              <li className="py-4 w-full active:bg-primary/50">
+              <li className="py-4 w-full active:bg-accent-500/50">
                 <a className="block text-center" href="#about" onClick={toggle}>
                   {t('navbar.about')}
                 </a>
               </li>
-              <li className="py-4 w-full active:bg-primary/50">
+              <li className="py-4 w-full active:bg-accent-500/50">
                 <a
                   className="block text-center"
                   href="#resume"
@@ -52,7 +52,7 @@ const ResponsiveNav = () => {
                   {t('navbar.resume')}
                 </a>
               </li>
-              {/* <li className="py-4 w-full active:bg-primary/50">
+              {/* <li className="py-4 w-full active:bg-accent-500/50">
                 <a
                   className="block text-center"
                   href="#portfolio"
@@ -61,7 +61,7 @@ const ResponsiveNav = () => {
                   Portfolio
                 </a>
               </li> */}
-              <li className="py-4 w-full active:bg-primary/50">
+              <li className="py-4 w-full active:bg-accent-500/50">
                 <a
                   className="block text-center"
                   href="#contact"

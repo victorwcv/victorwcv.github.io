@@ -9,7 +9,7 @@ const AboutSection: React.FC = () => {
   return (
     <SectionLayout id="about">
       {/* Title */}
-      <h3 className="text-primary font-bold lg:text-base text-sm text-center tracking-widest uppercase">
+      <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('about.title')}
       </h3>
       <h2 className="text-center lg:text-4xl text-2xl font-bold">
@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
       </h2>
       {/* Avatar */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-12 mb-5">
-        <div className="relative ring-primary ring-offset-base-100 lg:w-36 lg:h-36 w-24 h-24 rounded-full ring ring-offset-2 m-8 overflow-hidden flex justify-center items-center">
+        <div className="relative ring-primary ring-offset-base-100 lg:w-36 lg:h-36 w-24 h-24 rounded-full ring-3 ring-offset-2 m-8 overflow-hidden flex justify-center items-center">
           <img src="/profile.webp" alt="My picture" />
         </div>
         <p className="lg:text-lg text-lg lg:text-left text-center font-serif text-zinc-500 max-w-lg leading-relaxed">
@@ -62,7 +62,7 @@ const AboutSection: React.FC = () => {
                 </h5>
                 <a
                   href="mailto:victorwccv@gamil.com"
-                  className="text-zinc-500 hover:text-primary flex items-center gap-2"
+                  className="text-zinc-500 hover:text-accent-500 flex items-center gap-2"
                 >
                   {t('about.profile.email')}
                   <Icon.externalLink />
@@ -74,7 +74,7 @@ const AboutSection: React.FC = () => {
                 </h5>
                 <a
                   href="https://www.linkedin.com/in/victor-ccanchi/"
-                  className="text-zinc-500 hover:text-primary flex items-center gap-2"
+                  className="text-zinc-500 hover:text-accent-500 flex items-center gap-2"
                   target="_blank"
                 >
                   {t('about.profile.linkedin')}
@@ -87,7 +87,7 @@ const AboutSection: React.FC = () => {
                 </h5>
                 <a
                   href="https://github.com/victorwcv"
-                  className="text-zinc-500 hover:text-primary flex items-center gap-2"
+                  className="text-zinc-500 hover:text-accent-500 flex items-center gap-2"
                   target="_blank"
                 >
                   {t('about.profile.github')}
@@ -124,7 +124,7 @@ const AboutSection: React.FC = () => {
                   {skills.technologies.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
+                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-accent-500 cursor-pointer"
                     >
                       <skill.icon className="w-6 h-6" />
                       <p>{skill.name}</p>
@@ -148,7 +148,7 @@ const AboutSection: React.FC = () => {
                   {skills.tools.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
+                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-accent-500 cursor-pointer"
                     >
                       <skill.icon className="w-6 h-6" />
                       <p>{skill.name}</p>
@@ -172,7 +172,7 @@ const AboutSection: React.FC = () => {
                   {skills.others.map((skill, index) => (
                     <div
                       key={index}
-                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-primary cursor-pointer"
+                      className="flex flex-col justify-center items-center text-zinc-500 hover:text-accent-500 cursor-pointer"
                     >
                       <skill.icon className="w-6 h-6" />
                       <p>{skill.name}</p>
@@ -188,7 +188,7 @@ const AboutSection: React.FC = () => {
       <div className="flex sm:flex-row flex-col justify-center gap-6 mt-12">
         <a
           href="#contact"
-          className="text-center border-zinc-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-primary hover:text-primary font-bold transition-all duration-300 cursor-pointer uppercase"
+          className="text-center border-zinc-700 border-[3px] lg:w-64 w-full lg:px-16 px-8 lg:py-4 py-2 hover:border-accent-500 hover:text-accent-500 font-bold transition-all duration-300 cursor-pointer uppercase"
         >
           {t('about.hire-me-button')}
         </a>

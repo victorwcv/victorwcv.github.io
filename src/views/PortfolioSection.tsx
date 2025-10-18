@@ -9,7 +9,7 @@ const PortfolioSection = () => {
   return (
     <SectionLayout id="portfolio">
       {/* Title */}
-      <h3 className="text-primary font-bold lg:text-base text-sm text-center tracking-widest">
+      <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest">
         PORTFOLIO
       </h3>
       <h2 className="text-center lg:text-4xl text-2xl font-bold">

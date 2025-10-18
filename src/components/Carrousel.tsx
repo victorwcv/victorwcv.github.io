@@ -85,7 +85,7 @@ const Carrousel: FC<Props> = ({ items }) => {
               src={item.src}
               alt={`Image ${index + 1}`}
               style={{ width: '100%' }}
-              className="block w-full h-auto shadow"
+              className="block w-full h-auto shadow-sm"
             />
           </div>
         ))}
