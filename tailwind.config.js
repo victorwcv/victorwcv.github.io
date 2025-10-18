@@ -1,5 +1,3 @@
-import daisyui from 'daisyui';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -30,15 +28,5 @@ export default {
         ],
       },
     },
-  },
-  plugins: [daisyui],
-  daisyui: {
-    themes: [
-      {
-        myCustomTheme: {
-          primary: '#00c4f0',
-        },
-      },
-    ],
   },
 };
