@@ -1,3 +1,4 @@
+import { Tabs } from '@/components/Tabs';
 import { skills } from '@/data/skills';
 import { Icon } from '@/icons/icons';
 import SectionLayout from '@/layouts/SectionLayout';
@@ -35,7 +36,7 @@ const AboutSection: React.FC = () => {
           <p className="  leading-relaxed pb-8">
             {t('about.profile.description')}
           </p>
-          <div className="flex-1 flex flex-col justify-center items-center">
+          <div className="flex-1 mx-auto">
             <ul className="mr-6">
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2 uppercase">
@@ -106,81 +107,8 @@ const AboutSection: React.FC = () => {
           <p className="  leading-relaxed pb-8">
             {t('about.skills.description')}
           </p>
-          <div className="sm:h-auto h-[420px]">
-            <div role="tablist" className="tabs tabs-lifted">
-              <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab"
-                aria-label={t('about.skills.technologies-label')}
-                defaultChecked
-              />
-              <div
-                role="tabpanel"
-                className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-              >
-                <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
-                  {skills.technologies.map((skill, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col justify-center items-center  hover:text-accent-500 cursor-pointer"
-                    >
-                      <skill.icon className="w-6 h-6" />
-                      <p>{skill.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab"
-                aria-label={t('about.skills.tools-label')}
-              />
-              <div
-                role="tabpanel"
-                className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-              >
-                <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
-                  {skills.tools.map((skill, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col justify-center items-center  hover:text-accent-500 cursor-pointer"
-                    >
-                      <skill.icon className="w-6 h-6" />
-                      <p>{skill.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <input
-                type="radio"
-                name="my_tabs_2"
-                role="tab"
-                className="tab"
-                aria-label={t('about.skills.others-label')}
-              />
-              <div
-                role="tabpanel"
-                className="tab-content bg-base-100 border-base-300 rounded-box p-6"
-              >
-                <div className="grid lg:grid-cols-4 grid-cols-3 gap-6">
-                  {skills.others.map((skill, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col justify-center items-center  hover:text-accent-500 cursor-pointer"
-                    >
-                      <skill.icon className="w-6 h-6" />
-                      <p>{skill.name}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+          <div className="h-[420px]">
+           <Tabs tabs={skills} />
           </div>
         </div>
       </div>
@@ -188,7 +116,7 @@ const AboutSection: React.FC = () => {
       <div className="flex sm:flex-row flex-col justify-center gap-6 mt-12">
         <a
           href="#contact"
-          className="min-w-[250px] text-center px-6 py-3 text-xl border-2 border-accent-500 text-accent-500 rounded hover:bg-accent-500 hover:text-white transition-all duration-300"
+          className="min-w-[250px] text-center px-6 py-3 text-xl border-2 border-accent-500 rounded bg-accent-500 hover:bg-accent-500/90 transition-all duration-300"
         >
           {t('about.hire-me-button')}
         </a>
