@@ -5,7 +5,7 @@ interface Props {
   progress: number;
 }
 
-const LoadingPage: React.FC<Props> = ({ progress }) => {
+const LoadingPage: React.FC<Props> = () => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
@@ -25,11 +25,7 @@ const LoadingPage: React.FC<Props> = ({ progress }) => {
         alt="VC logo"
         className="w-20 h-auto brightness-125 mb-6"
       />
-      <progress
-        className="progress progress-primary w-56"
-        value={progress}
-        max="100"
-      ></progress>
+     
     </motion.div>
   );
 };
