@@ -9,7 +9,7 @@ interface Props {
 const ToggleButton: FC<Props> = ({ open, toggle }) => {
   return (
     <div
-      className="fixed top-4 right-4 z-50 text-lg bg-accent-500 text-white w-10 h-12  flex items-center justify-center cursor-pointer"
+      className="fixed top-4 right-4 z-50 text-lg bg-accent-500 text-white w-10 h-12  flex items-center justify-center rounded"
       onClick={() => toggle()}
     >
       {open ? <Icon.xmark /> : <Icon.bars />}
