@@ -33,35 +33,37 @@ const HomeSection: React.FC = () => {
           {/* Hero */}
           <div className="z-10">
             <div>
-              <h2 className="text-accent-500 font-bold lg:text-2xl uppercase text-sm mb-2">
+              <h2 className="text-accent-500 font-bold lg:text-2xl uppercase text-lg mb-1">
                 {t('home.subtitle')} <BlinkingCursor />
               </h2>
-              <h1 className="lg:text-8xl text-4xl font-bold">
+              <h1 className="lg:text-8xl text-5xl font-bold">
                 {t('home.title')}
               </h1>
-              <h3 className="text-text-secondary lg:text-2xl text-sm  mt-4">
+              <h3 className="text-text-secondary lg:text-xl text-base mt-1">
                 {t('home.description')}
               </h3>
             </div>
 
-            <div>
+          
               <a
                 href="#about"
-                className="block w-fit border-gray-500 border-[3px] lg:px-16 px-8 lg:py-4 py-2 mt-8 hover:border-accent-500 rounded transition-all duration-300"
+                className="inline-block mt-4 py-3 px-6 bg-accent-500 hover:bg-accent-600 text-accent-50 rounded shadow transition-all duration-300"
               >
                 <span className="inline-flex items-center gap-2 uppercase font-bold">
                   {t('home.button')}
                 </span>
               </a>
-            </div>
+            
           </div>
 
-          <div className='md:w-3/5 w-4/5'>
+          <div className='md:w-3/5 w-4/5 opacity-80'>
             <img src="/ilustration.svg" alt="Ilustration developer" />
           </div>
 
+          {/* <div className="absolute -bottom-8 w-full h-4 bg-gradient-to-r from-accent-400 to-transparent  rounded-full"></div> */}
+        </div>
           {/* Socials */}
-          <div className="absolute bottom-1 right-1 lg:text-4xl text-2xl flex gap-8 text-text-secondary">
+          <div className="absolute bottom-8 right-8 lg:text-4xl text-2xl flex gap-8 text-text-secondary">
             <a
               href="https://www.linkedin.com/in/victor-ccanchi/"
               target="_blank"
@@ -87,8 +89,6 @@ const HomeSection: React.FC = () => {
               <Icon.envelope />
             </a>
           </div>
-          {/* <div className="absolute -bottom-8 w-full h-4 bg-gradient-to-r from-accent-400 to-transparent  rounded-full"></div> */}
-        </div>
       </div>
     </SectionLayout>
   );

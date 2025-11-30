@@ -5,7 +5,7 @@ interface Props {
 }
 
 const PortfolioLayout: FC<Props> = ({ children }) => {
-  return <main >{children}</main>;
+  return <div className="relative bg-bg-primary text-text-primary">{children}</div>;
 };
 
 export default PortfolioLayout;

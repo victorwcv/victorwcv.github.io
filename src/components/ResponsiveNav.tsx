@@ -28,7 +28,7 @@ const ResponsiveNav = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed top-0 left-0 w-screen h-dvh bg-bg-card text-text-secondary z-40"
+            className="fixed top-0 left-0 w-screen h-dvh bg-bg-card text-text-secondary z-40 shadow-lg"
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}

@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         });
       },
       {
-        threshold: 0.20,
+        threshold: 0.30,
         rootMargin: '-120px 0px 0px 0px',
       },
     );

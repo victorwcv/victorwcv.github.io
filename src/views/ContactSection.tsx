@@ -89,7 +89,7 @@ const ContactSection = () => {
 
       {/* Description */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-4 mb-5">
-        <p className="lg:text-xl text-lg text-center  text-neutral-300 max-w-lg leading-relaxed">
+        <p className="lg:text-xl text-lg text-center max-w-lg leading-relaxed text-text-secondary">
           {t('contact.description')}
         </p>
       </div>
@@ -163,6 +163,7 @@ const ContactSection = () => {
           </button>
         </form>
       </div>
+      
     </SectionLayout>
   );
 };

@@ -29,10 +29,10 @@ export const Tabs: React.FC<TabsProps> = ({ tabs, defaultIndex = 0 }) => {
           <button
             key={index}
             onClick={() => setActiveIndex(index)}
-            className={`flex-1 py-2 text-sm font-medium transition-colors cursor-pointer border-2 border-b-0  ${
+            className={`flex-1 py-2 text-sm font-medium transition-colors cursor-pointer  ${
               activeIndex === index
-                ? ' border-accent-500 text-accent-500 rounded-t-lg'
-                : ' hover:text-accent-500/50 border-transparent'
+                ? ' text-accent-500'
+                : ' hover:text-accent-600'
             }`}
           >
             {t(`about.skills.${tab.label}`)}

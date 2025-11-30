@@ -1,5 +1,4 @@
 import { stats } from '@/data/stats';
-import SectionLayout from '@/layouts/SectionLayout';
 import { useEffect, useRef, useState } from 'react';
 import CountUp from 'react-countup';
 import { useTranslation } from 'react-i18next';
@@ -32,7 +31,7 @@ const Stats: React.FC = () => {
   }, [hasAnimated]);
 
   return (
-    <SectionLayout id="stats" className="bg-accent-500">
+    <div className="bg-accent-500 p-20 shadow-xl">
       <div
         ref={sectionRef}
         className="flex flex-wrap items-stretch justify-center gap-6"
@@ -57,7 +56,7 @@ const Stats: React.FC = () => {
           </div>
         ))}
       </div>
-    </SectionLayout>
+    </div>
   );
 };
 

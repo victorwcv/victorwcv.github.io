@@ -8,7 +8,7 @@ const AboutSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <SectionLayout id="about">
+    <SectionLayout id="about" >
       {/* Title */}
       <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('about.title')}
@@ -17,23 +17,23 @@ const AboutSection: React.FC = () => {
         {t('about.subtitle')}
       </h2>
       {/* Avatar */}
-      <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-12 mb-5">
-        <div className="relative ring-primary ring-offset-base-100 lg:w-36 lg:h-36 w-24 h-24 rounded-full ring-3 ring-offset-2 m-8 overflow-hidden flex justify-center items-center">
+      <div className="flex lg:flex-row flex-col justify-center items-center lg:mx-20 mt-12 mb-4 p-4 rounded bg-bg-card shadow">
+        <div className="relative text-accent-500 lg:w-36 lg:h-36 w-24 h-24 rounded m-8 overflow-hidden flex justify-center items-center">
           <img src="/profile.webp" alt="My picture" />
         </div>
-        <p className="lg:text-lg text-lg lg:text-left text-center   max-w-lg leading-relaxed">
+        <p className="text-text-secondary lg:text-lg text-lg lg:text-left text-center max-w-lg">
           {t('about.description')}
         </p>
       </div>
 
       {/* Profile */}
-      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 lg:mt-12 lg:mx-20 gap-x-12">
+      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 lg:mx-20 gap-x-4 text-text-secondary">
         {/* Left Side */}
-        <div className="flex flex-col mx-auto max-w-lg">
-          <h4 className="font-extrabold text-lg lg:text-left text-center my-4 tracking-widest uppercase">
+        <div className="flex flex-col mx-auto p-8 rounded bg-bg-card shadow">
+          <h4 className="font-extrabold text-lg lg:text-left text-center mb-4 tracking-widest uppercase text-text-primary">
             {t('about.profile.title')}
           </h4>
-          <p className="  leading-relaxed pb-8">
+          <p className="text-text-secondary leading-relaxed pb-8">
             {t('about.profile.description')}
           </p>
           <div className="flex-1 mx-auto">
@@ -100,14 +100,14 @@ const AboutSection: React.FC = () => {
         </div>
 
         {/* Right Side */}
-        <div className="mx-auto max-w-lg">
-          <h4 className="font-extrabold text-lg lg:text-left text-center my-4 tracking-widest uppercase">
+        <div className="mx-auto p-8 rounded bg-bg-card shadow">
+          <h4 className="font-extrabold text-lg lg:text-left text-center mb-4 tracking-widest uppercase text-text-primary">
             {t('about.skills.title')}
           </h4>
-          <p className="  leading-relaxed pb-8">
+          <p className="text-text-secondary leading-relaxed pb-8">
             {t('about.skills.description')}
           </p>
-          <div className="h-[420px]">
+          <div className="md:h-auto h-[400px] ">
            <Tabs tabs={skills} />
           </div>
         </div>
@@ -116,13 +116,13 @@ const AboutSection: React.FC = () => {
       <div className="flex sm:flex-row flex-col justify-center gap-6 mt-12">
         <a
           href="#contact"
-          className="min-w-[250px] text-center px-6 py-3 text-xl border-2 border-accent-500 rounded bg-accent-500 hover:bg-accent-500/90 transition-all duration-300"
+          className="min-w-[250px] text-center px-6 py-3 text-xl border-2 border-accent-500 rounded bg-accent-500 hover:bg-accent-600 transition-all duration-300 text-accent-50"
         >
           {t('about.hire-me-button')}
         </a>
         <a
           href="#"
-          className=" min-w-[250px] text-center px-6 py-3 text-xl border-2 border-gray-600 text-gray-400 rounded hover:border-gray-500 hover:text-gray-300 transition-all duration-300"
+          className=" min-w-[250px] text-center px-6 py-3 text-xl border-2 border-text-secondary text-text-secondary rounded hover:text-accent-500 hover:border-accent-500 transition-all duration-300"
         >
           {t('about.download-cv-button')}
         </a>

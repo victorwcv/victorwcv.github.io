@@ -10,11 +10,11 @@ import AboutSection from './views/AboutmeSection';
 import ResumeSection from './views/ResumeSection';
 // import PortfolioSection from './views/PortfolioSection';
 import ContactSection from './views/ContactSection';
-import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
 import LanguageProvider from './components/LanguageProvider';
 import PortfolioSection from './views/PortfolioSection';
 import { Configbar } from './components/Configbar';
+import Stats from './views/Stats';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
@@ -56,11 +56,11 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="relative min-h-fit bg-bg-primary text-text-primary">
-        <Navbar />
-        <Configbar/>
-        <ResponsiveNav />
+      
         <PortfolioLayout>
+          <Navbar />
+          <Configbar />
+          <ResponsiveNav />
           <HomeSection />
           <AboutSection />
           <ResumeSection />
@@ -68,7 +68,6 @@ function App() {
           <Stats />
           <ContactSection />
         </PortfolioLayout>
-
         <Footer />
 
         <AnimatePresence>
@@ -76,7 +75,7 @@ function App() {
             <LoadingPage progress={progress} key={'loadingPage'} />
           )}
         </AnimatePresence>
-      </div>
+      
     </LanguageProvider>
   );
 }
