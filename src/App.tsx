@@ -14,6 +14,7 @@ import Stats from './views/Stats';
 import ResponsiveNav from './components/ResponsiveNav';
 import LanguageProvider from './components/LanguageProvider';
 import PortfolioSection from './views/PortfolioSection';
+import { Configbar } from './components/Configbar';
 
 function App() {
   const [showLoadingPage, setShowLoadingPage] = useState(true);
@@ -55,8 +56,9 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="relative min-h-fit text-neutral-700">
+      <div className="relative min-h-fit bg-bg-primary text-text-primary">
         <Navbar />
+        <Configbar/>
         <ResponsiveNav />
         <PortfolioLayout>
           <HomeSection />

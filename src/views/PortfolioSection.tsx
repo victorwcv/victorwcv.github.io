@@ -21,7 +21,7 @@ const PortfolioSection = () => {
       : projects.filter((p) => p.category === activeFilter);
 
   return (
-    <SectionLayout id="projects" className="bg-neutral-900 text-primary-light">
+    <SectionLayout id="projects">
       {/* Title */}
       <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest">
         PORTFOLIO

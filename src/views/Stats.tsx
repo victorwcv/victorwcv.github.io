@@ -32,7 +32,7 @@ const Stats: React.FC = () => {
   }, [hasAnimated]);
 
   return (
-    <SectionLayout id="stats" className="bg-accent-600">
+    <SectionLayout id="stats" className="bg-accent-500">
       <div
         ref={sectionRef}
         className="flex flex-wrap items-stretch justify-center gap-6"
@@ -40,10 +40,10 @@ const Stats: React.FC = () => {
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className="md:w-[150px] w-[120px] h-fit flex flex-col items-center justify-center gap-1"
+            className="md:w-[150px] w-[120px] h-fit flex flex-col items-center justify-center gap-1 text-white"
           >
-            <stat.icon className="text-black/80 md:text-4xl text-3xl" />
-            <h1 className="md:text-4xl text-2xl font-bold text-white">
+            <stat.icon className="md:text-4xl text-3xl text-accent-900" />
+            <h1 className="md:text-4xl text-2xl font-bold">
               {hasAnimated ? (
                 <CountUp end={stat.number} duration={7} />
               ) : (
@@ -51,7 +51,7 @@ const Stats: React.FC = () => {
               )}
               +
             </h1>
-            <p className="text-white/80 uppercase font-bold text-center md:text-base text-xs">
+            <p className="uppercase font-bold text-center md:text-base text-xs">
               {t(`stats.${stat.title}`)}
             </p>
           </div>

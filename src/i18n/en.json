@@ -4,9 +4,9 @@
   },
   "navbar": {
     "home": "Home",
-    "about": "About",
+    "about": "About me",
     "resume": "Resume",
-    "projects": "Projects",
+    "projects": "My projects",
     "contact": "Contact"
   },
   "home": {
@@ -16,7 +16,7 @@
     "button": "More about me"
   },
   "about": {
-    "title": "About",
+    "title": "About me",
     "subtitle": "Let me introduce myself",
     "description": "Hi!, I'm Victor , a passionate web developer from Lima, Peru. My focus is creating digital solutions, offering products that are functional, scalable, and visually appealing. My main goal is transforming ideas into real projects through the use of modern technologies.",
     "profile": {

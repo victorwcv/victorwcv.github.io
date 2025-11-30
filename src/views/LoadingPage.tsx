@@ -15,7 +15,7 @@ const LoadingPage: React.FC<Props> = () => {
 
   return (
     <motion.div
-      className="fixed inset-0 w-screen h-dvh bg-neutral-900 z-50 flex flex-col justify-center items-center"
+      className="fixed inset-0 w-screen h-dvh bg-bg-primary z-50 flex flex-col justify-center items-center"
       initial={{ opacity: 1 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, transition: { duration: 0.5 } }}

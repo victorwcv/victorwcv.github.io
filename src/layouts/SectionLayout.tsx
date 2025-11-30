@@ -1,15 +1,11 @@
-import { FC } from 'react';
+import clsx from 'clsx';
 
-interface Props {
-  children: React.ReactNode;
-  className?: string;
-  id: string;
-}
+type Props = React.JSX.IntrinsicElements['section'];
 
-const SectionLayout: FC<Props> = ({ children, id, className = 'bg-white' }) => {
+const SectionLayout: React.FC<Props> = ({ children, className, ...rest }) => {
   return (
-    <section className={`${className}`} id={id}>
-      <div className="container mx-auto px-8 sm:py-28 py-20">{children}</div>
+    <section {...rest} className={clsx(className)}>
+      <div className="container mx-auto h-full px-8 sm:py-28 py-20">{children}</div>
     </section>
   );
 };

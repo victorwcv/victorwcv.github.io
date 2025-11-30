@@ -9,7 +9,7 @@ const ResumeSection = () => {
   const { t } = useTranslation();
   
   return (
-    <SectionLayout id="resume" className="bg-neutral-100">
+    <SectionLayout id="resume">
       {/* Title */}
       <h3 className="text-accent-500 font-bold lg:text-base text-sm text-center tracking-widest uppercase">
         {t('resume.title')}

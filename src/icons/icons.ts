@@ -7,7 +7,6 @@ import {
   FaCodeBranch,
   FaCss3Alt,
   FaDocker,
-  FaEnvelope,
   FaExternalLinkAlt,
   FaGithub,
   FaGithubSquare,
@@ -18,20 +17,20 @@ import {
   FaPencilRuler,
   FaReact,
   FaSass,
-  FaUser,
+  FaSun,
+  FaMoon,
 } from 'react-icons/fa';
 import { FaArrowUpLong, FaXmark, FaCode } from 'react-icons/fa6';
 import { GiCoffeeCup } from 'react-icons/gi';
 import { IoIosArrowDown } from 'react-icons/io';
 import {
-  IoBriefcaseSharp,
   IoCalendarNumber,
   IoLogoFigma,
   IoLogoFirebase,
   IoLogoVue,
   IoRocketOutline
 } from 'react-icons/io5';
-import { PiCertificateFill } from 'react-icons/pi';
+import { PiBriefcase, PiCertificateFill, PiEnvelope, PiFolder, PiGear, PiHouse, PiPalette, PiUser } from 'react-icons/pi';
 import { RiNodejsLine, RiTailwindCssFill } from 'react-icons/ri';
 import {
   SiExpress,
@@ -51,7 +50,7 @@ export const Icon = {
   arrowDown: IoIosArrowDown,
   arrowUp: FaArrowUpLong,
   bars: FaBars,
-  briefcase: IoBriefcaseSharp,
+  briefcase: PiBriefcase,
   calendar: IoCalendarNumber,
   certificate: PiCertificateFill,
   clock: FaClock,
@@ -60,7 +59,7 @@ export const Icon = {
   coffee: GiCoffeeCup,
   css: FaCss3Alt,
   docker: FaDocker,
-  envelope: FaEnvelope,
+  envelope: PiEnvelope,
   express: SiExpress,
   externalLink: FaExternalLinkAlt,
   figma: IoLogoFigma,
@@ -87,10 +86,16 @@ export const Icon = {
   teams: BsMicrosoftTeams,
   translate: BsTranslate,
   typescript: SiTypescript,
-  user: FaUser,
+  user: PiUser,
   vite: SiVite,
   vitest: SiVitest,
   vscode: VscVscode,
   vue: IoLogoVue,
   xmark: FaXmark,
+  sun: FaSun,
+  moon: FaMoon,
+  house: PiHouse,
+  folder: PiFolder,
+  gear: PiGear,
+  palette: PiPalette
 };

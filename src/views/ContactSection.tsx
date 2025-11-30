@@ -64,7 +64,7 @@ const ContactSection = () => {
   };
 
   return (
-    <SectionLayout id="contact" className="bg-neutral-900 text-white">
+    <SectionLayout id="contact">
       {/* Alert */}
       <AnimatePresence>
         {showMessage && (
