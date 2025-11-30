@@ -4,6 +4,7 @@ import ToggleButton from './ToggleButton';
 import { useTranslation } from 'react-i18next';
 import SelectLanguage from './SelectLanguage';
 import { navOptions } from '@/data/nav-options';
+import SelectTheme from './SelectTheme';
 
 const ResponsiveNav = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,7 @@ const ResponsiveNav = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed top-0 left-0 w-screen h-dvh bg-white z-40"
+            className="fixed top-0 left-0 w-screen h-dvh bg-bg-card text-text-secondary z-40"
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
@@ -49,8 +50,9 @@ const ResponsiveNav = () => {
                 </li>
               ))}
             </ul>
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-8">
               <SelectLanguage />
+              <SelectTheme />
             </div>
           </motion.div>
         )}
