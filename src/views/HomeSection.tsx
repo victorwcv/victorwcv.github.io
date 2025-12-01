@@ -13,26 +13,19 @@ const HomeSection: React.FC = () => {
 
   return (
     <SectionLayout
-      className="relative sm:h-screen h-svh min-w-80 min-h-[500px]"
+      className="relative sm:h-screen h-svh min-w-80 min-h-[500px] bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat"
       id="home"
     >
-      <div ref={ref} className="h-full w-full">
-        {/* Scroll to top */}
-        <motion.div
-          className="fixed bottom-2 right-2 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 shadow h-10 bg-accent-500 text-text-primary z-30 rounded "
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInView ? 0 : 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Icon.arrowUp className="lg:text-2xl text-lg text-white" />
-        </motion.div>
-
+      <div className="absolute inset-0 bg-bg-primary/50"></div>
+      <div
+        ref={ref}
+        className="h-full w-full bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl mt-12"
+      >
         {/* Content */}
         <div className="relative h-full flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 items-center justify-center">
           {/* Hero */}
           <div className="z-10">
-            <div>
+            <div className="md:text-left text-center">
               <h2 className="text-accent-500 font-bold lg:text-2xl uppercase text-lg mb-1">
                 {t('home.subtitle')} <BlinkingCursor />
               </h2>
@@ -42,9 +35,7 @@ const HomeSection: React.FC = () => {
               <h3 className="text-text-secondary lg:text-xl text-base mt-1">
                 {t('home.description')}
               </h3>
-            </div>
 
-          
               <a
                 href="#about"
                 className="inline-block mt-4 py-3 px-6 bg-accent-500 hover:bg-accent-600 text-accent-50 rounded shadow transition-all duration-300"
@@ -53,43 +44,53 @@ const HomeSection: React.FC = () => {
                   {t('home.button')}
                 </span>
               </a>
-            
+            </div>
           </div>
 
-          <div className='md:w-3/5 w-4/5 opacity-80'>
+          <div className="md:w-3/5 w-4/5 opacity-80">
             <img src="/ilustration.svg" alt="Ilustration developer" />
           </div>
 
           {/* <div className="absolute -bottom-8 w-full h-4 bg-gradient-to-r from-accent-400 to-transparent  rounded-full"></div> */}
         </div>
-          {/* Socials */}
-          <div className="absolute bottom-8 right-8 lg:text-4xl text-2xl flex gap-8 text-text-secondary">
-            <a
-              href="https://www.linkedin.com/in/victor-ccanchi/"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-accent-500 transition-all duration-300"
-            >
-              <Icon.linkedin />
-            </a>
-            <a
-              href="https://github.com/victorwcv"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-accent-500 transition-all duration-300"
-            >
-              <Icon.github />
-            </a>
-            <a
-              href="mailto:victorwccv@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-accent-500 transition-all duration-300"
-            >
-              <Icon.envelope />
-            </a>
-          </div>
+        {/* Socials */}
+        <div className="absolute bottom-8 right-8 lg:text-4xl text-2xl flex gap-8 text-text-secondary">
+          <a
+            href="https://www.linkedin.com/in/victor-ccanchi/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-accent-500 transition-all duration-300"
+          >
+            <Icon.linkedin />
+          </a>
+          <a
+            href="https://github.com/victorwcv"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-accent-500 transition-all duration-300"
+          >
+            <Icon.github />
+          </a>
+          <a
+            href="mailto:victorwccv@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-accent-500 transition-all duration-300"
+          >
+            <Icon.envelope />
+          </a>
+        </div>
       </div>
+      {/* Scroll to top */}
+      <motion.div
+        className="fixed bottom-2 right-2 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 shadow h-10 bg-accent-500 text-text-primary z-30 rounded "
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isInView ? 0 : 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Icon.arrowUp className="lg:text-2xl text-lg text-white" />
+      </motion.div>
     </SectionLayout>
   );
 };

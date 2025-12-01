@@ -5,7 +5,7 @@ type Props = React.JSX.IntrinsicElements['section'];
 const SectionLayout: React.FC<Props> = ({ children, className, ...rest }) => {
   return (
     <section {...rest} className={clsx(className)}>
-      <div className="container mx-auto h-full px-8 sm:py-28 py-20">{children}</div>
+      <div className="container mx-auto h-full px-2 sm:py-28 py-20">{children}</div>
     </section>
   );
 };

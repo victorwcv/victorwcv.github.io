@@ -31,7 +31,7 @@ const Stats: React.FC = () => {
   }, [hasAnimated]);
 
   return (
-    <div className="bg-accent-500 p-20 shadow-xl">
+    <div className="bg-accent-500 py-20 shadow-xl">
       <div
         ref={sectionRef}
         className="flex flex-wrap items-stretch justify-center gap-6"

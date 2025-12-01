@@ -17,26 +17,26 @@ const AboutSection: React.FC = () => {
         {t('about.subtitle')}
       </h2>
       {/* Avatar */}
-      <div className="flex lg:flex-row flex-col justify-center items-center lg:mx-20 mt-12 mb-4 p-4 rounded bg-bg-card shadow">
-        <div className="relative text-accent-500 lg:w-36 lg:h-36 w-24 h-24 rounded m-8 overflow-hidden flex justify-center items-center">
+      <div className="flex lg:flex-row flex-col justify-center items-center lg:mx-20 mt-12 mb-4 p-4 rounded-xl bg-bg-card shadow">
+        <div className="relative text-accent-500 lg:w-36 lg:h-36 w-24 h-24 rounded-xl m-8 overflow-hidden flex justify-center items-center">
           <img src="/profile.webp" alt="My picture" />
         </div>
-        <p className="text-text-secondary lg:text-lg text-lg lg:text-left text-center max-w-lg">
+        <p className="text-text-secondary lg:text-lg text-sm lg:text-left text-center max-w-lg">
           {t('about.description')}
         </p>
       </div>
 
       {/* Profile */}
-      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 lg:mx-20 gap-x-4 text-text-secondary">
+      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 lg:mx-20 gap-4 text-text-secondary">
         {/* Left Side */}
-        <div className="flex flex-col mx-auto p-8 rounded bg-bg-card shadow">
+        <div className="flex flex-col mx-auto p-8 rounded-xl bg-bg-card shadow">
           <h4 className="font-extrabold text-lg lg:text-left text-center mb-4 tracking-widest uppercase text-text-primary">
             {t('about.profile.title')}
           </h4>
-          <p className="text-text-secondary leading-relaxed pb-8">
+          <p className="text-text-secondary leading-relaxed pb-8 sm:text-base text-sm">
             {t('about.profile.description')}
           </p>
-          <div className="flex-1 mx-auto">
+          <div className="flex-1 mx-auto sm:text-base text-sm">
             <ul className="mr-6">
               <li className="mb-3">
                 <h5 className="font-bold flex items-center gap-2 uppercase">
@@ -100,14 +100,14 @@ const AboutSection: React.FC = () => {
         </div>
 
         {/* Right Side */}
-        <div className="mx-auto p-8 rounded bg-bg-card shadow">
+        <div className="mx-auto p-8 rounded-xl bg-bg-card shadow">
           <h4 className="font-extrabold text-lg lg:text-left text-center mb-4 tracking-widest uppercase text-text-primary">
             {t('about.skills.title')}
           </h4>
-          <p className="text-text-secondary leading-relaxed pb-8">
+          <p className="text-text-secondary leading-relaxed pb-8 sm:text-base text-sm">
             {t('about.skills.description')}
           </p>
-          <div className="md:h-auto h-[400px] ">
+          <div className="md:h-auto h-[400px] sm:text-base text-sm">
            <Tabs tabs={skills} />
           </div>
         </div>
