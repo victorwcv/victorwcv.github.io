@@ -11,14 +11,11 @@ import {
   FaGithub,
   FaGithubSquare,
   FaGlobeAmericas,
-  FaGraduationCap,
   FaHtml5,
   FaLinkedin,
   FaPencilRuler,
   FaReact,
   FaSass,
-  FaSun,
-  FaMoon,
 } from 'react-icons/fa';
 import { FaArrowUpLong, FaXmark, FaCode } from 'react-icons/fa6';
 import { GiCoffeeCup } from 'react-icons/gi';
@@ -30,7 +27,7 @@ import {
   IoLogoVue,
   IoRocketOutline
 } from 'react-icons/io5';
-import { PiBriefcase, PiCertificateFill, PiEnvelope, PiFolder, PiGear, PiHouse, PiPalette, PiUser } from 'react-icons/pi';
+import { PiArrowRight, PiBriefcase, PiCertificateFill, PiEnvelope, PiFolder, PiGear, PiGraduationCap, PiHouse, PiMoon, PiPalette, PiSun, PiUser } from 'react-icons/pi';
 import { RiNodejsLine, RiTailwindCssFill } from 'react-icons/ri';
 import {
   SiExpress,
@@ -68,7 +65,7 @@ export const Icon = {
   github: FaGithub,
   githubSquare: FaGithubSquare,
   globe: FaGlobeAmericas,
-  graduation: FaGraduationCap,
+  graduation: PiGraduationCap,
   html: FaHtml5,
   javascript: SiJavascript,
   jest: SiJest,
@@ -92,10 +89,11 @@ export const Icon = {
   vscode: VscVscode,
   vue: IoLogoVue,
   xmark: FaXmark,
-  sun: FaSun,
-  moon: FaMoon,
+  sun: PiSun,
+  moon: PiMoon,
   house: PiHouse,
   folder: PiFolder,
   gear: PiGear,
-  palette: PiPalette
+  palette: PiPalette,
+  arrowRight: PiArrowRight
 };

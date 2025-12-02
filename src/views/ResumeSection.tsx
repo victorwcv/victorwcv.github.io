@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 const ResumeSection = () => {
   const { t } = useTranslation();
-  
+
   return (
     <SectionLayout id="resume">
       {/* Title */}
@@ -19,7 +19,7 @@ const ResumeSection = () => {
       </h2>
       {/* Avatar */}
       <div className="flex lg:flex-row flex-col justify-center items-center lg:mt-4 pb-5">
-        <p className="lg:text-xl text-lg text-center  text-neutral-500 max-w-lg leading-relaxed">
+        <p className="lg:text-xl text-lg text-center  text-text-secondary max-w-lg leading-relaxed">
           {t('resume.description')}
         </p>
       </div>
@@ -31,29 +31,29 @@ const ResumeSection = () => {
             {t('resume.experience.title')}
           </h3>
 
-          <div className="grid grid-rows-3 max-w-4xl mx-auto">
+          <div className="grid grid-rows-3 max-w-4xl mx-auto md:px-0 px-6">
             <ResumeLineBlock
-              icon={<Icon.briefcase className="text-white" />}
+              icon={<Icon.briefcase size={22} className="text-accent-50" />}
               title={t('resume.experience.title-1')}
               date={t('resume.experience.date-1')}
               descriptioTitle={t('resume.experience.organization-1')}
-              description= {t('resume.experience.description-1')}
+              description={t('resume.experience.description-1')}
             />
 
             <ResumeLineBlock
-              icon={<Icon.briefcase className="text-white" />}
+              icon={<Icon.briefcase size={22} className="text-accent-50" />}
               title={t('resume.experience.title-2')}
               date={t('resume.experience.date-2')}
               descriptioTitle={t('resume.experience.organization-2')}
-              description= {t('resume.experience.description-2')}
+              description={t('resume.experience.description-2')}
             />
 
             <ResumeLineBlock
-              icon={<Icon.briefcase className="text-white" />}
+              icon={<Icon.briefcase size={22} className="text-accent-50" />}
               title={t('resume.experience.title-3')}
               date={t('resume.experience.date-3')}
               descriptioTitle={t('resume.experience.organization-3')}
-              description= {t('resume.experience.description-3')}
+              description={t('resume.experience.description-3')}
             />
           </div>
         </div>
@@ -64,28 +64,34 @@ const ResumeSection = () => {
             {t('resume.education.title')}
           </h3>
 
-          <div className="grid grid-rows-3 max-w-4xl mx-auto">
+          <div className="grid grid-rows-3 max-w-4xl mx-auto md:px-0 px-6">
             <ResumeLineBlock
-              icon={<Icon.graduation className="text-white text-xl" />}
+              icon={
+                <Icon.graduation size={22} className="text-accent-50 text-xl" />
+              }
               title={t('resume.education.title-1')}
               date={t('resume.education.date-1')}
-              descriptioTitle= {t('resume.education.organization-1')}
+              descriptioTitle={t('resume.education.organization-1')}
               description={t('resume.education.description-1')}
             />
 
             <ResumeLineBlock
-              icon={<Icon.graduation className="text-white text-xl" />}
-             title={t('resume.education.title-2')}
+              icon={
+                <Icon.graduation size={22} className="text-accent-50 text-xl" />
+              }
+              title={t('resume.education.title-2')}
               date={t('resume.education.date-2')}
-              descriptioTitle= {t('resume.education.organization-2')}
+              descriptioTitle={t('resume.education.organization-2')}
               description={t('resume.education.description-2')}
             />
 
             <ResumeLineBlock
-              icon={<Icon.graduation className="text-white text-xl" />}
+              icon={
+                <Icon.graduation size={22} className="text-accent-50 text-xl" />
+              }
               title={t('resume.education.title-3')}
               date={t('resume.education.date-3')}
-              descriptioTitle= {t('resume.education.organization-3')}
+              descriptioTitle={t('resume.education.organization-3')}
               description={t('resume.education.description-3')}
             />
           </div>

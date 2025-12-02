@@ -42,13 +42,13 @@ const SelectTheme: React.FC<Props> = ({ orientation = 'horizontal' }) => {
         onClick={() => changeTheme(false)}
         className={`w-8 h-8 rounded ${!darkMode ? 'text-white bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
       >
-        <Icon.sun className='m-auto' />
+        <Icon.sun size={20} className='m-auto' />
       </button>
       <button
         onClick={() => changeTheme(true)}
         className={`w-8 h-8 rounded ${darkMode ? 'text-white bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
       >
-        <Icon.moon className='m-auto'/>
+        <Icon.moon size={20} className='m-auto'/>
       </button>
     </div>
   );
