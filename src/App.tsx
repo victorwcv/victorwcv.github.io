@@ -1,5 +1,5 @@
 import { AnimatePresence } from 'motion/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import PortfolioLayout from './layouts/PortfolioLayout';
 import Navbar from './components/Navbar';
@@ -8,17 +8,20 @@ import LoadingPage from './views/LoadingPage';
 import HomeSection from './views/HomeSection';
 import AboutSection from './views/AboutmeSection';
 import ResumeSection from './views/ResumeSection';
-// import PortfolioSection from './views/PortfolioSection';
 import ContactSection from './views/ContactSection';
 import ResponsiveNav from './components/ResponsiveNav';
 import LanguageProvider from './components/LanguageProvider';
 import PortfolioSection from './views/PortfolioSection';
 import { Configbar } from './components/Configbar';
 import Stats from './views/Stats';
+import { ScrollTopArrow } from './components/ScrollTopArrow';
+import { useView } from './hooks/useView';
 
 function App() {
+  const ref = useRef<HTMLDivElement | null>(null);
   const [showLoadingPage, setShowLoadingPage] = useState(true);
   const [progress, setProgress] = useState(0);
+  const { isInView } = useView(ref, 50);
 
   useEffect(() => {
     const resources = [
@@ -56,26 +59,26 @@ function App() {
 
   return (
     <LanguageProvider>
-      
-        <PortfolioLayout>
-          <Navbar />
-          <Configbar />
-          <ResponsiveNav />
-          <HomeSection />
-          <AboutSection />
-          <ResumeSection />
-          <PortfolioSection />
-          <Stats />
-          <ContactSection />
-        </PortfolioLayout>
+      <PortfolioLayout>
+        <div ref={ref} />
+        <Navbar />
+        <ResponsiveNav />
+        <HomeSection />
+        <AboutSection />
+        <ResumeSection />
+        <PortfolioSection />
+        <Stats />
+        <ContactSection />
         <Footer />
+        <Configbar isInView={isInView} />
+        <ScrollTopArrow isInView={isInView} />
+      </PortfolioLayout>
 
-        <AnimatePresence>
-          {showLoadingPage && (
-            <LoadingPage progress={progress} key={'loadingPage'} />
-          )}
-        </AnimatePresence>
-      
+      <AnimatePresence>
+        {showLoadingPage && (
+          <LoadingPage progress={progress} key={'loadingPage'} />
+        )}
+      </AnimatePresence>
     </LanguageProvider>
   );
 }

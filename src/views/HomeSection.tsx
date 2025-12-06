@@ -1,14 +1,9 @@
-import { useRef } from 'react';
 import BlinkingCursor from '../components/BlinkingCursor';
 import { Icon } from '../icons/icons';
-import { useInView } from 'motion/react';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import SectionLayout from '@/layouts/SectionLayout';
 
 const HomeSection: React.FC = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { margin: '-50%' });
   const { t } = useTranslation();
 
   return (
@@ -17,10 +12,7 @@ const HomeSection: React.FC = () => {
       id="home"
     >
       <div className="absolute inset-0 bg-bg-primary/50"></div>
-      <div
-        ref={ref}
-        className="h-full w-full bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0"
-      >
+      <div className="h-full w-full bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0">
         {/* Content */}
         <div className="relative h-full flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 items-center justify-center">
           {/* Hero */}
@@ -42,7 +34,7 @@ const HomeSection: React.FC = () => {
               >
                 <span className="inline-flex items-center gap-2">
                   {t('home.button')}
-                  <Icon.arrowRight size={22}/> 
+                  <Icon.arrowRight size={22} />
                 </span>
               </a>
             </div>
@@ -82,16 +74,6 @@ const HomeSection: React.FC = () => {
           </a>
         </div>
       </div>
-      {/* Scroll to top */}
-      <motion.div
-        className="fixed bottom-2 right-2 cursor-pointer flex items-center justify-center lg:w-14 w-8 lg:h-16 shadow h-10 bg-accent-500 text-text-primary z-30 rounded "
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        initial={{ x: "0", opacity: 0 }}
-        animate={{ x: isInView ? "200%" : "0", opacity: isInView ? 0 : 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Icon.arrowUp className="lg:text-2xl text-lg text-white" />
-      </motion.div>
     </SectionLayout>
   );
 };
