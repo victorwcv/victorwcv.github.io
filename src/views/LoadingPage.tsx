@@ -1,3 +1,4 @@
+import { lockScroll, unlockScroll } from '@/utils/scroll';
 import { motion } from 'motion/react';
 import { useEffect } from 'react';
 
@@ -7,10 +8,8 @@ interface Props {
 
 const LoadingPage: React.FC<Props> = () => {
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
+    lockScroll();
+    return () => unlockScroll();
   }, []);
 
   return (
@@ -25,7 +24,6 @@ const LoadingPage: React.FC<Props> = () => {
         alt="VC logo"
         className="w-20 h-auto brightness-125 mb-6"
       />
-     
     </motion.div>
   );
 };

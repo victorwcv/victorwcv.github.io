@@ -63,7 +63,7 @@ function App() {
         <div ref={ref} />
         <Navbar />
         <ResponsiveNav />
-        <HomeSection />
+        <HomeSection isReady={!showLoadingPage} />
         <AboutSection />
         <ResumeSection />
         <PortfolioSection />
