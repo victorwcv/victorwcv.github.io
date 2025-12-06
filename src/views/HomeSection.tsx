@@ -17,7 +17,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
       className="relative sm:h-screen h-svh min-h-[500px] bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat"
       id="home"
     >
-      <div className="absolute inset-0 bg-bg-primary/50 backdrop-blur-md"></div>
+      <div className="absolute inset-0 bg-bg-primary/70 backdrop-blur-md"></div>
       <div className="h-full w-full bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0 overflow-hidden">
         <motion.img
           src="/react-logo.svg"
@@ -61,14 +61,21 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
               <motion.h3
                 variants={fadeUp}
-                className="text-text-secondary lg:text-xl text-base mt-1"
+                className="text-text-secondary font-semibold lg:text-xl text-base mt-2"
               >
                 {t('home.description')}
               </motion.h3>
 
+              <motion.h3
+                variants={fadeUp}
+                className="text-text-secondary lg:text-base text-sm mt-1"
+              >
+                {t('home.description2')}
+              </motion.h3>
+
               <motion.a
                 variants={fadeUp}
-                href="#about"
+                href="#projects"
                 className="inline-block mt-4 py-3 px-6 bg-accent-500 hover:bg-accent-600 text-accent-50 rounded shadow-lg transition-colors duration-300"
               >
                 <span className="inline-flex items-center gap-2">
@@ -81,7 +88,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
           {/* Illustration */}
           <motion.div
-            className="md:w-3/5 w-4/5 opacity-80"
+            className="md:w-3/5 w-4/5"
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -98,6 +105,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
           transition={{ duration: 0.6, delay: 1 }}
         >
           <a
+            title='Linkedin'
             href="https://www.linkedin.com/in/victor-ccanchi/"
             target="_blank"
             rel="noreferrer"
@@ -106,6 +114,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
             <Icon.linkedin />
           </a>
           <a
+            title='Github'
             href="https://github.com/victorwcv"
             target="_blank"
             rel="noreferrer"
@@ -114,6 +123,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
             <Icon.github />
           </a>
           <a
+            title='Mail'
             href="mailto:victorwccv@gmail.com"
             target="_blank"
             rel="noreferrer"

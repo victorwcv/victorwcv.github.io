@@ -1,4 +1,4 @@
-import { BsGit, BsMicrosoftTeams, BsTranslate } from 'react-icons/bs';
+import { BsGit, BsMicrosoftTeams } from 'react-icons/bs';
 import { DiScrum } from 'react-icons/di';
 import {
   FaAngular,
@@ -8,11 +8,9 @@ import {
   FaCss3Alt,
   FaDocker,
   FaExternalLinkAlt,
-  FaGithub,
   FaGithubSquare,
   FaGlobeAmericas,
   FaHtml5,
-  FaLinkedin,
   FaPencilRuler,
   FaReact,
   FaSass,
@@ -25,9 +23,25 @@ import {
   IoLogoFigma,
   IoLogoFirebase,
   IoLogoVue,
-  IoRocketOutline
+  IoRocketOutline,
 } from 'react-icons/io5';
-import { PiArrowRight, PiBriefcase, PiCertificateFill, PiEnvelope, PiFolder, PiGear, PiGraduationCap, PiHouse, PiMoon, PiPalette, PiSun, PiUser } from 'react-icons/pi';
+import {
+  PiArrowRight,
+  PiBriefcase,
+  PiCertificateFill,
+  PiEnvelope,
+  PiFolder,
+  PiGear,
+  PiGithubLogo,
+  PiGraduationCap,
+  PiHouse,
+  PiLinkedinLogo,
+  PiMoon,
+  PiPalette,
+  PiSun,
+  PiTranslate,
+  PiUser,
+} from 'react-icons/pi';
 import { RiNodejsLine, RiTailwindCssFill } from 'react-icons/ri';
 import {
   SiExpress,
@@ -62,7 +76,7 @@ export const Icon = {
   figma: IoLogoFigma,
   firebase: IoLogoFirebase,
   git: BsGit,
-  github: FaGithub,
+  github: PiGithubLogo,
   githubSquare: FaGithubSquare,
   globe: FaGlobeAmericas,
   graduation: PiGraduationCap,
@@ -70,7 +84,7 @@ export const Icon = {
   javascript: SiJavascript,
   jest: SiJest,
   jira: SiJira,
-  linkedin: FaLinkedin,
+  linkedin: PiLinkedinLogo,
   mongodb: SiMongodb,
   node: RiNodejsLine,
   pencil: FaPencilRuler,
@@ -81,7 +95,7 @@ export const Icon = {
   scrum: DiScrum,
   tailwind: RiTailwindCssFill,
   teams: BsMicrosoftTeams,
-  translate: BsTranslate,
+  translate: PiTranslate,
   typescript: SiTypescript,
   user: PiUser,
   vite: SiVite,
@@ -95,5 +109,5 @@ export const Icon = {
   folder: PiFolder,
   gear: PiGear,
   palette: PiPalette,
-  arrowRight: PiArrowRight
+  arrowRight: PiArrowRight,
 };

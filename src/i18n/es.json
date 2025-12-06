@@ -12,8 +12,9 @@
   "home": {
     "title": "Soy Victor Ccanchi",
     "subtitle": "Hola, Mundo!",
-    "description": "Desarrollador web | Especialista frontend",
-    "button": "Más sobre mí"
+    "description": "Desarrollador Frontend | JavaScript & TypeScript",
+    "description2": "Construyo interfaces web eficientes y atractivas enfocadas en el rendimiento y la experiencia del usuario.",
+    "button": "Ver mis proyectos"
   },
   "about": {
     "title": "Sobre mi",

@@ -27,8 +27,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg-primary: #f9fafb; /* bg-gray-50 - Fondo principal */
-  --bg-card: #ffffff; /* bg-white - Cards y elementos flotantes */
+  --bg-primary: #f5f5f5; /* bg-gray-50 - Fondo principal */
+  --bg-card: #fdfdfd; /* bg-white - Cards y elementos flotantes */
   --bg-hover: #e5e7eb; /* bg-gray-200 - Hover states */
 
   /* Textos */
