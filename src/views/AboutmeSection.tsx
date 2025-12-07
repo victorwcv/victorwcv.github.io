@@ -1,6 +1,6 @@
 import { Tabs } from '@/components/Tabs';
 import { skills } from '@/data/skills';
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 import SectionLayout from '@/layouts/SectionLayout';
 import { useTranslation } from 'react-i18next';
 

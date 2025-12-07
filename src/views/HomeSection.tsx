@@ -1,5 +1,5 @@
 import BlinkingCursor from '../components/BlinkingCursor';
-import { Icon } from '../icons/icons';
+import { Icon } from '../data/icons';
 import { useTranslation } from 'react-i18next';
 import SectionLayout from '@/layouts/SectionLayout';
 import { motion } from 'framer-motion';
@@ -81,7 +81,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
               <motion.a
                 variants={fadeUp}
                 href="#projects"
-                className="inline-block mt-4 py-3 px-6 bg-accent-500 hover:bg-accent-600 text-accent-50 rounded shadow-lg transition-colors duration-300"
+                className="inline-block font-semibold mt-4 py-3 px-6 bg-accent-500 hover:bg-accent-600 text-accent-50 rounded shadow-lg transition-colors duration-300"
               >
                 <span className="inline-flex items-center gap-2">
                   {t('home.button')}

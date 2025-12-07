@@ -11,3 +11,12 @@ export interface Project {
   demo?: string;
   featured?: boolean;
 }
+
+export interface CarouselItem {
+  id: number;
+  src: string;
+  title: string;
+  link?: string;
+  description?: string;
+  tags?: string[];
+}

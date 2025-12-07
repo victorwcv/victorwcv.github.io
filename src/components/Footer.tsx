@@ -1,4 +1,4 @@
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {

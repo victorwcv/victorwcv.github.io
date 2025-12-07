@@ -3,7 +3,7 @@ import SectionLayout from '@/layouts/SectionLayout';
 import { ProjectCategory } from '@/types';
 import { useState } from 'react';
 import { projects } from '@/data/projects';
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState<ProjectCategory>('All');

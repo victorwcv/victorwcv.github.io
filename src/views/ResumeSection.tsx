@@ -1,7 +1,7 @@
 import Carrousel from '@/components/Carrousel';
 import ResumeLineBlock from '@/components/ResumeLineBlock';
 import { certificates } from '@/data/certificates';
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 import SectionLayout from '@/layouts/SectionLayout';
 import { useTranslation } from 'react-i18next';
 
@@ -97,12 +97,10 @@ const ResumeSection = () => {
           </div>
         </div>
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-accent-500 font-bold lg:text-xl text-base tracking-widest mt-24 mb-16 uppercase">
+          <h3 className="text-accent-500 font-bold lg:text-xl text-base tracking-widest mt-16 mb-8 uppercase">
             {t('resume.certificates.title')}
           </h3>
-          <div className="w-full flex justify-center">
-            <Carrousel items={certificates} />
-          </div>
+          <Carrousel items={certificates} />
         </div>
       </div>
     </SectionLayout>

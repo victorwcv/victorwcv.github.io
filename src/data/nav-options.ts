@@ -1,4 +1,4 @@
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 
 export const navOptions = [
   {

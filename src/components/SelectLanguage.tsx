@@ -20,13 +20,13 @@ const SelectLanguage: React.FC<Props> = ({ orientation = 'horizontal' }) => {
     >
       <button
         onClick={() => changeLang('en')}
-        className={`w-8 h-8 rounded ${lang === 'en' ? 'text-white bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
+        className={`w-8 h-8 rounded ${lang === 'en' ? 'text-accent-50 bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
       >
         En
       </button>
       <button
         onClick={() => changeLang('es')}
-        className={`w-8 h-8 rounded ${lang === 'es' ? 'text-white bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
+        className={`w-8 h-8 rounded ${lang === 'es' ? 'text-accent-50 bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
       >
         Es
       </button>

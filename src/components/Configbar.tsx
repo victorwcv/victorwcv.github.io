@@ -1,4 +1,4 @@
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 import SelectLanguage from './SelectLanguage';
 import SelectTheme from './SelectTheme';
 import {motion} from 'framer-motion'

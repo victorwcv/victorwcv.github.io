@@ -1,4 +1,5 @@
-import type { CarouselItem } from '@/components/Carrousel';
+import { CarouselItem } from "@/types";
+
 
 export const certificates: CarouselItem[] = [
   {

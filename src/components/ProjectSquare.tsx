@@ -1,6 +1,6 @@
 import { ProjectCategory } from '@/types';
 import { FC } from 'react';
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 
 interface Props {
   id: number;

@@ -27,22 +27,18 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --bg-primary: #f5f5f5; /* bg-gray-50 - Fondo principal */
-  --bg-card: #fdfdfd; /* bg-white - Cards y elementos flotantes */
-  --bg-hover: #e5e7eb; /* bg-gray-200 - Hover states */
-
-  /* Textos */
-  --text-primary: #111827; /* text-gray-900 - Texto principal */
+  --bg-primary: #f5f5f5;
+  --bg-card: #fdfdfd;
+  --bg-hover: #e5e7eb;
+  --text-primary: #111827;
   --text-secondary: #4b5563;
 }
 
 .dark {
-  --bg-primary: #111827; /* bg-gray-900 - Fondo principal */
-  --bg-card: #1f2937; /* bg-gray-800 - Cards y elementos flotantes */
-  --bg-hover: #374151; /* bg-gray-700 - Hover states */
-
-  /* Textos */
-  --text-primary: #f3f4f6; /* text-gray-100 - Texto principal */
+  --bg-primary: #111827;
+  --bg-card: #1f2937;
+  --bg-hover: #374151;
+  --text-primary: #f3f4f6;
   --text-secondary: #9ca3af;
 }
 
@@ -61,4 +57,34 @@ a {
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: auto-scroll 35s linear infinite;
+  padding-right: 1rem;
+}
+
+.carousel-card {
+  flex: 0 0 300px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+}
+
+@keyframes auto-scroll {
+  from {translate: 0;}
+  to {translate: -100%;}
 }

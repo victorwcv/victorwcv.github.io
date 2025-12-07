@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 
 export const ScrollTopArrow: React.FC<{isInView: boolean}> = ({isInView}) => {
   return (

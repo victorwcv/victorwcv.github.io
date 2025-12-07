@@ -1,4 +1,4 @@
-import { Icon } from '@/icons/icons';
+import { Icon } from '@/data/icons';
 import { useEffect, useState } from 'react';
 
 interface Props {
@@ -40,13 +40,13 @@ const SelectTheme: React.FC<Props> = ({ orientation = 'horizontal' }) => {
     >
       <button
         onClick={() => changeTheme(false)}
-        className={`w-8 h-8 rounded ${!darkMode ? 'text-white bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
+        className={`w-8 h-8 rounded ${!darkMode ? 'text-accent-50 bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
       >
         <Icon.sun size={20} className='m-auto' />
       </button>
       <button
         onClick={() => changeTheme(true)}
-        className={`w-8 h-8 rounded ${darkMode ? 'text-white bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
+        className={`w-8 h-8 rounded ${darkMode ? 'text-accent-50 bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
       >
         <Icon.moon size={20} className='m-auto'/>
       </button>
