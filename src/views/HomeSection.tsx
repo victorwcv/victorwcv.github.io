@@ -14,11 +14,11 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
   return (
     <SectionLayout
-      className="relative sm:h-screen h-svh min-h-[500px] bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat"
+      className="relative bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat"
       id="home"
     >
       <div className="absolute inset-0 bg-bg-primary/70 backdrop-blur-md"></div>
-      <div className="h-full w-full bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0 overflow-hidden">
+      <div className="h-full min-h-fit w-full flex flex-col bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0 overflow-hidden">
         {/* Logo optimizado con will-change y transform 3D */}
         <motion.img
           src="/react-logo.svg"
@@ -41,7 +41,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
           }}
         />
 
-        <div className="relative h-full flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 items-center justify-center">
+        <div className="relative flex-1 flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 py-12 items-center md:justify-center justify-evenly">
           {/* Hero Text */}
           <motion.div
             className="z-10"
@@ -104,7 +104,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
         {/* Socials (fade simple) */}
         <motion.div
-          className="absolute bottom-8 right-8 lg:text-4xl text-2xl flex gap-8 text-text-secondary"
+          className=" lg:text-4xl text-2xl flex justify-end sm:pb-10 pb-5 sm:px-12 px-6 gap-8 text-text-secondary"
           initial={{ opacity: 0 }}
           animate={{ opacity: isReady ? 1 : 0 }}
           transition={{ duration: 0.6, delay: 1 }}
