@@ -29,16 +29,30 @@ const ResponsiveNav = () => {
         {open && (
           <motion.div
             className="fixed top-0 left-0 w-screen h-dvh bg-bg-card text-text-secondary z-40 shadow-lg"
+            style={{ 
+              willChange: 'transform',
+              transformStyle: 'preserve-3d',
+              backfaceVisibility: 'hidden'
+            }}
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            transition={{ 
+              duration: 0.3,
+              ease: [0.4, 0, 0.2, 1]
+            }}
           >
             <ul className="flex flex-col items-center justify-center h-full text-xl font-semibold">
-              {navOptions.map((option) => (
-                <li
+              {navOptions.map((option, index) => (
+                <motion.li
                   key={option.id}
                   className="py-4 w-full active:bg-accent-500/50"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ 
+                    duration: 0.2, 
+                    delay: 0.2 + index * 0.05
+                  }}
                 >
                   <a
                     className="block text-center"
@@ -47,13 +61,18 @@ const ResponsiveNav = () => {
                   >
                     {t(`navbar.${option.id}`)}
                   </a>
-                </li>
+                </motion.li>
               ))}
             </ul>
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-8">
+            <motion.div 
+              className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+            >
               <SelectLanguage />
               <SelectTheme />
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

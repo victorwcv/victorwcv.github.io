@@ -19,15 +19,20 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
     >
       <div className="absolute inset-0 bg-bg-primary/70 backdrop-blur-md"></div>
       <div className="h-full w-full bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0 overflow-hidden">
+        {/* Logo optimizado con will-change y transform 3D */}
         <motion.img
           src="/react-logo.svg"
           alt="logo"
           className="absolute top-0 left-0 
              -translate-x-1/3 -translate-y-1/3
-             scale-125 opacity-5 pointer-events-none select-none"
+             scale-150 opacity-5 pointer-events-none select-none"
+          style={{ 
+            willChange: 'transform',
+            transformStyle: 'preserve-3d',
+            backfaceVisibility: 'hidden'
+          }}
           animate={{
             rotate: [0, 360],
-            scale: [2.2, 2.25, 2.2],
           }}
           transition={{
             duration: 25,
