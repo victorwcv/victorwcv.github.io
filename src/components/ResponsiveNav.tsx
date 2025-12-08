@@ -14,6 +14,30 @@ const ResponsiveNav = () => {
     setOpen((prev) => !prev);
   };
 
+    const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section[id]');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: '-120px 0px 0px 0px',
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
@@ -46,7 +70,7 @@ const ResponsiveNav = () => {
               {navOptions.map((option, index) => (
                 <motion.li
                   key={option.id}
-                  className="py-4 w-full active:bg-accent-500/50"
+                  className="w-full"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ 
@@ -55,11 +79,12 @@ const ResponsiveNav = () => {
                   }}
                 >
                   <a
-                    className="block text-center"
+                    className={`block text-center py-4 w-full rounded ${activeSection === option.id ? 'text-accent-50 bg-accent-500 shadow-lg' : ''}`}
                     href={`#${option.id}`}
                     onClick={toggle}
                   >
-                    {t(`navbar.${option.id}`)}
+                    <option.icon className="inline-block mr-2" />
+                    <span>{t(`navbar.${option.id}`)}</span>
                   </a>
                 </motion.li>
               ))}
