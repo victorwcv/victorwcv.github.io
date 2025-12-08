@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 sm:block hidden">
-      <div className="flex items-center justify-between bg-bg-card/80 backdrop-blur p-4 px-8 rounded-xl shadow-lg">
+      <div className="min-w-content flex items-center justify-between bg-bg-card/80 backdrop-blur p-4 px-8 rounded-xl shadow-lg">
         <picture className="w-12 h-12 mr-18">
           <img
             src="vc-logo.png"
@@ -44,18 +44,17 @@ const Navbar: React.FC = () => {
             {navOptions.map((option) => (
               <li
                 key={option.id}
-                className="hover:transform hover:-translate-y-1 transition-all duration-300"
               >
                 <a
                   href={`#${option.id}`}
-                  className={`flex flex-col items-center gap-2 ${
+                  className={`flex flex-col items-center transition-all duration-300 will-change-auto ${
                     activeSection === option.id
-                      ? 'text-accent-500'
-                      : 'text-text-secondary'
+                      ? 'text-accent-500 transform scale-110 font-semibold'
+                      : 'text-text-secondary hover:text-text-secondary/80'
                   }`}
                 >
                   <option.icon size={22} />
-                  <span className='text-center'>{t(`navbar.${option.id}`)} </span>
+                  <span className='text-center whitespace-nowrap'>{t(`navbar.${option.id}`)} </span>
                 </a>
               </li>
             ))}
