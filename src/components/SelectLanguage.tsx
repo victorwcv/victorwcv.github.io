@@ -6,29 +6,45 @@ interface Props {
 
 const SelectLanguage: React.FC<Props> = ({ orientation = 'horizontal' }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const lang = searchParams.get('lang') || 'en';
+  const lang = searchParams.get('lang') ?? 'en';
 
-  const changeLang = (newLang: string) => {
+  const changeLang = (newLang: 'en' | 'es') => {
     if (newLang === lang) return;
-    searchParams.set('lang', newLang);
-    setSearchParams(searchParams, { replace: true });
+
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.set('lang', newLang);
+
+    setSearchParams(nextParams, { replace: true });
   };
 
   return (
     <div
-      className={`flex gap-2 ${orientation === 'vertical' ? 'flex-col' : 'flex-row'}`}
+      role="group"
+      aria-label="Language selector"
+      className={`flex items-center ${orientation === 'vertical' ? 'flex-col' : 'flex-row'}`}
     >
       <button
+        aria-pressed={lang === 'en'}
         onClick={() => changeLang('en')}
-        className={`w-8 h-8 rounded ${lang === 'en' ? 'text-accent-50 bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
+        className={`w-8 h-8 ${
+          lang === 'en'
+            ? 'text-accent-500 font-semibold'
+            : 'text-text-secondary'
+        }`}
       >
-        En
+        EN
       </button>
+      <div className="w-[1px] h-4 bg-bg-hover"></div>
       <button
+        aria-pressed={lang === 'es'}
         onClick={() => changeLang('es')}
-        className={`w-8 h-8 rounded ${lang === 'es' ? 'text-accent-50 bg-accent-400 shadow' : 'bg-bg-hover text-text-secondary'} `}
+        className={`w-8 h-8 ${
+          lang === 'es'
+            ? 'text-accent-500 font-semibold'
+            : 'text-text-secondary'
+        }`}
       >
-        Es
+        ES
       </button>
     </div>
   );

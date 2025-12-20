@@ -12,7 +12,6 @@ import ContactSection from './views/ContactSection';
 import ResponsiveNav from './components/ResponsiveNav';
 import LanguageProvider from './components/LanguageProvider';
 import PortfolioSection from './views/PortfolioSection';
-import { Configbar } from './components/Configbar';
 import Stats from './views/Stats';
 import { ScrollTopArrow } from './components/ScrollTopArrow';
 import { useView } from './hooks/useView';
@@ -70,7 +69,7 @@ function App() {
         <Stats />
         <ContactSection />
         <Footer />
-        <Configbar isInView={isInView} />
+        {/* <Configbar isInView={isInView} /> */}
         <ScrollTopArrow isInView={isInView} />
       </PortfolioLayout>
 
