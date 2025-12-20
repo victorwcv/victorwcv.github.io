@@ -1,4 +1,3 @@
-import BlinkingCursor from '../components/BlinkingCursor';
 import { Icon } from '../data/icons';
 import { useTranslation } from 'react-i18next';
 import SectionLayout from '@/layouts/SectionLayout';
@@ -22,7 +21,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
           alt="logo"
           className="absolute top-0 left-0 
              -translate-x-1/3 -translate-y-1/3
-             scale-200 opacity-10 pointer-events-none select-none"
+             scale-200 opacity-5 pointer-events-none select-none"
           style={{ 
             willChange: 'transform',
             transformStyle: 'preserve-3d',
@@ -38,7 +37,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
           }}
         />
       {/* <div className="absolute inset-0 bg-bg-primary/70 backdrop-blur-md"></div> */}
-      <div className="h-full min-h-fit w-full flex flex-col md:mt-12 mt-0">
+      <div className="h-full min-h-fit w-full flex flex-col md:pt-12 pt-0">
         {/* Logo optimizado con will-change y transform 3D */}
 
         <div className="relative flex-1 flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 py-12 items-center md:justify-center justify-evenly">
@@ -54,7 +53,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
                 variants={fadeUp}
                 className="text-accent-500 font-bold lg:text-2xl uppercase text-lg mb-1"
               >
-                {t('home.subtitle')} <BlinkingCursor />
+                {t('home.subtitle')} 
               </motion.h2>
 
               <motion.h1

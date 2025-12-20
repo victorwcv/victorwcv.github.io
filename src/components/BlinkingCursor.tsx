@@ -10,7 +10,7 @@ const BlinkingCursor = () => {
         duration: 1, // Duración de cada ciclo (en segundos)
       }}
     >
-      _
+      ▍
     </motion.span>
   );
 };

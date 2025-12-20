@@ -21,7 +21,7 @@ const Carrousel: React.FC<Props> = ({ items }) => {
           </div>
         ))}
       </div>
-      <div aria-hiden className="carousel-group">
+      <div className="carousel-group">
         {items.map((item, index) => (
           <div
             className="carousel-card"

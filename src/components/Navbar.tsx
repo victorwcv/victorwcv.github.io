@@ -47,13 +47,13 @@ const Navbar: React.FC = () => {
               >
                 <a
                   href={`#${option.id}`}
-                  className={`flex flex-col items-center transition-all duration-300 will-change-auto ${
+                  className={`flex flex-col items-center font-semibold transition-all will-change-auto  ${
                     activeSection === option.id
-                      ? 'text-accent-500 transform scale-110 font-semibold'
-                      : 'text-text-secondary hover:text-text-secondary/80'
+                      ? 'text-accent-500 underline underline-offset-4 transform scale-120'
+                      : 'hover:text-text-secondary/80'
                   }`}
                 >
-                  <option.icon size={22} />
+                  {/* <option.icon size={22} /> */}
                   <span className='text-center whitespace-nowrap'>{t(`navbar.${option.id}`)} </span>
                 </a>
               </li>
