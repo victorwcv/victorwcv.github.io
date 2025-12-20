@@ -52,7 +52,7 @@ const ResponsiveNav = () => {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed top-0 left-0 w-screen h-dvh bg-bg-card text-text-secondary z-40 shadow-lg"
+            className="fixed top-0 left-0 w-screen h-dvh bg-bg-card/90 backdrop-blur-sm text-text-secondary z-40 shadow-lg"
             style={{ 
               willChange: 'transform',
               transformStyle: 'preserve-3d',

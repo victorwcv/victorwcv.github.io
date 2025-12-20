@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 sm:block hidden">
-      <div className="min-w-content flex items-center justify-between bg-bg-card/80 backdrop-blur p-4 rounded-xl shadow-lg">
+      <div className="min-w-content flex items-center justify-between bg-bg-card/90 backdrop-blur-sm p-4 rounded-xl shadow-md">
         <a href="#home" className="block w-12 h-12 mx-6" aria-hidden>
           <img
             src="vc-logo.png"

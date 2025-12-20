@@ -40,10 +40,10 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
       <div className="h-full min-h-fit w-full flex flex-col md:pt-12 pt-0">
         {/* Logo optimizado con will-change y transform 3D */}
 
-        <div className="relative flex-1 flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 py-12 items-center md:justify-center justify-evenly">
+        <div className="flex-1 flex md:flex-row flex-col md:gap-0 gap-8 max-w-7xl mx-auto py-2 items-center md:justify-center justify-evenly">
           {/* Hero Text */}
           <motion.div
-            className="z-10"
+            className="z-10 flex-1"
             initial={'hidden'}
             animate={isReady ? 'show' : 'hidden'}
             transition={{ staggerChildren: 0.15 }}
@@ -51,7 +51,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
             <motion.div className="md:text-left text-center px-4">
               <motion.h2
                 variants={fadeUp}
-                className="text-accent-500 font-bold lg:text-2xl uppercase text-lg mb-1"
+                className="text-accent-500 font-bold tracking-widest lg:text-2xl uppercase text-lg mb-1"
               >
                 {t('home.subtitle')} 
               </motion.h2>
@@ -65,7 +65,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
               <motion.h3
                 variants={fadeUp}
-                className="text-text-secondary font-semibold lg:text-xl text-base mt-6"
+                className="text-text-primary/90 font-semibold lg:text-xl text-base mt-6"
               >
                 {t('home.description')}
               </motion.h3>
@@ -92,12 +92,12 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
           {/* Illustration */}
           <motion.div
-            className="md:w-3/5 w-4/5"
+            className="flex-1 flex justify-center items-center"
             initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={{ opacity: .9, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <img src="/ilustration.svg" alt="Ilustration developer" />
+            <img src="/ilustration.svg" alt="Ilustration developer" className='block w-[80%] h-auto'/>
           </motion.div>
         </div>
 
