@@ -14,18 +14,15 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
   return (
     <SectionLayout
-      className="relative bg-[url('/bg.webp')] bg-cover bg-center bg-no-repeat"
+      className="relative overflow-hidden bg-gradient-to-bl from-bg-card to-bg-primary"
       id="home"
     >
-      <div className="absolute inset-0 bg-bg-primary/70 backdrop-blur-md"></div>
-      <div className="h-full min-h-fit w-full flex flex-col bg-bg-card/90 backdrop-blur-lg rounded-2xl shadow-2xl md:mt-12 mt-0 overflow-hidden">
-        {/* Logo optimizado con will-change y transform 3D */}
         <motion.img
           src="/react-logo.svg"
           alt="logo"
           className="absolute top-0 left-0 
              -translate-x-1/3 -translate-y-1/3
-             scale-150 opacity-5 pointer-events-none select-none"
+             scale-200 opacity-10 pointer-events-none select-none"
           style={{ 
             willChange: 'transform',
             transformStyle: 'preserve-3d',
@@ -35,11 +32,14 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
             rotate: [0, 360],
           }}
           transition={{
-            duration: 25,
+            duration: 35,
             repeat: Infinity,
             ease: 'linear',
           }}
         />
+      {/* <div className="absolute inset-0 bg-bg-primary/70 backdrop-blur-md"></div> */}
+      <div className="h-full min-h-fit w-full flex flex-col md:mt-12 mt-0">
+        {/* Logo optimizado con will-change y transform 3D */}
 
         <div className="relative flex-1 flex md:flex-row flex-col md:gap-0 gap-8 md:px-32 px-0 py-12 items-center md:justify-center justify-evenly">
           {/* Hero Text */}
@@ -66,7 +66,7 @@ const HomeSection: React.FC<{ isReady: boolean }> = ({ isReady }) => {
 
               <motion.h3
                 variants={fadeUp}
-                className="text-text-secondary font-semibold lg:text-xl text-base mt-2"
+                className="text-text-secondary font-semibold lg:text-xl text-base mt-6"
               >
                 {t('home.description')}
               </motion.h3>

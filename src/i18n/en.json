@@ -10,11 +10,11 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "I'm Victor Ccanchi",
-    "subtitle": "Hello, World!",
-    "description": "Frontend Developer | JavaScript & TypeScript",
-    "description2": "I build fast, scalable and modern web interfaces with a strong focus on performance and user experience.",
-    "button": "View my projects"
+    "title": "Frontend Developer",
+    "subtitle": "Victor Ccanchi",
+    "description": "Web fundamentals · JavaScript · TypeScript · React · Vue",
+    "description2": "I design and build scalable frontend systems for real-world products, with a strong focus on performance, accessibility, maintainability, and data-driven decisions.",
+    "button": "View featured projects"
   },
   "about": {
     "title": "About me",
