@@ -19,7 +19,7 @@ export const Configbar: React.FC<{isInView: boolean}> = ({isInView}) => {
           </li>
           <li className="flex flex-col items-center gap-2 py-4">
             <Icon.palette size={22} className="text-text-secondary" />
-            <SelectTheme orientation="vertical" />
+            <SelectTheme />
           </li>
         </ul>
       </div>
